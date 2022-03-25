@@ -4,17 +4,26 @@ import pandas as pd
 import csv
 from PIL import Image
 
+import edge
+import hair
+import sub_hair
+import eye
+import mouth
+import wrinkles
+
 height = 24
 width = 24
 canvas = np.zeros((height, width, 3))
 canvas += 255
 
-f = pd.read_csv('output_edge.csv', header=None)
+# generate image
+canvas = edge.generate(canvas, height, width)
+canvas = hair.generate(canvas, height, width)
+canvas = sub_hair.generate(canvas, height, width)
+canvas = eye.generate(canvas, height, width)
+canvas = mouth.generate(canvas, height, width)
+canvas = wrinkles.generate(canvas, height, width)
 
-for i in range(height):
-  for j in range(width):
-   if f.iloc[i,j] == 255:
-     canvas[i,j] = (0,0,0)
 
 
 interpolation = cv.INTER_AREA
@@ -23,3 +32,4 @@ cv.imwrite('output.png', canvas)
 
 img = Image.open('output.png')
 img.show()
+
