@@ -8,12 +8,12 @@ class Pug:
         self.width = width
         self.height = height
 
-        self.draw('edge.dt3')
-        self.draw('hair.dt3')
-        self.draw('ears.dt3')
-        self.draw('eyes.dt3')
-        self.draw('mouth.dt3')
-        self.draw('wrinkles.dt3')
+        self.draw('templates/edge.csv')
+        self.draw('templates/hair.csv')
+        self.draw('templates/ears.csv')
+        self.draw('templates/eyes.csv')
+        self.draw('templates/mouth.csv')
+        self.draw('templates/wrinkles.csv')
 
         self.attributes = {
             'glasses': None
@@ -29,13 +29,16 @@ class Pug:
                     self.canvas[i,j] = paretto[f.iloc[i][j]]
         print(doc)
 
+    def add_attribute(self, tmplate):
+        pass
+
     def glasses(self):
         #self.draw('3d-glasses.dt3')
-        self.draw('vr.dt3')
+        self.draw('templates/vr.csv')
         self.attributes['glasses'] = '3d glasses'
 
     def cigarret(self):
-        self.draw('cigarette.dt3')
+        self.draw('templates/cigarette.csv')
         self.attributes['cigarret'] = 'cigarette'
 
     def get_canvas(self):
