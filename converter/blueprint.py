@@ -1,4 +1,3 @@
-import parser
 import numpy as np
 import os
 import random
@@ -72,7 +71,9 @@ _pug_bp = {
 }
 
 class Pug(Character):
-
+    """
+    Register pug's blueprints.
+    """
     def register(self):
         self._bps['color_eye_right'] = _pug_bp['color_eye_right']  
         self._bps['color_eye_left'] = _pug_bp['color_eye_left']  
@@ -92,15 +93,25 @@ _androidpug_bp = {
 }
 
 class AndroidPug(Character):
-
+    """
+    Register AndroidPug's blueprints.
+    """
     def register(self):
         self._bps['face'] = _androidpug_bp['face']
         self._bps['shape_mouth'] = _pug_bp['shape_mouth']
         self._bps['shape_eye'] = _pug_bp['shape_eye']
         
 
-class AnonyPug(Pug):
+_anonypug_bp_dir = _bp_dir + 'types/anonypug/'
+_anonypug_bp = {
+    'face': _androidpug_bp_dir + 'anonypug.csv'
+}
 
+class AnonyPug(Pug):
+    """
+    Register AnonyPug's blueprints.
+    """
     def register(self):
-        self._bps['face'] = _androidpug_bp['face']
+        super().register()
+        self._bps['face'] = _anonypug_bp['face']
 

@@ -22,6 +22,10 @@ class TestPugMethods(unittest.TestCase):
     def test_csv(self):
         print(bp.eyes())
 
+    def test_anonypug(self):
+        p = bp.AnonyPug()
+
+
 
 if __name__ == '__main__':
     unittest.main()
