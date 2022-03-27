@@ -7,9 +7,9 @@ height = 24
 width = 24
 
 # generate image
-#p = Pug()
+#p = blueprint.Pug()
 p = blueprint.AndroidPug()
-p.add_blueprint('glasses', blueprint.glasses())
+p.add_attribute('eyes')
 canvas = painter.draw(width, height, p.blueprints, painter.PARETTO)
 
 interpolation = cv.INTER_AREA

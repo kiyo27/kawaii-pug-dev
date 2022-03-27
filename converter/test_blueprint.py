@@ -1,17 +1,26 @@
 import unittest
-from blueprint import Pug, AndroidPug
+import blueprint as bp
 
 class TestPugMethods(unittest.TestCase):
     def test_pug(self):
-        p = Pug()
+        p = bp.Pug()
         self.assertEqual(
-            'blueprints/types/pug/shape/shape.csv',
-            p.blueprints['shape']
+            'blueprints/types/pug/shape_shape.csv',
+            p.blueprints['shape_shape']
         )
 
     def test_androidpug(self):
-        p = AndroidPug()
-        print(p.blueprints)
+        p = bp.AndroidPug()
+        #print(p.blueprints)
+
+    def test_reflection(self):
+        p = bp.Pug()
+        p.add_attribute('eyes')
+        p.blueprints['eyes']
+        self.assertRaises(KeyError, p.add_attribute, 'keyerror')
+
+    def test_csv(self):
+        print(bp.eyes())
 
 
 if __name__ == '__main__':
