@@ -1,15 +1,16 @@
 import cv2 as cv
 from PIL import Image
-from pug import Pug
+import blueprint
+import painter
 
 height = 24
 width = 24
 
 # generate image
-p = Pug(width, height)
-p.glasses()
-p.cigarret()
-canvas = p.get_canvas()
+#p = Pug()
+p = blueprint.AndroidPug()
+p.add_blueprint('glasses', blueprint.glasses())
+canvas = painter.draw(width, height, p.blueprints, painter.PARETTO)
 
 interpolation = cv.INTER_AREA
 canvas = cv.resize(canvas, None, 0, 10,10,interpolation)
