@@ -4,27 +4,16 @@ import blueprint as bp
 class TestPugMethods(unittest.TestCase):
     def test_pug(self):
         p = bp.Pug()
-        self.assertEqual(
-            'blueprints/types/pug/shape_shape.csv',
-            p.blueprints['shape_shape']
-        )
+        print(p.blueprints)
 
     def test_androidpug(self):
-        p = bp.AndroidPug()
-        #print(p.blueprints)
+        ap = bp.AndroidPug()
+        print(ap.blueprints)
 
-    def test_reflection(self):
-        p = bp.Pug()
-        p.add_attribute('eyes')
-        p.blueprints['eyes']
-        self.assertRaises(KeyError, p.add_attribute, 'keyerror')
-
-    def test_csv(self):
-        print(bp.eyes())
 
     def test_anonypug(self):
-        p = bp.AnonyPug()
-
+        ap = bp.AnonyPug()
+        self.assertIsInstance(ap, bp.AnonyPug)
 
 
 if __name__ == '__main__':

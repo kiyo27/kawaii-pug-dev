@@ -39,85 +39,93 @@ def head(name=None):
     return choice(blueprint_dir)
 
 
+_types = [
+    'color',
+    'shape',
+]
+
+class BlueprintManager:
+    def __init__(self):
+        self.bps = []
+        self.attributes = {'shape':{},'color':{}}
+
+    def register(self, base_dir, **kwargs):
+        bp_dir = 'blueprints/' +  base_dir + '/'
+
+        def add(attr, category, value):
+            self.attributes[attr][category] = value
+            self.bps.append(
+                bp_dir + attr + '/' + category + '/' + value + '.csv'
+            )
+
+        for attr in _types:
+            if attr in kwargs:
+                for category, value in kwargs[attr].items():
+                    add(attr, category, value)
+
+
 class Character(metaclass=ABCMeta):
     
     def __init__(self):
-        self._bps = {}
-        self._attributes = {}
+        self.shape = {}
+        self.color = {}
+        self._manager = BlueprintManager()
+        self.shuffle()
         self.register()
 
     @property
     def blueprints(self):
-        return self._bps
+        return self._manager.bps
     
     @property
     def attributes(self):
-        return self._attributes
+        return self._manager.attributes
 
     @abstractmethod
-    def register(self):
+    def shuffle(self):
         pass
+
+    def register(self):
+        self._manager.register(
+            'types',
+            shape=self.shape,
+            color=self.color
+        )
 
     def add_attribute(self, category, name=None):
         self._bps[category] = globals()[category]()
 
 
-_pug_bp_dir = _bp_base_dir + 'types/pug/'
-_pug_bp = {
-    'color_eye_right': _pug_bp_dir + 'color_eye_right.csv',
-    'color_eye_left': _pug_bp_dir + 'color_eye_left.csv',
-    'color_ear_right': _pug_bp_dir + 'color_ear_right.csv',
-    'color_ear_left': _pug_bp_dir + 'color_ear_left.csv',
-    'color_mouth': _pug_bp_dir + 'color_mouth.csv',
-    'color_face': _pug_bp_dir + 'color_face.csv',
-    'color_body': _pug_bp_dir + 'color_body.csv',
-    'shape_shape': _pug_bp_dir + 'shape_shape.csv',
-    'shape_eye': _pug_bp_dir + 'shape_eye.csv',
-    'shape_mouth': _pug_bp_dir + 'shape_mouth.csv'
-}
-
 class Pug(Character):
     """
     Register pug's blueprints.
+
     """
-    def register(self):
-        self._bps['color_eye_right'] = _pug_bp['color_eye_right']  
-        self._bps['color_eye_left'] = _pug_bp['color_eye_left']  
-        self._bps['color_ear_right'] = _pug_bp['color_ear_right']  
-        self._bps['color_ear_left'] = _pug_bp['color_ear_left']  
-        self._bps['color_mouth'] = _pug_bp['color_mouth']  
-        self._bps['color_face'] = _pug_bp['color_face']  
-        self._bps['color_body'] = _pug_bp['color_body']  
-        self._bps['shape_shape'] = _pug_bp['shape_shape']  
-        self._bps['shape_eye'] = _pug_bp['shape_eye']  
-        self._bps['shape_mouth'] = _pug_bp['shape_mouth']  
+    def shuffle(self):
+        """
+        毛の色にバリエーションを持たせる
+        """
+        self.shape = {
+          'edge':'basic',
+          'eyes':'basic',
+          'mouth': 'basic'
+        }
+        self.color = { 'base': 'basic' }
 
-
-_androidpug_bp_dir = _bp_base_dir + 'types/androidpug/'
-_androidpug_bp = {
-    'face': _androidpug_bp_dir + 'androidpug.csv'
-}
 
 class AndroidPug(Character):
     """
     Register AndroidPug's blueprints.
     """
-    def register(self):
-        self._bps['face'] = _androidpug_bp['face']
-        self._bps['shape_mouth'] = _pug_bp['shape_mouth']
-        self._bps['shape_eye'] = _pug_bp['shape_eye']
-        
+    def shuffle(self):
+        self.shape = { 'edge':'basic', 'eyes': 'basic' }
+        self.color = { 'base': 'androidpug' }
 
-_anonypug_bp_dir = _bp_base_dir + 'types/anonypug/'
-_anonypug_bp = {
-    'face': _androidpug_bp_dir + 'anonypug.csv'
-}
 
 class AnonyPug(Pug):
     """
     Register AnonyPug's blueprints.
     """
-    def register(self):
-        super().register()
-        self._bps['face'] = _anonypug_bp['face']
-
+    def __init__(self):
+        pass
+    

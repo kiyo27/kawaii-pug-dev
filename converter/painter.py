@@ -30,7 +30,7 @@ def draw(width, height, blueprints, paretto):
     canvas = np.zeros((height, width, 3))
     canvas += (144, 128, 112)
 
-    for blueprint in blueprints.values():
+    for blueprint in blueprints:
         f = parser.parse(blueprint)
 
         for i in range(height):
