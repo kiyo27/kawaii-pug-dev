@@ -39,29 +39,48 @@ def head(name=None):
     return choice(blueprint_dir)
 
 
-_types = [
+_component = [
     'color',
     'shape',
 ]
 
+_attribute_list = [
+    'face',
+    'head',
+    'mouth'
+]
+
+
 class BlueprintManager:
     def __init__(self):
         self.bps = []
-        self.attributes = {'shape':{},'color':{}}
+        self.component = {'shape':{},'color':{}}
+        self.attributes = {k:{} for k in _attribute_list}
 
-    def register(self, base_dir, **kwargs):
-        bp_dir = 'blueprints/' +  base_dir + '/'
+    def register_base(self, category, **kwargs):
+        self.register(_component, category, **kwargs)        
 
-        def add(attr, category, value):
-            self.attributes[attr][category] = value
+    def register_attribute(self, category, **kwargs):
+        self.register(_attribute_list, category, **kwargs)        
+
+    def register(self, l, category, **kwargs):
+
+        def append(category, elem, key, name):
+            bp_dir = 'blueprints/' +  category + '/' + key
             self.bps.append(
-                bp_dir + attr + '/' + category + '/' + value + '.csv'
+                bp_dir + '/' + name + '.csv'
             )
 
-        for attr in _types:
-            if attr in kwargs:
-                for category, value in kwargs[attr].items():
-                    add(attr, category, value)
+            if category == 'base':
+                self.component[elem][key] = name
+
+            if category == 'attribute':
+                self.attributes[elem][key] = name
+
+        for elem in l:
+            if elem in kwargs:
+                for key, name in kwargs[elem].items():
+                    append(category, elem, key, name)
 
 
 class Character(metaclass=ABCMeta):
@@ -86,14 +105,15 @@ class Character(metaclass=ABCMeta):
         pass
 
     def register(self):
-        self._manager.register(
-            'types',
+        self._manager.register_base(
+            'base',
             shape=self.shape,
             color=self.color
         )
 
     def add_attribute(self, category, name=None):
-        self._bps[category] = globals()[category]()
+        x = globals()[category]()
+        self._manager.register(**x)
 
 
 class Pug(Character):
@@ -127,5 +147,5 @@ class AnonyPug(Pug):
     Register AnonyPug's blueprints.
     """
     def __init__(self):
-        pass
+        super().__init__()
     

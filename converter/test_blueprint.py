@@ -4,11 +4,10 @@ import blueprint as bp
 class TestPugMethods(unittest.TestCase):
     def test_pug(self):
         p = bp.Pug()
-        print(p.blueprints)
 
     def test_androidpug(self):
         ap = bp.AndroidPug()
-        print(ap.blueprints)
+        print(ap.attributes)
 
 
     def test_anonypug(self):
