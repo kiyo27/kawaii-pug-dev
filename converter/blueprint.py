@@ -4,7 +4,7 @@ import random
 from abc import ABCMeta, abstractmethod
 
 
-_bp_dir = 'blueprints/'
+_bp_base_dir = 'blueprints/'
 
 def scan(path):
     target = []
@@ -14,23 +14,29 @@ def scan(path):
                 target.append(d.name)
     return target 
 
+def choice(path, name=None):
+    if name is not None:
+        return path + name + '.csv' 
+
+    target = scan(path)
+    r = random.randrange(0, len(target))    
+    return path + target[r]
+    
 def eyes(name=None):
-    blueprint_dir = _bp_dir + 'attributes/eyes/'
-    if name is None:
-        target = scan(blueprint_dir)
-        r = random.randrange(0, len(target))    
-        return blueprint_dir + target[r]
-    else:
-        return blueprint_dir + name + '.csv' 
+    blueprint_dir = _bp_base_dir + 'attributes/eyes/'
+    return choice(blueprint_dir)
 
-def mouth():
-    pass
+def mouth(name=None):
+    bp_dir = _bp_base_dir + 'attributes/mouth/'
+    return choice(bp_dir)
 
-def face():
-    pass
+def face(name=None):
+    bp_dir = _bp_base_dir + 'attributes/face/'
+    return choice(bp_dir)
 
-def head():
-    pass
+def head(name=None):
+    bp_dir = _bp_base_dir + 'attributes/face/'
+    return choice(blueprint_dir)
 
 
 class Character(metaclass=ABCMeta):
@@ -56,7 +62,7 @@ class Character(metaclass=ABCMeta):
         self._bps[category] = globals()[category]()
 
 
-_pug_bp_dir = _bp_dir + 'types/pug/'
+_pug_bp_dir = _bp_base_dir + 'types/pug/'
 _pug_bp = {
     'color_eye_right': _pug_bp_dir + 'color_eye_right.csv',
     'color_eye_left': _pug_bp_dir + 'color_eye_left.csv',
@@ -87,7 +93,7 @@ class Pug(Character):
         self._bps['shape_mouth'] = _pug_bp['shape_mouth']  
 
 
-_androidpug_bp_dir = _bp_dir + 'types/androidpug/'
+_androidpug_bp_dir = _bp_base_dir + 'types/androidpug/'
 _androidpug_bp = {
     'face': _androidpug_bp_dir + 'androidpug.csv'
 }
@@ -102,7 +108,7 @@ class AndroidPug(Character):
         self._bps['shape_eye'] = _pug_bp['shape_eye']
         
 
-_anonypug_bp_dir = _bp_dir + 'types/anonypug/'
+_anonypug_bp_dir = _bp_base_dir + 'types/anonypug/'
 _anonypug_bp = {
     'face': _androidpug_bp_dir + 'anonypug.csv'
 }
