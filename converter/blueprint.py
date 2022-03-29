@@ -53,22 +53,25 @@ _attribute_list = [
 
 class BlueprintManager:
     def __init__(self):
+        self.bp_dir = 'blueprints/'
         self.bps = []
         self.component = {'shape':{},'color':{}}
-        self.attributes = {k:{} for k in _attribute_list}
+        self._bps = {'shape': {}, 'color': {}, 'attributes': {}}
 
     def register_base(self, category, **kwargs):
         self.register(_component, category, **kwargs)        
 
-    def register_attribute(self, category, **kwargs):
-        self.register(_attribute_list, category, **kwargs)        
+    def register_attribute(self, category, element, path):
+        target_path = self.bp_dir + '/' + path + '.csv'
+        self._bps[category][element] = target_path
+        print(self._bps)
 
     def register(self, l, category, **kwargs):
 
         def append(category, elem, key, name):
-            bp_dir = 'blueprints/' +  category + '/' + key
+            target_dir = self.bp_dir +  category + '/' + key
             self.bps.append(
-                bp_dir + '/' + name + '.csv'
+                target_dir + name + '.csv'
             )
 
             if category == 'base':
@@ -89,6 +92,8 @@ class Character(metaclass=ABCMeta):
         self.shape = {}
         self.color = {}
         self._manager = BlueprintManager()
+        self.attributes = AttributeManager(self._manager)
+
         self.shuffle()
         self.register()
 
@@ -148,4 +153,97 @@ class AnonyPug(Pug):
     """
     def __init__(self):
         super().__init__()
+
+
+class Attribute(metaclass=ABCMeta):
     
+    @property
+    @abstractmethod
+    def part(self):
+        pass
+
+    @property
+    @abstractmethod
+    def group(self):
+        pass
+
+    @property
+    @abstractmethod
+    def name(self):
+        pass
+
+    @property
+    def path(self):
+        return f"attributes/{self.part}/{self.group}/{self.name}"
+
+
+class Face(Attribute):
+    def __init__(self, **kwargs):
+        """口に属性を追加する"""
+        self._group = None
+        self._name = None
+        self.register(**kwargs)
+
+    @property
+    def part(self):
+        return 'face' 
+
+    @property
+    def group(self):
+        return self._group
+
+    @property
+    def name(self):
+        return self._name
+
+    def shuffle(self):
+        """シャッフルする"""
+        self.register()
+
+    def register(self, **kwargs):
+        """属性の追加"""
+        if 'face' in kwargs:
+          self._group = kwargs['face']['group']
+          self._name = kwargs['face']['name']
+        else:
+          # ランダムに選択する
+          self.facemask()
+
+    def facemask(self):
+        """フェイスマスクの属性を登録する"""
+        self._group = "facemask"
+        # ランダムに選択する
+        self._name = "anonymous"
+
+    def cigarette(self):
+        """属性にタバコを追加する"""
+        pass
+
+
+class AttributeManager:
+    def __init__(self, blueprint_manager,  **kwargs):
+        self.category = 'attributes'
+        self._manager = blueprint_manager
+
+        self.list = []
+        self.create(**kwargs)
+        #self.register_blueprint()
+
+    def create(self, **kwargs):
+        """各部位の属性を生成する"""
+        self.list.append(Face(**kwargs))
+
+    def recreate(self):
+        """各部位の属性を再生成する"""
+        self.create()
+        self.register_blueprint()
+
+    def register_blueprint(self):
+        for attr in self.list:
+            if attr.path is not None:
+                self._manager.register_attribute(
+                    self.category, attr.part, attr.path
+                )
+
+
+
