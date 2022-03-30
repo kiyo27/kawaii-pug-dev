@@ -113,10 +113,18 @@ class PugShape(Shape):
         self._edge = self.base_dir + 'edge/basic.csv'
         
     def makeEyes(self, **kwargs):
-        self._eyes = self.base_dir + 'eyes/basic.csv'
+        bp_dir = self.base_dir + 'eyes/'
+        if 'eyes' in kwargs:
+            self._eyes = bp_dir + kwargs['eyes'] + '.csv'
+        else:
+            self._eyes = bp_dir + 'basic.csv'
         
     def makeMouth(self, **kwargs):
-        self._mouth = self.base_dir + 'mouth/basic.csv'
+        bp_dir = self.base_dir + 'mouth/'
+        if 'mouth' in kwargs:
+            self._mouth = bp_dir + kwargs['mouth'] + '.csv'
+        else:
+            self._mouth = bp_dir + 'basic.csv'
 
 
 class Color(metaclass=ABCMeta):
@@ -229,4 +237,12 @@ class AnonyPug(Pug):
     def makeAttributes(self, **kwargs):        
         kwargs['face'] = 'anonymous'
         self._attr = Attributes(self, **kwargs)
+
+
+class SleepingPug(Pug):
+    """Register pug's blueprints."""
+    def makeShape(self, **kwargs):        
+        kwargs['eyes'] = 'sleeping'
+        kwargs['mouth'] = 'sleeping'
+        self._shape = PugShape(**kwargs)
 

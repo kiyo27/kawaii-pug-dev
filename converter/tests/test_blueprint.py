@@ -13,3 +13,10 @@ class TestPugMethods(unittest.TestCase):
         d = {'attributes':{'mouth':'cigarette'}}
         p.create(**d)
         self.assertEqual(p.attributes.mouth, 'cigarette')
+        
+    def test_sleepingpug(self):
+        p = bp.Character.get_factory('SleepingPug')
+        d = {}
+        p.create(**d)
+        print(p.shape.eyes)
+
