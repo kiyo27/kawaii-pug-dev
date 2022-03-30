@@ -9,24 +9,6 @@ class Attributes:
     def __init__(self, **kwargs):
         pass
 
-    def face(self):
-        pass
-
-    def head(self):
-        pass
-
-    def neck(self):
-        pass
-
-    def mouth(self):
-        pass
-
-    def eyes(self):
-        pass
-
-    def ears(self):
-        pass
-
 
 class Shape(metaclass=ABCMeta):
     @property
@@ -44,11 +26,13 @@ class Shape(metaclass=ABCMeta):
     def mouth(self):
         pass
 
+
 class PugShape(Shape):
     def __init__(self, **kwargs):
-        self._edge = 'basic.csv'
-        self._eyes = 'basic.csv'
-        self._mouth = 'basic.csv'
+        bp_base_dir = 'blueprints/base/shape/'
+        self._edge = bp_base_dir + 'edge/basic.csv'
+        self._eyes = bp_base_dir + 'eyes/basic.csv'
+        self._mouth = bp_base_dir + 'mouth/basic.csv'
 
     @property
     def edge(self):
@@ -81,7 +65,8 @@ class Color(metaclass=ABCMeta):
 
 class PugColor(Color):
     def __init__(self, **kwargs):
-        self._base = 'basic.csv'
+        bp_base_dir = 'blueprints/base/color/'
+        self._base = bp_base_dir + 'base/basic.csv'
         self._eyes = None
         self._ears = None
 
@@ -96,6 +81,32 @@ class PugColor(Color):
     @property
     def ears(self):
         return self._ears
+
+
+class Factory(metaclass=ABCMeta):
+    @abstractmethod
+    def createShape(self, **kwargs):
+        pass
+
+    @abstractmethod
+    def createColor(self, **kwargs):
+        pass
+
+    @abstractmethod
+    def createAttributes(self, **kwargs):
+        pass
+
+
+class PugFactory(Factory):
+    
+    def createShape(self, **kwargs):
+        return PugShape(**kwargs)
+
+    def createColor(self, **kwargs):
+        return PugColor(**kwargs)
+
+    def createAttributes(self, **kwargs):
+        return Attributes(**kwargs)
 
 
 class Character(metaclass=ABCMeta):
@@ -114,13 +125,15 @@ class Character(metaclass=ABCMeta):
     def attributes(self):
         pass
 
+
 class Pug(Character):
     """Register pug's blueprints."""
 
     def __init__(self, **kwargs):
-        self._shape = PugShape()
-        self._color = PugColor()
-        self._attr = Attributes()
+        factory = PugFactory()
+        self._shape = factory.createShape(**kwargs)
+        self._color = factory.createColor(**kwargs)
+        self._attr = factory.createAttributes(**kwargs)
 
     @property
     def shape(self):
