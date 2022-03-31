@@ -19,6 +19,10 @@ class Attributes:
         return self._head
 
     @property
+    def neck(self):
+        return self._neck
+
+    @property
     def mouth(self):
         return self._mouth
 
@@ -26,44 +30,77 @@ class Attributes:
     def eyes(self):
         return self._eyes
 
-    @property
-    def ears(self):
-        return self._ears
-
     def make(self, **kwargs):
         self.makeFace(**kwargs)
         self.makeHead(**kwargs)
         self.makeNeck(**kwargs)
         self.makeMouth(**kwargs)
         self.makeEyes(**kwargs)
-        self.makeEars(**kwargs)
+
+    def choice(self, path):
+        target = []
+        with os.scandir(path) as it:
+            for d in it:
+                if d.name.endswith('.csv') and d.is_file():
+                    target.append(d.name)
+        return path + random.choice(target) 
 
     def makeFace(self, **kwargs):
+        bp_dir = self.base_dir + 'face/'
         if 'face' in kwargs:
             self._face = kwargs['face']
         else:
-            self._face = None
+            r = random.randrange(0, 9)
+            if r <= 7:
+                self._face = None
+            else:
+                self._face = self.choice(bp_dir) 
 
     def makeHead(self, **kwargs):
-        self._head = None
+        bp_dir = self.base_dir + 'head/'
+        if 'head' in kwargs:
+            self._head = kwargs['head']
+        else:
+            r = random.randrange(0, 9)
+            if r <= 7:
+                self._head = None
+            else:
+                self._head = self.choice(bp_dir) 
 
     def makeNeck(self, **kwargs):
-        self._neck = None
+        bp_dir = self.base_dir + 'neck/'
+        if 'neck' in kwargs:
+            self._neck = kwargs['neck']
+        else:
+            r = random.randrange(0, 9)
+            if r <= 7:
+                self._neck = None
+            else:
+                self._neck = self.choice(bp_dir) 
 
     def makeMouth(self, **kwargs):
+        bp_dir = self.base_dir + 'mouth/'
         if 'mouth' in kwargs:
             self._mouth = kwargs['mouth']
         else:
-            self._mouth = None
+            r = random.randrange(0, 9)
+            if r <= 7:
+                self._mouth = None
+            else:
+                self._mouth = self.choice(bp_dir) 
 
     def makeEyes(self, **kwargs):
+        bp_dir = self.base_dir + 'eyes/'
         if self.face is not None:
             self._eyes = None
-
-        self._eyes = None
-
-    def makeEars(self, **kwargs):
-        self._ears = None
+        elif 'eyes' in kwargs:
+            self._eyes = kwargs['eyes']
+        else:
+            r = random.randrange(0, 9)
+            if r <= 7:
+                self._eyes = None
+            else:
+                self._eyes = self.choice(bp_dir) 
 
 
 class Shape(metaclass=ABCMeta):
@@ -233,14 +270,14 @@ class Pug(Character):
 
 
 class AnonyPug(Pug):
-    """Register pug's blueprints."""
+    """Register anonypug's blueprints."""
     def makeAttributes(self, **kwargs):        
         kwargs['face'] = 'anonymous'
         self._attr = Attributes(self, **kwargs)
 
 
 class SleepingPug(Pug):
-    """Register pug's blueprints."""
+    """Register sleeping-pug's blueprints."""
     def makeShape(self, **kwargs):        
         kwargs['eyes'] = 'sleeping'
         kwargs['mouth'] = 'sleeping'

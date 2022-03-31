@@ -2,6 +2,9 @@ import numpy as np
 import parser
 
 _paretto = {
+    232: (32, 165, 218),
+    233: (0, 252, 124),
+    234: (0, 255, 255),
     235: (113, 179, 60),
     236: (225, 105, 65),
     237: (221, 160, 221),
@@ -57,5 +60,9 @@ class Painter:
         self.draw(c.color.ears)
 
     def drawAttributes(self, c):
-        pass
+        self.draw(c.attributes.face)
+        self.draw(c.attributes.head)
+        self.draw(c.attributes.neck)
+        self.draw(c.attributes.mouth)
+        self.draw(c.attributes.eyes)
 

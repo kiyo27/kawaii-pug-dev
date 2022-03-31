@@ -6,6 +6,7 @@ class TestPugMethods(unittest.TestCase):
         p = bp.Character.get_factory('Pug')
         d = {}
         p.create(**d)
+        print(p.attributes.face)
         self.assertEqual(p.attributes.mouth, None)
 
     def test_anonypug(self):
