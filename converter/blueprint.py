@@ -26,6 +26,14 @@ class Attributes:
     def mouth(self):
         return self._mouth
 
+    def __eq__(self, other):
+        if (self.face == other.face
+              and self.head == other.head
+              and self.neck == other.neck
+              and self.mouth == other.mouth):
+            return True
+        return False
+
     @property
     def eyes(self):
         return self._eyes
@@ -123,6 +131,13 @@ class Shape(metaclass=ABCMeta):
     def make(self, **kwargs):
         pass
 
+    def __eq__(self, other):
+        if (self.edge == other.edge
+              and self.eyes == other.eyes
+              and self.mouth == other.mouth):
+            return True
+        return False
+
 
 class PugShape(Shape):
     def __init__(self, **kwargs):
@@ -185,6 +200,13 @@ class Color(metaclass=ABCMeta):
     def make(self, **kwargs):
         pass
 
+    def __eq__(self, other):
+        if (self.base == other.base
+              and self.eyes == other.eyes
+              and self.ears == other.ears):
+            return True
+        return False
+
 
 class PugColor(Color):
     def __init__(self, **kwargs):
@@ -234,6 +256,13 @@ class Character(metaclass=ABCMeta):
     @abstractmethod
     def create(self, **kwargs):
         pass
+
+    def __eq__(self, other):
+        if (self.shape == other.shape
+            and self.color == other.color
+            and self.attributes == other.attributes):
+            return True
+        return False
 
 
 class Pug(Character):
