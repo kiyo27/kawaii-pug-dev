@@ -10,6 +10,14 @@ class Attributes:
         self._obj = obj
         self.make(**kwargs)
 
+    def __eq__(self, other):
+        if (self.face == other.face
+              and self.head == other.head
+              and self.neck == other.neck
+              and self.mouth == other.mouth):
+            return True
+        return False
+
     @property
     def face(self):
         return self._face
@@ -25,14 +33,6 @@ class Attributes:
     @property
     def mouth(self):
         return self._mouth
-
-    def __eq__(self, other):
-        if (self.face == other.face
-              and self.head == other.head
-              and self.neck == other.neck
-              and self.mouth == other.mouth):
-            return True
-        return False
 
     @property
     def eyes(self):
