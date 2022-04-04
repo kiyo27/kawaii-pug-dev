@@ -25,3 +25,10 @@ class TestPugMethods(unittest.TestCase):
         ap = bp.Character.get_factory('AnonyPug')
         ap.create()
         self.assertIsNot(p, ap)
+
+    def test_kwargs(self):
+        p1 = bp.Character.get_factory('AnonyPug')
+        p1.create()
+        p2 = bp.Character.get_factory('AnonyPug')
+        p2.create()
+        print(p1 == p2)

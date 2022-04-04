@@ -3,7 +3,8 @@ from PIL import Image
 import random
 import csv
 import os
-import blueprint as bp
+import abstract
+import pug
 import canvas
 
 height = 24
@@ -52,41 +53,44 @@ def get_filename_without_ext(path):
 
 
 created = []
-total = 100
+total = 50
 count = 0
 # generate image
 header()
 while count < total:
-    l = ['Pug', 'SleepingPug']
-    c = random.choice(l)
-    p = bp.Character.get_factory(c)
+    types = ['Pug', 'SleepingPug']
+    c = random.choice(types)
+    p = abstract.Character.get_factory(c, 'pug')
     p.create()
     # compare to alredy created character instances.
     if not created:
-        print('instance created first time.')
         created.append(p) 
         write(p)
         count += 1
         continue
 
     new = []
-    for _, ins in enumerate(created):
-        if p != ins:  
-            created.append(ins)
+    l = len(created)
+    for i, ins in enumerate(created):
+        if p == ins:
+            break
+
+        if i == l - 1:
+            created.append(p)
             write(p)
             count += 1
             break
 
 
-painter = canvas.Painter(width, height)
-painter.drawColor(p)
-painter.drawShape(p)
-painter.drawAttributes(p)
-
-interpolation = cv.INTER_AREA
-canvas = cv.resize(painter.canvas, None, 0, 10,10,interpolation)
-cv.imwrite('output.png', canvas)
-
-img = Image.open('output.png')
-img.show()
+#painter = canvas.Painter(width, height)
+#painter.drawColor(p)
+#painter.drawShape(p)
+#painter.drawAttributes(p)
 #
+#interpolation = cv.INTER_AREA
+#canvas = cv.resize(painter.canvas, None, 0, 10,10,interpolation)
+#cv.imwrite('output.png', canvas)
+#
+#img = Image.open('output.png')
+#img.show()
+

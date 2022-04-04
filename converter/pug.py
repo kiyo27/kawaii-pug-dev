@@ -1,7 +1,7 @@
 import numpy as np
 import os
 import random
-from abc import ABCMeta, abstractmethod
+import abstract
 
 
 class Attributes:
@@ -111,35 +111,7 @@ class Attributes:
                 self._eyes = self.choice(bp_dir) 
 
 
-class Shape(metaclass=ABCMeta):
-    @property
-    @abstractmethod
-    def edge(self):
-        pass
-
-    @property
-    @abstractmethod
-    def eyes(self):
-        pass
-
-    @property
-    @abstractmethod
-    def mouth(self):
-        pass
-
-    @abstractmethod
-    def make(self, **kwargs):
-        pass
-
-    def __eq__(self, other):
-        if (self.edge == other.edge
-              and self.eyes == other.eyes
-              and self.mouth == other.mouth):
-            return True
-        return False
-
-
-class PugShape(Shape):
+class Shape(abstract.Shape):
     def __init__(self, **kwargs):
         self.base_dir = 'blueprints/base/shape/'
         self.make(**kwargs)
@@ -162,7 +134,11 @@ class PugShape(Shape):
         self.makeMouth(**kwargs)
 
     def makeEdge(self, **kwargs):
-        self._edge = self.base_dir + 'edge/basic.csv'
+        bp_dir = self.base_dir + 'edge/'
+        if 'edge' in kwargs:
+            self._edge = bp_dir + kwargs['edge'] + '.csv'
+        else:
+            self._edge = bp_dir + 'basic.csv'
         
     def makeEyes(self, **kwargs):
         bp_dir = self.base_dir + 'eyes/'
@@ -179,36 +155,7 @@ class PugShape(Shape):
             self._mouth = bp_dir + 'basic.csv'
 
 
-class Color(metaclass=ABCMeta):
-
-    @property
-    @abstractmethod
-    def base(self):
-        pass
-
-    @property
-    @abstractmethod
-    def eyes(self):
-        pass
-
-    @property
-    @abstractmethod
-    def ears(self):
-        pass
-
-    @abstractmethod
-    def make(self, **kwargs):
-        pass
-
-    def __eq__(self, other):
-        if (self.base == other.base
-              and self.eyes == other.eyes
-              and self.ears == other.ears):
-            return True
-        return False
-
-
-class PugColor(Color):
+class Color(abstract.Color):
     def __init__(self, **kwargs):
         self.base_dir = 'blueprints/base/color/'
         self.make(**kwargs)
@@ -231,41 +178,7 @@ class PugColor(Color):
         self._ears = None
 
 
-class Character(metaclass=ABCMeta):
-    @classmethod
-    def get_factory(cls, classname):
-        mod = __import__(__name__)
-        factory = getattr(mod, classname)
-        return factory()
-
-    @property
-    @abstractmethod
-    def shape(self):
-        pass
-
-    @property
-    @abstractmethod
-    def color(self):
-        pass
-
-    @property
-    @abstractmethod
-    def attributes(self):
-        pass
-
-    @abstractmethod
-    def create(self, **kwargs):
-        pass
-
-    def __eq__(self, other):
-        if (self.shape == other.shape
-            and self.color == other.color
-            and self.attributes == other.attributes):
-            return True
-        return False
-
-
-class Pug(Character):
+class Pug(abstract.Character):
     """Register pug's blueprints."""
     @property
     def shape(self):
@@ -289,10 +202,10 @@ class Pug(Character):
         self.makeAttributes(**kwargs['attributes'])
 
     def makeShape(self,**kwargs):
-        self._shape = PugShape(**kwargs)
+        self._shape = Shape(**kwargs)
         
     def makeColor(self,**kwargs):
-        self._color = PugColor(**kwargs)
+        self._color = Color(**kwargs)
 
     def makeAttributes(self,**kwargs):
         self._attr = Attributes(self, **kwargs)
@@ -310,5 +223,5 @@ class SleepingPug(Pug):
     def makeShape(self, **kwargs):        
         kwargs['eyes'] = 'sleeping'
         kwargs['mouth'] = 'sleeping'
-        self._shape = PugShape(**kwargs)
+        self._shape = Shape(**kwargs)
 
