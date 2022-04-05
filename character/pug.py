@@ -1,12 +1,12 @@
 import numpy as np
 import os
 import random
-import abstract
+from  pixart import abstract
 
 
 class Attributes:
     def __init__(self, obj, **kwargs):
-        self.base_dir = 'blueprints/attributes/'
+        self.base_dir = 'character/blueprints/attributes/'
         self._obj = obj
         self.make(**kwargs)
 

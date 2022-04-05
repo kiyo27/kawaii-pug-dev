@@ -95,7 +95,7 @@ class Character(metaclass=ABCMeta):
         return False
 
     @classmethod
-    def get_factory(cls, classname, modname):
+    def get_factory(cls, modname, classname):
         mod = __import__(modname)
         factory = getattr(mod, classname)
         return factory()

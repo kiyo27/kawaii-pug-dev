@@ -1,5 +1,5 @@
 import numpy as np
-import parser
+import pixart.parser
 
 _paretto = {
     232: (32, 165, 218),
