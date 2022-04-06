@@ -6,21 +6,18 @@ from  pixart import abstract
 
 class Multiple:
 
-    def __init__(self, types=None, total=None):
-          self.total = 50
+    def __init__(self):
           self.created = []
 
-    def create(self):
+    def create(self, types, mod, total=50):
         self. _header()
-
         count = 0
 
-        while count < self.total:
-            types = ['Pug', 'SleepingPug']
+        while count < total:
             c = random.choice(types)
-            p = abstract.Character.get_factory('character', c)
+            p = abstract.Character.get_factory(mod, c)
             p.create()
-            # compare to alredy created character instances.
+
             if not self.created:
                 self.created.append(p) 
                 self._write(p)

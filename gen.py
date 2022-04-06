@@ -4,7 +4,7 @@ from pixart import canvas, parser
 from pixart.helper import factory
 
 f = factory.Multiple()
-f.create()
+f.create(['Pug', 'SleepingPug'], 'character')
 
 height = 24
 width = 24
