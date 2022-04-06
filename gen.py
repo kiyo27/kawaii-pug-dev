@@ -5,10 +5,11 @@ from pixart.helper import factory
 
 f = factory.Multiple()
 f.create(['Pug', 'SleepingPug'], 'character')
+c = f.created[1]
+print(c.ctype)
 
 height = 24
 width = 24
-
 
 #painter = canvas.Painter(width, height)
 #painter.drawColor(p)

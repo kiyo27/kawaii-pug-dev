@@ -37,34 +37,27 @@ class Multiple:
                     break
 
     def _write(self, character):
-        l = [self._name(character.shape.edge),
-            self._name(character.shape.eyes),
-           self._name(character.shape.mouth),
-           self._name(character.color.base),
-           self._name(character.color.eyes),
-           self._name(character.color.ears),
-           self._name(character.attributes.face),
-           self._name(character.attributes.head),
-           self._name(character.attributes.neck),
-           self._name(character.attributes.mouth),
-           self._name(character.attributes.eyes)]
+        l = [character.ctype,
+            self._name(character.color.base),
+            self._name(character.attributes.face),
+            self._name(character.attributes.head),
+            self._name(character.attributes.neck),
+            self._name(character.attributes.mouth),
+            self._name(character.attributes.eyes)
+        ]
 
         with open('result.csv', 'a') as f:
             writer = csv.writer(f)
             writer.writerow(l)
 
     def _header(self):
-        l = ['shape_edge',
-            'shape_eyes',
-            'shape_mouth',
-            'color_base',
-            'color_eyes',
-            'color_ears',
+        l = ['type',
             'attributes_face',
             'attributes_head',
             'attributes_neck',
             'attributes_mouth',
-            'attributes_eyes']
+            'attributes_eyes'
+        ]
 
         with open('result.csv', 'w') as f:
             writer = csv.writer(f)
@@ -75,5 +68,4 @@ class Multiple:
             return
         return  os.path.splitext(
               os.path.basename(path))[0]
-
 

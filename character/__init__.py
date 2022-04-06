@@ -1,4 +1,4 @@
-from .pug import (
+from .types import (
     Pug,
     SleepingPug
 )
