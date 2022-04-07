@@ -116,6 +116,6 @@ class Character(metaclass=ABCMeta):
         pass
 
     @abstractmethod
-    def create(self, **kwargs):
+    def create(self, num,  **kwargs):
         pass
 

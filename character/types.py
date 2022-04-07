@@ -23,7 +23,8 @@ class Pug(abstract.Character):
     def attributes(self):
         return self._attr
 
-    def create(self, **kwargs):        
+    def create(self, num, **kwargs):        
+        self.num = num
         kwargs.setdefault('shape', {})
         kwargs.setdefault('color', {})
         kwargs.setdefault('attributes', {})

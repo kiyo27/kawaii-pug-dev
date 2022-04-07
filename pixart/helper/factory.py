@@ -16,7 +16,7 @@ class Multiple:
         while count < total:
             c = random.choice(types)
             p = abstract.Character.get_factory(mod, c)
-            p.create()
+            p.create(count+1)
 
             if not self.created:
                 self.created.append(p) 
@@ -37,27 +37,52 @@ class Multiple:
                     break
 
     def _write(self, character):
-        l = [character.ctype,
-            self._name(character.color.base),
-            self._name(character.attributes.face),
-            self._name(character.attributes.head),
-            self._name(character.attributes.neck),
-            self._name(character.attributes.mouth),
-            self._name(character.attributes.eyes)
-        ]
-
         with open('result.csv', 'a') as f:
             writer = csv.writer(f)
-            writer.writerow(l)
+            for l in self._pivot(character):
+                writer.writerow(l)
+
+    def _pivot(self, character):
+        l = []
+        l.append([
+            character.num,
+            character.ctype,
+            self._name(character.color.base),
+            self._name(character.attributes.face)
+        ])
+
+        l.append([
+            character.num,
+            character.ctype,
+            self._name(character.color.base),
+            self._name(character.attributes.head)
+        ])
+
+        l.append([
+            character.num,
+            character.ctype,
+            self._name(character.color.base),
+            self._name(character.attributes.neck)
+        ])
+    
+        l.append([
+            character.num,
+            character.ctype,
+            self._name(character.color.base),
+            self._name(character.attributes.mouth)
+        ])
+
+        l.append([
+            character.num,
+            character.ctype,
+            self._name(character.color.base),
+            self._name(character.attributes.eyes)
+        ])
+
+        return l
 
     def _header(self):
-        l = ['type',
-            'attributes_face',
-            'attributes_head',
-            'attributes_neck',
-            'attributes_mouth',
-            'attributes_eyes'
-        ]
+        l = ['#', 'type', 'color', 'attribute']
 
         with open('result.csv', 'w') as f:
             writer = csv.writer(f)
@@ -65,7 +90,7 @@ class Multiple:
 
     def _name(self, path):
         if path is None:
-            return
+            return None
         return  os.path.splitext(
               os.path.basename(path))[0]
 
