@@ -3,7 +3,7 @@ from pixart import abstract
 
 class PugShape(abstract.Shape):
     def __init__(self, **kwargs):
-        self.base_dir = 'blueprints/base/shape/'
+        self.base_dir = 'character/blueprints/base/shape/'
         self.make(**kwargs)
 
     @property

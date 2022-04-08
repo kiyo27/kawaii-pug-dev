@@ -6,20 +6,34 @@ from pixart.helper import factory
 f = factory.Multiple()
 f.create(['Pug', 'SleepingPug'], 'character')
 c = f.created[1]
-print(c.ctype)
+
+from character import types
+
+p = types.AnonyPug()
+p.create(1)
 
 height = 24
 width = 24
 
-#painter = canvas.Painter(width, height)
-#painter.drawColor(p)
-#painter.drawShape(p)
-#painter.drawAttributes(p)
+painter = canvas.Painter(width, height)
+
+painter.drawColor(p)
+painter.drawShape(p)
+painter.drawAttributes(p)
+
+interpolation = cv.INTER_AREA
+canvas = cv.resize(painter.canvas, None, 0, 10,10,interpolation)
+cv.imwrite('img/output.png', canvas)
+
+#for p in f.created:
+#    painter.drawColor(p)
+#    painter.drawShape(p)
+#    painter.drawAttributes(p)
 #
-#interpolation = cv.INTER_AREA
-#canvas = cv.resize(painter.canvas, None, 0, 10,10,interpolation)
-#cv.imwrite('output.png', canvas)
-#
-#img = Image.open('output.png')
-#img.show()
+#    interpolation = cv.INTER_AREA
+#    canvas = cv.resize(painter.canvas, None, 0, 10,10,interpolation)
+#    cv.imwrite('output.png', canvas)
+
+img = Image.open('img/output.png')
+img.show()
 

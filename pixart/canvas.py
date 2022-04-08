@@ -1,7 +1,12 @@
 import numpy as np
-import pixart.parser
+from pixart import parser
 
 _paretto = {
+    227: (0, 215, 255),
+    228: (0, 165, 255),
+    229: (0, 128, 128),
+    230: (255, 255, 0),
+    231: (128, 128, 0),
     232: (32, 165, 218),
     233: (0, 252, 124),
     234: (0, 255, 255),
@@ -38,7 +43,8 @@ class Painter:
         else:
             self.paretto = paretto
         self.canvas = np.zeros((height, width, 3))
-        self.canvas += (144, 128, 112)
+        self.background = (144, 128, 112)
+        self.canvas += self.background
 
     def draw(self, blueprint):
         if blueprint is not None:
@@ -46,7 +52,9 @@ class Painter:
 
             for i in range(self.height):
                 for j in range(self.width):
-                    if f.iloc[i][j] != 0:
+                    if f.iloc[i][j] == 1:
+                        self.canvas[i,j] = self.background
+                    elif f.iloc[i][j] != 0:
                         self.canvas[i,j] = self.paretto[f.iloc[i][j]]
       
     def drawShape(self, c):

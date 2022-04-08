@@ -55,7 +55,7 @@ class PugAttribute:
     def makeFace(self, **kwargs):
         bp_dir = self.base_dir + 'face/'
         if 'face' in kwargs:
-            self._face = kwargs['face']
+            self._face = bp_dir + kwargs['face'] + '.csv'
         else:
             r = random.randrange(0, 9)
             if r <= 7:
@@ -66,7 +66,7 @@ class PugAttribute:
     def makeHead(self, **kwargs):
         bp_dir = self.base_dir + 'head/'
         if 'head' in kwargs:
-            self._head = kwargs['head']
+            self._head = bp_dir + kwargs['head'] + '.csv'
         else:
             r = random.randrange(0, 9)
             if r <= 7:
@@ -77,7 +77,7 @@ class PugAttribute:
     def makeNeck(self, **kwargs):
         bp_dir = self.base_dir + 'neck/'
         if 'neck' in kwargs:
-            self._neck = kwargs['neck']
+            self._neck = bp_dir + kwargs['neck'] + '.csv'
         else:
             r = random.randrange(0, 9)
             if r <= 7:
@@ -88,7 +88,10 @@ class PugAttribute:
     def makeMouth(self, **kwargs):
         bp_dir = self.base_dir + 'mouth/'
         if 'mouth' in kwargs:
-            self._mouth = kwargs['mouth']
+            if kwargs['mouth'] is False:
+                self._mouth = None
+            else:
+                self._mouth = bp_dir + kwargs['mouth'] + '.csv'
         else:
             r = random.randrange(0, 9)
             if r <= 7:

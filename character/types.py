@@ -49,7 +49,8 @@ class AnonyPug(Pug):
 
     def makeAttributes(self, **kwargs):        
         kwargs['face'] = 'anonymous'
-        self._attr = Attributes(self, **kwargs)
+        kwargs['mouth'] = False
+        self._attr = PugAttribute(self, **kwargs)
 
 
 class SleepingPug(Pug):

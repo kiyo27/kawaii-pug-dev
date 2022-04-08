@@ -2,7 +2,7 @@ from pixart import abstract
 
 class PugColor(abstract.Color):
     def __init__(self, **kwargs):
-        self.base_dir = 'blueprints/base/color/'
+        self.base_dir = 'character/blueprints/base/color/'
         self.make(**kwargs)
 
     @property
