@@ -1,0 +1,37 @@
+face:
+  weight: 1
+  attribute:
+    - name: "anonymous"
+      weight: 3
+
+head: 
+  weight: 7
+  attribute:
+    - name: "beanie"
+      weight: 3
+    - name: "pilot-helmet"
+      weight: 1
+    - name: "welding-goggles"
+      weight: 5
+
+neck:
+  weight: 7
+  attribute:
+    - name: "scarf"
+      weight: 1
+
+mouth:
+  weight: 7
+  attribute:
+    - name: "cigarette"
+      weight: 1
+
+eyes:
+  weight: 7
+  attribute:
+    - name: "3d-glasses"
+      weight: 1
+    - name: "vr"
+      weight: 2
+
+

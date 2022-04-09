@@ -1,12 +1,45 @@
+import yaml
 import os
 import random
 from pixart import abstract
+
+
+def get_attr(attr_list, key):
+    n = []
+    w = []
+    for o in attr_list[key]['attribute']:
+        n.append(o['name'])
+        w.append(o['weight'])
+
+    d = {'list': {'names': n, 'weights': w}}
+    d['weight'] = attr_list[key]['weight']
+    return d 
+
+
+class AttributeYaml:
+    singleton = None
+
+    def __new__(cls, *args, **kwargs):
+        if cls.singleton == None:
+            cls.singleton = super().__new__(cls)
+
+            with open('character/attributes.yaml') as f:
+                attr_list = yaml.safe_load(f)
+
+            cls.face = get_attr(attr_list, 'face')
+            cls.head = get_attr(attr_list, 'head')
+            cls.neck = get_attr(attr_list, 'neck')
+            cls.mouth = get_attr(attr_list, 'mouth')
+            cls.eyes = get_attr(attr_list, 'eyes')
+
+        return cls.singleton
 
 
 class PugAttribute:
     def __init__(self, obj, **kwargs):
         self.base_dir = 'character/blueprints/attributes/'
         self._obj = obj
+        self.attr = AttributeYaml()
         self.make(**kwargs)
 
     def __eq__(self, other):
@@ -44,13 +77,9 @@ class PugAttribute:
         self.makeMouth(**kwargs)
         self.makeEyes(**kwargs)
 
-    def choice(self, path):
-        target = []
-        with os.scandir(path) as it:
-            for d in it:
-                if d.name.endswith('.csv') and d.is_file():
-                    target.append(d.name)
-        return path + random.choice(target) 
+    def choice(self, path, attr):
+        target = random.choices(attr['names'], weights=attr['weights'], k=1)[0]
+        return path + target + '.csv'
 
     def makeFace(self, **kwargs):
         bp_dir = self.base_dir + 'face/'
@@ -58,21 +87,23 @@ class PugAttribute:
             self._face = bp_dir + kwargs['face'] + '.csv'
         else:
             r = random.randrange(0, 9)
-            if r <= 7:
+            if self.attr.face['weight'] < r:
                 self._face = None
             else:
-                self._face = self.choice(bp_dir) 
+                print(r, 'anony')
+                self._face = self.choice(bp_dir, self.attr.face['list'])
 
     def makeHead(self, **kwargs):
         bp_dir = self.base_dir + 'head/'
+
         if 'head' in kwargs:
             self._head = bp_dir + kwargs['head'] + '.csv'
         else:
             r = random.randrange(0, 9)
-            if r <= 7:
+            if self.attr.head['weight'] < r:
                 self._head = None
             else:
-                self._head = self.choice(bp_dir) 
+                self._head = self.choice(bp_dir, self.attr.head['list'])
 
     def makeNeck(self, **kwargs):
         bp_dir = self.base_dir + 'neck/'
@@ -80,10 +111,11 @@ class PugAttribute:
             self._neck = bp_dir + kwargs['neck'] + '.csv'
         else:
             r = random.randrange(0, 9)
-            if r <= 7:
+            if self.attr.neck['weight'] < r :
                 self._neck = None
             else:
-                self._neck = self.choice(bp_dir) 
+                self._neck = self.choice(bp_dir, self.attr.neck['list'])
+
 
     def makeMouth(self, **kwargs):
         bp_dir = self.base_dir + 'mouth/'
@@ -94,10 +126,10 @@ class PugAttribute:
                 self._mouth = bp_dir + kwargs['mouth'] + '.csv'
         else:
             r = random.randrange(0, 9)
-            if r <= 7:
+            if self.attr.mouth['weight'] < r:
                 self._mouth = None
             else:
-                self._mouth = self.choice(bp_dir) 
+                self._mouth = self.choice(bp_dir, self.attr.mouth['list']) 
 
     def makeEyes(self, **kwargs):
         bp_dir = self.base_dir + 'eyes/'
@@ -107,7 +139,8 @@ class PugAttribute:
             self._eyes = kwargs['eyes']
         else:
             r = random.randrange(0, 9)
-            if r <= 7:
+            if self.attr.eyes['weight'] < r:
                 self._eyes = None
             else:
-                self._eyes = self.choice(bp_dir) 
+                self._eyes = self.choice(bp_dir, self.attr.eyes['list'])
+

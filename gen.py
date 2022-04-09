@@ -3,13 +3,13 @@ from PIL import Image
 from pixart import canvas, parser
 from pixart.helper import factory
 
-f = factory.Multiple()
-f.create(['Pug', 'SleepingPug'], 'character')
-c = f.created[1]
+#f = factory.Multiple()
+#f.create(['Pug', 'SleepingPug'], 'character', total=10)
+#c = f.created[1]
 
 from character import types
 
-p = types.AnonyPug()
+p = types.Pug()
 p.create(1)
 
 height = 24
@@ -24,6 +24,8 @@ painter.drawAttributes(p)
 interpolation = cv.INTER_AREA
 canvas = cv.resize(painter.canvas, None, 0, 10,10,interpolation)
 cv.imwrite('img/output.png', canvas)
+img = Image.open('img/output.png')
+img.show()
 
 #for p in f.created:
 #    painter.drawColor(p)
@@ -34,6 +36,6 @@ cv.imwrite('img/output.png', canvas)
 #    canvas = cv.resize(painter.canvas, None, 0, 10,10,interpolation)
 #    cv.imwrite('output.png', canvas)
 
-img = Image.open('img/output.png')
-img.show()
+#img = Image.open('img/output.png')
+#img.show()
 
