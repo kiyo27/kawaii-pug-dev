@@ -2,6 +2,47 @@ import numpy as np
 from pixart import parser
 
 _paretto = {
+    185: (205, 73, 0),
+    186: (202, 58, 0),
+    187: (223, 84, 0),
+    189: (5, 221, 247),
+    190: (172, 181, 39),
+    191: (163, 43, 99),
+    192: (219, 112, 147),
+    193: (181, 174, 163),
+    194: (234, 234, 236),
+    195: (0, 52, 153),
+    196: (13, 88, 211),
+    197: (50, 205, 50),
+    198: (105, 105, 105),
+    199: (112, 66, 29),
+    200: (11, 134, 184),
+    201: (32, 165, 218),
+    202: (50, 205, 50),
+    203: (255, 144, 30),
+    204: (92, 92, 205),
+    205: (211, 0, 148),
+    206: (211, 85, 186),
+    207: (128, 0, 128),
+    208: (199, 212, 212),
+    209: (72, 74, 72),
+    210: (171, 169, 171),
+    211: (231, 235, 235),
+    212: (250, 206, 135),
+    213: (25, 53, 68),
+    214: (6, 57, 98),
+    215: (8, 82, 149),
+    216: (0, 215, 255),
+    217: (0, 165, 255),
+    218: (0, 128, 128),
+    219: (255, 255, 0),
+    220: (128, 128, 0),
+    221: (32, 165, 218),
+    222: (0, 252, 124),
+    223: (0, 255, 255),
+    224: (113, 179, 60),
+    225: (225, 105, 65),
+    226: (221, 160, 221),
     227: (0, 215, 255),
     228: (0, 165, 255),
     229: (0, 128, 128),
@@ -46,7 +87,7 @@ class Painter:
         self.background = (144, 128, 112)
         self.canvas += self.background
 
-    def draw(self, blueprint):
+    def map(self, blueprint):
         if blueprint is not None:
             f = parser.parse(blueprint)
 
@@ -56,21 +97,23 @@ class Painter:
                         self.canvas[i,j] = self.background
                     elif f.iloc[i][j] != 0:
                         self.canvas[i,j] = self.paretto[f.iloc[i][j]]
-      
-    def drawShape(self, c):
-        self.draw(c.shape.edge)
-        self.draw(c.shape.eyes)
-        self.draw(c.shape.mouth)
 
-    def drawColor(self, c):
-        self.draw(c.color.base)
-        self.draw(c.color.eyes)
-        self.draw(c.color.ears)
+    def draw(self, c):
+        self.map(c.shape.edge)
 
-    def drawAttributes(self, c):
-        self.draw(c.attributes.face)
-        self.draw(c.attributes.head)
-        self.draw(c.attributes.neck)
-        self.draw(c.attributes.mouth)
-        self.draw(c.attributes.eyes)
+        self.map(c.color.base)
+        self.map(c.color.eyes)
+        self.map(c.color.ears)
+
+        self.map(c.shape.mouth)
+
+        self.map(c.attributes.head)
+        self.map(c.attributes.neck)
+        self.map(c.attributes.nose)
+        self.map(c.attributes.mouth)
+        self.map(c.attributes.eyes)
+        self.map(c.attributes.face)
+
+        self.map(c.shape.eyes)
+        self.map(c.attributes.goggle)
 

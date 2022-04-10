@@ -31,6 +31,8 @@ class AttributeYaml:
             cls.neck = get_attr(attr_list, 'neck')
             cls.mouth = get_attr(attr_list, 'mouth')
             cls.eyes = get_attr(attr_list, 'eyes')
+            cls.goggle = get_attr(attr_list, 'goggle')
+            cls.nose = get_attr(attr_list, 'nose')
 
         return cls.singleton
 
@@ -46,7 +48,10 @@ class PugAttribute:
         if (self.face == other.face
               and self.head == other.head
               and self.neck == other.neck
-              and self.mouth == other.mouth):
+              and self.mouth == other.mouth
+              and self.eyes == other.eyes
+              and self.goggle == other.goggle
+              and self.nose == other.nose):
             return True
         return False
 
@@ -70,77 +75,65 @@ class PugAttribute:
     def eyes(self):
         return self._eyes
 
+    @property
+    def goggle(self):
+        return self._goggle
+
+    @property
+    def nose(self):
+        return self._nose
+
     def make(self, **kwargs):
         self.makeFace(**kwargs)
         self.makeHead(**kwargs)
         self.makeNeck(**kwargs)
         self.makeMouth(**kwargs)
         self.makeEyes(**kwargs)
-
-    def choice(self, path, attr):
-        target = random.choices(attr['names'], weights=attr['weights'], k=1)[0]
-        return path + target + '.csv'
+        self.makeGoggles(**kwargs)
+        self.makeNose(**kwargs)
 
     def makeFace(self, **kwargs):
-        bp_dir = self.base_dir + 'face/'
-        if 'face' in kwargs:
-            self._face = bp_dir + kwargs['face'] + '.csv'
-        else:
-            r = random.randrange(0, 9)
-            if self.attr.face['weight'] < r:
-                self._face = None
-            else:
-                print(r, 'anony')
-                self._face = self.choice(bp_dir, self.attr.face['list'])
+        self.set_attr('face', **kwargs)
 
     def makeHead(self, **kwargs):
-        bp_dir = self.base_dir + 'head/'
-
-        if 'head' in kwargs:
-            self._head = bp_dir + kwargs['head'] + '.csv'
-        else:
-            r = random.randrange(0, 9)
-            if self.attr.head['weight'] < r:
-                self._head = None
-            else:
-                self._head = self.choice(bp_dir, self.attr.head['list'])
+        self.set_attr('head', **kwargs)
 
     def makeNeck(self, **kwargs):
-        bp_dir = self.base_dir + 'neck/'
-        if 'neck' in kwargs:
-            self._neck = bp_dir + kwargs['neck'] + '.csv'
-        else:
-            r = random.randrange(0, 9)
-            if self.attr.neck['weight'] < r :
-                self._neck = None
-            else:
-                self._neck = self.choice(bp_dir, self.attr.neck['list'])
-
+        self.set_attr('neck', **kwargs)
 
     def makeMouth(self, **kwargs):
-        bp_dir = self.base_dir + 'mouth/'
-        if 'mouth' in kwargs:
-            if kwargs['mouth'] is False:
-                self._mouth = None
-            else:
-                self._mouth = bp_dir + kwargs['mouth'] + '.csv'
-        else:
-            r = random.randrange(0, 9)
-            if self.attr.mouth['weight'] < r:
-                self._mouth = None
-            else:
-                self._mouth = self.choice(bp_dir, self.attr.mouth['list']) 
+        self.set_attr('mouth', **kwargs)
 
     def makeEyes(self, **kwargs):
         bp_dir = self.base_dir + 'eyes/'
         if self.face is not None:
             self._eyes = None
-        elif 'eyes' in kwargs:
-            self._eyes = kwargs['eyes']
         else:
-            r = random.randrange(0, 9)
-            if self.attr.eyes['weight'] < r:
-                self._eyes = None
+            self.set_attr('eyes', **kwargs)
+
+    def makeGoggles(self, **kwargs):
+        self.set_attr('goggle', **kwargs)
+
+    def makeNose(self, **kwargs):
+        self.set_attr('nose', **kwargs)
+
+    def choice(self, path, attr):
+        target = random.choices(attr['names'], weights=attr['weights'], k=1)[0]
+        return path + target + '.csv'
+
+    def set_attr(self, attr, **kwargs):
+        if attr in kwargs:
+            if kwargs[attr] is False:
+                setattr(self, '_' + attr, None)
             else:
-                self._eyes = self.choice(bp_dir, self.attr.eyes['list'])
+                setattr(self, '_' + attr, bp_dir + kwargs[attr] + '.csv')
+        else:
+            r = random.randrange(0, 1000)
+            weight = getattr(self.attr, attr)['weight']
+            if weight < r:
+                setattr(self, '_' + attr, None)
+            else:
+                bp_dir = self.base_dir + attr + '/'
+                l = getattr(self.attr, attr)['list']
+                setattr(self, '_' + attr, self.choice(bp_dir, l))
 

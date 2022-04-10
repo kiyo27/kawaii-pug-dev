@@ -17,9 +17,7 @@ width = 24
 
 painter = canvas.Painter(width, height)
 
-painter.drawColor(p)
-painter.drawShape(p)
-painter.drawAttributes(p)
+painter.draw(p)
 
 interpolation = cv.INTER_AREA
 canvas = cv.resize(painter.canvas, None, 0, 10,10,interpolation)
