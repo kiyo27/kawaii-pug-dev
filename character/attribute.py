@@ -136,6 +136,7 @@ class PugAttribute:
         return path + target + ".csv"
 
     def set_attr(self, attr, **kwargs):
+        bp_dir = self.base_dir + attr + "/"
         if attr in kwargs:
             if kwargs[attr] is False:
                 setattr(self, "_" + attr, None)
@@ -147,6 +148,5 @@ class PugAttribute:
             if weight < r:
                 setattr(self, "_" + attr, None)
             else:
-                bp_dir = self.base_dir + attr + "/"
                 l = getattr(self.attr, attr)["list"]
                 setattr(self, "_" + attr, self.choice(bp_dir, l))

@@ -10,7 +10,8 @@ from pixart.helper import factory
 from character import types
 
 p = types.Pug()
-p.create(1)
+attr = {}
+p.create(1, **attr)
 
 height = 24
 width = 24

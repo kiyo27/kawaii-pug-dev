@@ -8,22 +8,86 @@ head:
   weight: 800
   attribute:
     - name: "beanie"
-      weight: 3
+      weight: 1
     - name: "pilot-helmet"
       weight: 1
     - name: "welding-goggles"
-      weight: 5
+      weight: 1
+    - name: "bandana"
+      weight: 1
+    - name: "big-hat"
+      weight: 1
+    - name: "bucket-hat"
+      weight: 1
+    - name: "cap-forward"
+      weight: 1
+    - name: "cap"
+      weight: 1
+    - name: "casual-knitted-cap"
+      weight: 1
+    - name: "chonmage"
+      weight: 1
+    - name: "cowboy-hat"
+      weight: 1
+    - name: "crown"
+      weight: 1
+    - name: "demon"
+      weight: 1
+    - name: "fedora"
+      weight: 1
+    - name: "hachimaki"
+      weight: 1
+    - name: "hat-and-flower"
+      weight: 1
+    - name: "hat-and-goggle"
+      weight: 1
+    - name: "head-light"
+      weight: 1
+    - name: "headband"
+      weight: 1
+    - name: "headphone"
+      weight: 1
+    - name: "kasa"
+      weight: 1
+    - name: "knitted-cap"
+      weight: 1
+    - name: "mohawk"
+      weight: 1
+    - name: "police-cap"
+      weight: 1
+    - name: "silk-hat"
+      weight: 1
+    - name: "straw-hat"
+      weight: 1
+    - name: "stripe-ribbon"
+      weight: 1
+    - name: "tassle-hat"
+      weight: 1
+    - name: "top-hat"
+      weight: 1
+    - name: "wizard-hat"
+      weight: 1
 
 neck:
   weight: 500
   attribute:
     - name: "scarf"
       weight: 1
+    - name: "green-collar"
+      weight: 1
 
 mouth:
   weight: 500
   attribute:
     - name: "cigarette"
+      weight: 1
+    - name: "medical-mask"
+      weight: 1
+    - name: "pipe"
+      weight: 1
+    - name: "tongue"
+      weight: 1
+    - name: "vape"
       weight: 1
 
 goggle:
@@ -32,12 +96,34 @@ goggle:
     - name: "3d-glasses"
       weight: 1
     - name: "vr"
-      weight: 2
+      weight: 1
+    - name: "big-shades"
+      weight: 1
+    - name: "black-glasses"
+      weight: 1
+    - name: "classic-shades"
+      weight: 1
+    - name: "eye-mask"
+      weight: 1
+    - name: "eye-patch"
+      weight: 1
+    - name: "horned-rim-glasses"
+      weight: 1
+    - name: "mafia-glasses"
+      weight: 1
+    - name: "nerd-glasses"
+      weight: 1
+    - name: "regular-shades"
+      weight: 1
 
 eyes:
   weight: 100
   attribute:
     - name: "blue-eye-shadow"
+      weight: 1
+    - name: "purple-eye-shadow"
+      weight: 1
+    - name: "cross-eyed"
       weight: 1
 
 nose:
@@ -50,5 +136,7 @@ ears:
   weight: 10
   attribute:
     - name: "green-ears"
+      weight: 1
+    - name: "golden-ears"
       weight: 1
 
