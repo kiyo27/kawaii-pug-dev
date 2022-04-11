@@ -103,7 +103,9 @@ class Painter:
 
         self.map(c.color.base)
         self.map(c.color.eyes)
+        self.map(c.attributes.eyes)
         self.map(c.color.ears)
+        self.map(c.attributes.ears)
 
         self.map(c.shape.mouth)
 
@@ -111,7 +113,6 @@ class Painter:
         self.map(c.attributes.neck)
         self.map(c.attributes.nose)
         self.map(c.attributes.mouth)
-        self.map(c.attributes.eyes)
         self.map(c.attributes.face)
 
         self.map(c.shape.eyes)

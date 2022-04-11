@@ -45,3 +45,10 @@ nose:
   attribute:
     - name: "clown-nose"
       weight: 1
+
+ears:
+  weight: 10
+  attribute:
+    - name: "green-ears"
+      weight: 1
+
