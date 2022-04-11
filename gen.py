@@ -4,7 +4,8 @@ from pixart import canvas, parser
 from pixart.helper import factory
 
 #f = factory.Multiple()
-#f.create(['Pug', 'SleepingPug'], 'character', total=10)
+#face_types = ['Pug', 'SleepingPug']
+#f.create(face_types, 'character', total=10)
 #c = f.created[1]
 
 from character import types

@@ -33,7 +33,7 @@ class AttributeYaml:
             cls.neck = get_attr(attr_list, "neck")
             cls.mouth = get_attr(attr_list, "mouth")
             cls.eyes = get_attr(attr_list, "eyes")
-            cls.goggle = get_attr(attr_list, "goggle")
+            cls.glasses = get_attr(attr_list, "glasses")
             cls.nose = get_attr(attr_list, "nose")
             cls.ears = get_attr(attr_list, "ears")
 
@@ -54,7 +54,7 @@ class PugAttribute:
             and self.neck == other.neck
             and self.mouth == other.mouth
             and self.eyes == other.eyes
-            and self.goggle == other.goggle
+            and self.glasses == other.glasses
             and self.nose == other.nose
             and self.ears == other.ears
         ):
@@ -82,8 +82,8 @@ class PugAttribute:
         return self._eyes
 
     @property
-    def goggle(self):
-        return self._goggle
+    def glasses(self):
+        return self._glasses
 
     @property
     def nose(self):
@@ -123,7 +123,7 @@ class PugAttribute:
             self.set_attr("eyes", **kwargs)
 
     def makeGoggles(self, **kwargs):
-        self.set_attr("goggle", **kwargs)
+        self.set_attr("glasses", **kwargs)
 
     def makeNose(self, **kwargs):
         self.set_attr("nose", **kwargs)

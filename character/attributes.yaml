@@ -90,7 +90,7 @@ mouth:
     - name: "vape"
       weight: 1
 
-goggle:
+glasses:
   weight: 500
   attribute:
     - name: "3d-glasses"

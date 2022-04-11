@@ -80,7 +80,7 @@ class Painter:
         self.background = (144, 128, 112)
         self.canvas += self.background
 
-    def map(self, blueprint):
+    def copy(self, blueprint):
         if blueprint is not None:
             f = parser.parse(blueprint)
 
@@ -92,21 +92,21 @@ class Painter:
                         self.canvas[i, j] = self.paretto[f.iloc[i][j]]
 
     def draw(self, c):
-        self.map(c.shape.edge)
+        self.copy(c.shape.edge)
 
-        self.map(c.color.base)
-        self.map(c.color.eyes)
-        self.map(c.attributes.eyes)
-        self.map(c.color.ears)
-        self.map(c.attributes.ears)
+        self.copy(c.color.base)
+        self.copy(c.color.eyes)
+        self.copy(c.attributes.eyes)
+        self.copy(c.color.ears)
+        self.copy(c.attributes.ears)
 
-        self.map(c.shape.mouth)
+        self.copy(c.shape.mouth)
 
-        self.map(c.attributes.neck)
-        self.map(c.attributes.nose)
-        self.map(c.attributes.face)
+        self.copy(c.attributes.neck)
+        self.copy(c.attributes.nose)
+        self.copy(c.attributes.face)
 
-        self.map(c.shape.eyes)
-        self.map(c.attributes.goggle)
-        self.map(c.attributes.head)
-        self.map(c.attributes.mouth)
+        self.copy(c.shape.eyes)
+        self.copy(c.attributes.glasses)
+        self.copy(c.attributes.head)
+        self.copy(c.attributes.mouth)
