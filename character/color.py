@@ -1,8 +1,9 @@
 from pixart import abstract
 
+
 class PugColor(abstract.Color):
     def __init__(self, **kwargs):
-        self.base_dir = 'character/blueprints/base/color/'
+        self.base_dir = "character/blueprints/base/color/"
         self.make(**kwargs)
 
     @property
@@ -18,6 +19,6 @@ class PugColor(abstract.Color):
         return self._ears
 
     def make(self, **kwargs):
-        self._base = self.base_dir + 'base/basic.csv' 
+        self._base = self.base_dir + "base/basic.csv"
         self._eyes = None
         self._ears = None

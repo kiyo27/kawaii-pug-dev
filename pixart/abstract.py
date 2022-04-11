@@ -3,9 +3,11 @@ from abc import ABCMeta, abstractmethod
 
 class Shape(metaclass=ABCMeta):
     def __eq__(self, other):
-        if (self.edge == other.edge
-              and self.eyes == other.eyes
-              and self.mouth == other.mouth):
+        if (
+            self.edge == other.edge
+            and self.eyes == other.eyes
+            and self.mouth == other.mouth
+        ):
             return True
         return False
 
@@ -29,12 +31,13 @@ class Shape(metaclass=ABCMeta):
         pass
 
 
-
 class Shape(metaclass=ABCMeta):
     def __eq__(self, other):
-        if (self.edge == other.edge
-              and self.eyes == other.eyes
-              and self.mouth == other.mouth):
+        if (
+            self.edge == other.edge
+            and self.eyes == other.eyes
+            and self.mouth == other.mouth
+        ):
             return True
         return False
 
@@ -60,9 +63,11 @@ class Shape(metaclass=ABCMeta):
 
 class Color(metaclass=ABCMeta):
     def __eq__(self, other):
-        if (self.base == other.base
-              and self.eyes == other.eyes
-              and self.ears == other.ears):
+        if (
+            self.base == other.base
+            and self.eyes == other.eyes
+            and self.ears == other.ears
+        ):
             return True
         return False
 
@@ -88,9 +93,11 @@ class Color(metaclass=ABCMeta):
 
 class Character(metaclass=ABCMeta):
     def __eq__(self, other):
-        if (self.shape == other.shape
+        if (
+            self.shape == other.shape
             and self.color == other.color
-            and self.attributes == other.attributes):
+            and self.attributes == other.attributes
+        ):
             return True
         return False
 
@@ -116,6 +123,5 @@ class Character(metaclass=ABCMeta):
         pass
 
     @abstractmethod
-    def create(self, num,  **kwargs):
+    def create(self, num, **kwargs):
         pass
-

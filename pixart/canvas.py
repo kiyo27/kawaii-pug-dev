@@ -1,4 +1,5 @@
 import numpy as np
+
 from pixart import parser
 
 _paretto = {
@@ -71,7 +72,7 @@ _paretto = {
     252: (255, 149, 255),
     253: (44, 96, 128),
     254: (213, 239, 255),
-    255: (0, 0, 0)
+    255: (0, 0, 0),
 }
 
 
@@ -94,9 +95,9 @@ class Painter:
             for i in range(self.height):
                 for j in range(self.width):
                     if f.iloc[i][j] == 1:
-                        self.canvas[i,j] = self.background
+                        self.canvas[i, j] = self.background
                     elif f.iloc[i][j] != 0:
-                        self.canvas[i,j] = self.paretto[f.iloc[i][j]]
+                        self.canvas[i, j] = self.paretto[f.iloc[i][j]]
 
     def draw(self, c):
         self.map(c.shape.edge)
@@ -117,4 +118,3 @@ class Painter:
 
         self.map(c.shape.eyes)
         self.map(c.attributes.goggle)
-

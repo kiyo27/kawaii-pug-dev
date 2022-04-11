@@ -1,4 +1,1 @@
-from .types import (
-    Pug,
-    SleepingPug
-)
+from .types import Pug, SleepingPug
