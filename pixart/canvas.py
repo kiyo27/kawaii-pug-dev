@@ -95,6 +95,7 @@ class Painter:
         self.copy(c.shape.edge)
 
         self.copy(c.color.base)
+        self.copy(c.attributes.skin)
         self.copy(c.color.eyes)
         self.copy(c.attributes.eyes)
         self.copy(c.color.ears)

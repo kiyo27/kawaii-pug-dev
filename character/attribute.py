@@ -36,6 +36,7 @@ class AttributeYaml:
             cls.glasses = get_attr(attr_list, "glasses")
             cls.nose = get_attr(attr_list, "nose")
             cls.ears = get_attr(attr_list, "ears")
+            cls.skin = get_attr(attr_list, "skin")
 
         return cls.singleton
 
@@ -57,6 +58,7 @@ class PugAttribute:
             and self.glasses == other.glasses
             and self.nose == other.nose
             and self.ears == other.ears
+            and self.skin == other.skin
         ):
             return True
         return False
@@ -93,6 +95,10 @@ class PugAttribute:
     def ears(self):
         return self._ears
 
+    @property
+    def skin(self):
+        return self._skin
+
     def make(self, **kwargs):
         self.makeFace(**kwargs)
         self.makeHead(**kwargs)
@@ -102,6 +108,7 @@ class PugAttribute:
         self.makeGoggles(**kwargs)
         self.makeNose(**kwargs)
         self.makeEars(**kwargs)
+        self.makeSkin(**kwargs)
 
     def makeFace(self, **kwargs):
         self.set_attr("face", **kwargs)
@@ -130,6 +137,9 @@ class PugAttribute:
 
     def makeEars(self, **kwargs):
         self.set_attr("ears", **kwargs)
+
+    def makeSkin(self, **kwargs):
+        self.set_attr("skin", **kwargs)
 
     def choice(self, path, attr):
         target = random.choices(attr["names"], weights=attr["weights"], k=1)[0]

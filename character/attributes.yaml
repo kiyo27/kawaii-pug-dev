@@ -140,3 +140,9 @@ ears:
     - name: "golden-ears"
       weight: 1
 
+skin:
+  weight: 10
+  attribute:
+    - name: "rainbow"
+      weight: 1
+
