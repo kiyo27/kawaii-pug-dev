@@ -6,8 +6,7 @@ import numpy as np
 from character.attribute import PugAttribute
 from character.color import PugColor
 from character.shape import PugShape
-from pixart import abstract
-from pixart import write_sqlite
+from pixart import abstract 
 
 
 class Pug(abstract.Character):
@@ -36,8 +35,6 @@ class Pug(abstract.Character):
         self.makeShape(**kwargs["shape"])
         self.makeColor(**kwargs["color"])
         self.makeAttributes(**kwargs["attributes"])
-
-        write_sqlite(num, self)
 
     def makeShape(self, **kwargs):
         self._shape = PugShape(**kwargs)
