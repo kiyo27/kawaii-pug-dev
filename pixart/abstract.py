@@ -65,8 +65,6 @@ class Color(metaclass=ABCMeta):
     def __eq__(self, other):
         if (
             self.base == other.base
-            and self.eyes == other.eyes
-            and self.ears == other.ears
         ):
             return True
         return False
@@ -74,16 +72,6 @@ class Color(metaclass=ABCMeta):
     @property
     @abstractmethod
     def base(self):
-        pass
-
-    @property
-    @abstractmethod
-    def eyes(self):
-        pass
-
-    @property
-    @abstractmethod
-    def ears(self):
         pass
 
     @abstractmethod

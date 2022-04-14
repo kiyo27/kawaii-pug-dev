@@ -66,3 +66,12 @@ class SleepingPug(Pug):
         kwargs["eyes"] = "sleeping"
         kwargs["mouth"] = "sleeping"
         self._shape = PugShape(**kwargs)
+
+class KabukiPug(Pug):
+    """Register kabuki-pug's blueprints."""
+
+    ctype = "KabukiPug"
+
+    def makeColor(self, **kwargs):
+        kwargs["color"] = 'kabuki'
+        self._color = PugColor(**kwargs)

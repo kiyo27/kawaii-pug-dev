@@ -10,15 +10,8 @@ class PugColor(abstract.Color):
     def base(self):
         return self._base
 
-    @property
-    def eyes(self):
-        return self._eyes
-
-    @property
-    def ears(self):
-        return self._ears
-
     def make(self, **kwargs):
-        self._base = self.base_dir + "base/basic.csv"
-        self._eyes = None
-        self._ears = None
+        if 'color' in kwargs:
+            self._base = self.base_dir + kwargs['color'] + '.csv'
+        else:
+            self._base = self.base_dir + "basic.csv"
