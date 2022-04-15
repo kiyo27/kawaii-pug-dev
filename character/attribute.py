@@ -111,7 +111,7 @@ class PugAttribute:
         self.makeSkin(**kwargs)
 
     def makeFace(self, **kwargs):
-        if 'face' in kwargs:
+        if "face" in kwargs:
             self.set_attr("face", **kwargs)
         else:
             self._face = None

@@ -2,7 +2,7 @@ import cv2 as cv
 from PIL import Image
 from pixart import canvas, parser
 from pixart.helper import factory
-from pixart.io import sqlite
+from pixart.io import sqlite, opencv
 
 #f = factory.Multiple()
 #face_types = ['Pug', 'SleepingPug']
@@ -21,11 +21,9 @@ width = 24
 painter = canvas.Painter(width, height)
 
 painter.draw(p)
-
-interpolation = cv.INTER_AREA
-canvas = cv.resize(painter.canvas, None, 0, 10,10,interpolation)
-cv.imwrite('img/output.png', canvas)
-img = Image.open('img/output.png')
+out_file = 'img/output.png'
+opencv.generate(painter.canvas, out_file)
+img = Image.open(out_file)
 img.show()
 
 #sqlite.export_csv()

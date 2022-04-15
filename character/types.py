@@ -6,7 +6,7 @@ import numpy as np
 from character.attribute import PugAttribute
 from character.color import PugColor
 from character.shape import PugShape
-from pixart import abstract 
+from pixart import abstract
 
 
 class Pug(abstract.Character):
@@ -67,11 +67,12 @@ class SleepingPug(Pug):
         kwargs["mouth"] = "sleeping"
         self._shape = PugShape(**kwargs)
 
+
 class KabukiPug(Pug):
     """Register kabuki-pug's blueprints."""
 
     ctype = "KabukiPug"
 
     def makeColor(self, **kwargs):
-        kwargs["color"] = 'kabuki'
+        kwargs["color"] = "kabuki"
         self._color = PugColor(**kwargs)
