@@ -6,25 +6,25 @@ from pixart.io import sqlite, opencv
 
 #f = factory.Multiple()
 #face_types = ['Pug', 'SleepingPug']
-#f.create(face_types, 'character', total=1000)
+#f.create(face_types, 'character', 1, total=1000)
 #c = f.created[1]
 
 from character import types
 
-p = types.KabukiPug()
-attr = {}
-p.create(1, **attr)
+#p = types.KabukiPug()
+#attr = {}
+#p.create(1, **attr)
 #
-height = 24
-width = 24
-
-painter = canvas.Painter(width, height)
-
-painter.draw(p)
-out_file = 'img/output.png'
-opencv.generate(painter.canvas, out_file)
-img = Image.open(out_file)
-img.show()
+#height = 24
+#width = 24
+#
+#painter = canvas.Painter(width, height)
+#
+#painter.draw(p)
+#out_file = 'img/output.png'
+#opencv.generate(painter.canvas, out_file)
+#img = Image.open(out_file)
+#img.show()
 
 #sqlite.export_csv()
 
@@ -40,3 +40,20 @@ img.show()
 #img = Image.open('img/output.png')
 #img.show()
 
+
+def create_from_db():
+    from pixart.helper import factory
+    data = sqlite.select()
+    for row in data:
+        p = factory.factory('character', row['type'])
+        p.create(1, **{'attributes':row['attributes']})
+        painter = canvas.Painter(24, 24)
+        painter.draw(p)
+        out_file = 'img/output.png'
+        opencv.generate(painter.canvas, out_file)
+        img = Image.open(out_file)
+        img.show()
+
+
+if __name__ == '__main__':
+    create_from_db()

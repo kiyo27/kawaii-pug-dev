@@ -6,11 +6,15 @@ from pixart import abstract
 from pixart.io.sqlite import write_sqlite
 
 
+def factory(modname, cname):
+    return abstract.Character.get_factory(modname, cname)
+    
+
 class Multiple:
     def __init__(self):
         self.created = []
 
-    def create(self, types, mod, total=50):
+    def create(self, types, mod, version, total=50):
         count = 0
 
         while count < total:
@@ -20,7 +24,7 @@ class Multiple:
 
             if not self.created:
                 self.created.append(p)
-                write_sqlite(p)
+                write_sqlite(version, p)
                 count += 1
                 continue
 
@@ -32,7 +36,7 @@ class Multiple:
 
                 if i == l - 1:
                     self.created.append(p)
-                    write_sqlite(p)
+                    write_sqlite(version, p)
                     count += 1
                     break
 

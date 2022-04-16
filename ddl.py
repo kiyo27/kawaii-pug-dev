@@ -5,7 +5,7 @@ cur = con.cursor()
 
 cur.execute(
     """create table attributes
-  (id number, types string, head string, neck string, mouth string, eyes string, goggle string, nose string, ears string, skin string)
+  (version number, id number, types string, head string, neck string, mouth string, eyes string, glasses string, nose string, ears string, skin string)
   """
 )
 
