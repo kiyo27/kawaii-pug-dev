@@ -6,4 +6,3 @@ def generate(canvas, filename):
     canvas = cv.resize(canvas, None, 0, 10,10,interpolation)
     cv.imwrite(filename, canvas)
 
-

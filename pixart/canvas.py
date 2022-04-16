@@ -69,7 +69,7 @@ _paretto = {
 
 
 class Painter:
-    def __init__(self, width, height, paretto=None):
+    def __init__(self, width=24, height=24, paretto=None):
         self.width = width
         self.height = height
         if paretto is None:

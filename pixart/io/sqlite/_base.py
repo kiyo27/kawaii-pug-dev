@@ -43,12 +43,12 @@ def export_csv():
 
     con.close()
 
-def select():
+def select(version):
     con = sqlite3.connect("characters.db")
     con.row_factory = sqlite3.Row
     with con:
         cur = con.cursor()
-        cur.execute("SELECT * FROM attributes limit 10")
+        cur.execute("SELECT * FROM attributes where version=?", (version,))
         l = list()
         for row in cur.fetchall():
             l.append(_format(row))
@@ -58,6 +58,7 @@ def select():
 
 def _format(row):
     data = {
+        'id': row['id'],
         'type': row['types'],
         'attributes': {
             'head': _convert_none_to_false(row['head']),

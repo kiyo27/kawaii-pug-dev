@@ -33,7 +33,10 @@ class PugShape(abstract.Shape):
     def makeEyes(self, **kwargs):
         bp_dir = self.base_dir + "eyes/"
         if "eyes" in kwargs:
-            self._eyes = bp_dir + kwargs["eyes"] + ".csv"
+            if kwargs['eyes']:
+                self._eyes = bp_dir + kwargs["eyes"] + ".csv"
+            else:
+                self._eyes = None
         else:
             self._eyes = bp_dir + "basic.csv"
 

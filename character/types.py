@@ -73,6 +73,10 @@ class KabukiPug(Pug):
 
     ctype = "KabukiPug"
 
+    def makeShape(self, **kwargs):
+        kwargs["eyes"] = False
+        self._shape = PugShape(**kwargs)
+
     def makeColor(self, **kwargs):
         kwargs["color"] = "kabuki"
         self._color = PugColor(**kwargs)
