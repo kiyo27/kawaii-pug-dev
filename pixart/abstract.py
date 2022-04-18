@@ -31,47 +31,17 @@ class Shape(metaclass=ABCMeta):
         pass
 
 
-class Shape(metaclass=ABCMeta):
-    def __eq__(self, other):
-        if (
-            self.edge == other.edge
-            and self.eyes == other.eyes
-            and self.mouth == other.mouth
-        ):
-            return True
-        return False
-
-    @property
-    @abstractmethod
-    def edge(self):
-        pass
-
-    @property
-    @abstractmethod
-    def eyes(self):
-        pass
-
-    @property
-    @abstractmethod
-    def mouth(self):
-        pass
-
-    @abstractmethod
-    def make(self, **kwargs):
-        pass
-
-
 class Color(metaclass=ABCMeta):
     def __eq__(self, other):
         if (
-            self.base == other.base
+            self.skin == other.skin
         ):
             return True
         return False
 
     @property
     @abstractmethod
-    def base(self):
+    def skin(self):
         pass
 
     @abstractmethod

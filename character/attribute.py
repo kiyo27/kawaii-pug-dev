@@ -17,6 +17,10 @@ def get_attr(attr_list, key):
     d["weight"] = attr_list[key]["weight"]
     return d
 
+def choice(path, attr):
+    target = random.choices(attr["names"], weights=attr["weights"], k=1)[0]
+    return path + target + ".csv"
+
 
 class AttributeYaml:
     singleton = None
@@ -28,7 +32,6 @@ class AttributeYaml:
             with open("character/attributes.yaml") as f:
                 attr_list = yaml.safe_load(f)
 
-            cls.face = get_attr(attr_list, "face")
             cls.head = get_attr(attr_list, "head")
             cls.neck = get_attr(attr_list, "neck")
             cls.mouth = get_attr(attr_list, "mouth")
@@ -36,7 +39,6 @@ class AttributeYaml:
             cls.glasses = get_attr(attr_list, "glasses")
             cls.nose = get_attr(attr_list, "nose")
             cls.ears = get_attr(attr_list, "ears")
-            cls.skin = get_attr(attr_list, "skin")
 
         return cls.singleton
 
@@ -50,7 +52,7 @@ class PugAttribute:
 
     def __eq__(self, other):
         if (
-            self.face == other.face
+            self.mask == other.mask
             and self.head == other.head
             and self.neck == other.neck
             and self.mouth == other.mouth
@@ -58,14 +60,13 @@ class PugAttribute:
             and self.glasses == other.glasses
             and self.nose == other.nose
             and self.ears == other.ears
-            and self.skin == other.skin
         ):
             return True
         return False
 
     @property
-    def face(self):
-        return self._face
+    def mask(self):
+        return self._mask
 
     @property
     def head(self):
@@ -95,10 +96,6 @@ class PugAttribute:
     def ears(self):
         return self._ears
 
-    @property
-    def skin(self):
-        return self._skin
-
     def make(self, **kwargs):
         self.makeFace(**kwargs)
         self.makeHead(**kwargs)
@@ -108,13 +105,12 @@ class PugAttribute:
         self.makeGoggles(**kwargs)
         self.makeNose(**kwargs)
         self.makeEars(**kwargs)
-        self.makeSkin(**kwargs)
 
     def makeFace(self, **kwargs):
-        if "face" in kwargs:
-            self.set_attr("face", **kwargs)
+        if "mask" in kwargs:
+            self.set_attr("mask", **kwargs)
         else:
-            self._face = None
+            self._mask = None
 
     def makeHead(self, **kwargs):
         self.set_attr("head", **kwargs)
@@ -127,7 +123,7 @@ class PugAttribute:
 
     def makeEyes(self, **kwargs):
         bp_dir = self.base_dir + "eyes/"
-        if self.face is not None:
+        if self.mask is not None:
             self._eyes = None
         else:
             self.set_attr("eyes", **kwargs)
@@ -140,13 +136,6 @@ class PugAttribute:
 
     def makeEars(self, **kwargs):
         self.set_attr("ears", **kwargs)
-
-    def makeSkin(self, **kwargs):
-        self.set_attr("skin", **kwargs)
-
-    def choice(self, path, attr):
-        target = random.choices(attr["names"], weights=attr["weights"], k=1)[0]
-        return path + target + ".csv"
 
     def set_attr(self, attr, **kwargs):
         bp_dir = self.base_dir + attr + "/"
@@ -162,4 +151,4 @@ class PugAttribute:
                 setattr(self, "_" + attr, None)
             else:
                 l = getattr(self.attr, attr)["list"]
-                setattr(self, "_" + attr, self.choice(bp_dir, l))
+                setattr(self, "_" + attr, choice(bp_dir, l))

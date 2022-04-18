@@ -1,8 +1,3 @@
-import os
-import random
-
-import numpy as np
-
 from character.attribute import PugAttribute
 from character.color import PugColor
 from character.shape import PugShape
@@ -52,8 +47,10 @@ class AnonyPug(Pug):
     ctype = "AnonyPug"
 
     def makeAttributes(self, **kwargs):
-        kwargs["face"] = "anonymous"
+        kwargs["mask"] = "anonymous"
         kwargs["mouth"] = False
+        kwargs["eyes"] = False
+        kwargs["glasses"] = False
         self._attr = PugAttribute(self, **kwargs)
 
 
@@ -67,6 +64,11 @@ class SleepingPug(Pug):
         kwargs["mouth"] = "sleeping"
         self._shape = PugShape(**kwargs)
 
+    def makeAttributes(self, **kwargs):
+        kwargs["mouth"] = False
+        kwargs["glasses"] = False
+        self._attr = PugAttribute(self, **kwargs)
+
 
 class KabukiPug(Pug):
     """Register kabuki-pug's blueprints."""
@@ -78,5 +80,16 @@ class KabukiPug(Pug):
         self._shape = PugShape(**kwargs)
 
     def makeColor(self, **kwargs):
-        kwargs["color"] = "kabuki"
+        kwargs["skin"] = "kabuki"
         self._color = PugColor(**kwargs)
+
+class PhantomPug(Pug):
+    """Register phantom-pug's blueprints."""
+
+    ctype = "PhantomPug"
+
+    def makeAttributes(self, **kwargs):
+        kwargs["mask"] = "phantom"
+        kwargs["nose"] = "sleeping"
+        self._attr = PugAttribute(self, **kwargs)
+

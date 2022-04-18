@@ -15,7 +15,7 @@ group.add_argument("--from-db", dest="db", action="store_true", help="create fro
 
 def multiple():
     f = factory.Multiple()
-    face_types = ["Pug", "SleepingPug", "AnonyPug",  "KabukiPug"]
+    face_types = ["Pug", "SleepingPug", "AnonyPug", "KabukiPug", "PhantomPug"]
     f.create(face_types, "character", 1, total=1000)
     #painter = canvas.Painter()
     #for p in f.created:
@@ -36,8 +36,6 @@ def create():
     img = Image.open(out_file)
     img.show()
 
-
-# sqlite.export_csv()
 
 
 def create_from_db():
@@ -63,3 +61,6 @@ if __name__ == "__main__":
         create()
     elif args.db:
         create_from_db()
+
+    sqlite.export_csv()
+

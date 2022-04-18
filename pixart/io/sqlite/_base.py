@@ -24,7 +24,7 @@ def write_sqlite(version, character):
                 _extract_filename(character.attributes.glasses),
                 _extract_filename(character.attributes.nose),
                 _extract_filename(character.attributes.ears),
-                _extract_filename(character.attributes.skin),
+                _extract_filename(character.color.skin),
             )
         ]
         con.executemany("insert into attributes values (?,?,?,?,?,?,?,?,?,?,?)", l)

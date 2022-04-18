@@ -1,9 +1,3 @@
-face:
-  weight: 10
-  attribute:
-    - name: "anonymous"
-      weight: 1
-
 head: 
   weight: 800
   attribute:
@@ -138,11 +132,5 @@ ears:
     - name: "green-ears"
       weight: 1
     - name: "golden-ears"
-      weight: 1
-
-skin:
-  weight: 10
-  attribute:
-    - name: "rainbow"
       weight: 1
 

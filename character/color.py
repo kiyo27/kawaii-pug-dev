@@ -1,4 +1,5 @@
 from pixart import abstract
+from character import attribute
 
 
 class PugColor(abstract.Color):
@@ -7,11 +8,15 @@ class PugColor(abstract.Color):
         self.make(**kwargs)
 
     @property
-    def base(self):
-        return self._base
+    def skin(self):
+        return self._skin
 
     def make(self, **kwargs):
-        if "color" in kwargs:
-            self._base = self.base_dir + kwargs["color"] + ".csv"
+        if "skin" in kwargs:
+            self._skin = self.base_dir + kwargs["skin"] + ".csv"
         else:
-            self._base = self.base_dir + "basic.csv"
+            n = ['rainbow', 'metallic', 'basic']
+            w = [1, 5, 10]
+            attr = {'names': n, 'weights': w}
+            bp = attribute.choice(self.base_dir, attr)
+            self._skin = bp

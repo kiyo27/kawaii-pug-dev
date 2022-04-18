@@ -94,8 +94,7 @@ class Painter:
     def draw(self, c):
         self.copy(c.shape.edge)
 
-        self.copy(c.color.base)
-        self.copy(c.attributes.skin)
+        self.copy(c.color.skin)
         self.copy(c.attributes.eyes)
         self.copy(c.attributes.ears)
 
@@ -103,7 +102,7 @@ class Painter:
 
         self.copy(c.attributes.neck)
         self.copy(c.attributes.nose)
-        self.copy(c.attributes.face)
+        self.copy(c.attributes.mask)
 
         self.copy(c.shape.eyes)
         self.copy(c.attributes.glasses)
