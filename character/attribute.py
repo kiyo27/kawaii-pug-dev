@@ -13,13 +13,13 @@ def get_attr(attr_list, key):
         n.append(o["name"])
         w.append(o["weight"])
 
-    d = {"list": {"names": n, "weights": w}}
+    d = {"list": attr_list[key]["attribute"], "attr_weights": w}
     d["weight"] = attr_list[key]["weight"]
     return d
 
-def choice(path, attr):
-    target = random.choices(attr["names"], weights=attr["weights"], k=1)[0]
-    return path + target + ".csv"
+def choice(attr):
+    target = random.choices(attr["list"], weights=attr["attr_weights"], k=1)[0]
+    return target
 
 
 class AttributeYaml:
@@ -47,7 +47,7 @@ class PugAttribute:
     def __init__(self, obj, **kwargs):
         self.base_dir = "character/blueprints/attributes/"
         self._obj = obj
-        self.attr = AttributeYaml()
+        self.attr_yml = AttributeYaml()
         self.make(**kwargs)
 
     def __eq__(self, other):
@@ -102,7 +102,7 @@ class PugAttribute:
         self.makeNeck(**kwargs)
         self.makeMouth(**kwargs)
         self.makeEyes(**kwargs)
-        self.makeGoggles(**kwargs)
+        self.makeGlasses(**kwargs)
         self.makeNose(**kwargs)
         self.makeEars(**kwargs)
 
@@ -128,7 +128,7 @@ class PugAttribute:
         else:
             self.set_attr("eyes", **kwargs)
 
-    def makeGoggles(self, **kwargs):
+    def makeGlasses(self, **kwargs):
         self.set_attr("glasses", **kwargs)
 
     def makeNose(self, **kwargs):
@@ -144,11 +144,30 @@ class PugAttribute:
                 setattr(self, "_" + attr, None)
             else:
                 setattr(self, "_" + attr, bp_dir + kwargs[attr] + ".csv")
+                target = self._get_attr_by_name(attr, kwargs[attr])
+                self._optional_attr(target)
         else:
             r = random.randrange(0, 1000)
-            weight = getattr(self.attr, attr)["weight"]
+            weight = getattr(self.attr_yml, attr)["weight"]
             if weight < r:
                 setattr(self, "_" + attr, None)
             else:
-                l = getattr(self.attr, attr)["list"]
-                setattr(self, "_" + attr, choice(bp_dir, l))
+                l = getattr(self.attr_yml, attr)
+                target = choice(l)
+                setattr(self, "_" + attr, bp_dir + target["name"] + ".csv")
+                self._optional_attr(target)
+
+    def _get_attr_by_name(self, key, name):
+        attr_list = getattr(self.attr_yml, key)["list"]
+        for attr in attr_list:
+            if name == attr["name"]:
+                return attr
+
+    def _optional_attr(self, target):
+        if 'option' in target:
+            for opt in target['option']:
+                if self._obj.ctype == 'Pug':
+                    setattr(self._obj, opt, target['option']['basic'][opt])
+                elif self._obj.ctype == 'Sleeping':
+                    setattr(self._obj, opt, target['option']['sleeping'][opt])
+                    

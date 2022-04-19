@@ -14,6 +14,10 @@ class PugShape(abstract.Shape):
     def eyes(self):
         return self._eyes
 
+    @eyes.setter
+    def eyes(self, eyes):
+        self.makeEyes(eyes=eyes)
+
     @property
     def mouth(self):
         return self._mouth

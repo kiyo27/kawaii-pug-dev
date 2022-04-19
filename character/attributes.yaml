@@ -103,12 +103,22 @@ glasses:
       weight: 1
     - name: "horned-rim-glasses"
       weight: 1
+      options:
+        basic:
+          eyes: "glasses-eyes"
     - name: "mafia-glasses"
       weight: 1
     - name: "nerd-glasses"
       weight: 1
     - name: "regular-shades"
       weight: 1
+    - name: "scouter"
+      weight: 1
+      options:
+        sleeping:
+          eyes: "scouter-sleeping"
+        basic:
+          eyes: "scouter-eyes"
 
 eyes:
   weight: 100
