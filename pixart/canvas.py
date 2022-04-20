@@ -106,5 +106,6 @@ class Painter:
 
         self.copy(c.shape.eyes)
         self.copy(c.attributes.glasses)
+        self.copy(c.color.eyes)
         self.copy(c.attributes.head)
         self.copy(c.attributes.mouth)

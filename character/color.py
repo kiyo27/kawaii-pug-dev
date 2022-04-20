@@ -11,7 +11,18 @@ class PugColor(abstract.Color):
     def skin(self):
         return self._skin
 
+    @property
+    def eyes(self):
+        return self._eyes
+
+    @eyes.setter
+    def eyes(self, eyes):
+        self._eyes = eyes
+
+
     def make(self, **kwargs):
+        self._eyes = None
+
         if "skin" in kwargs:
             self._skin = self.base_dir + kwargs["skin"] + ".csv"
         else:

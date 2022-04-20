@@ -34,7 +34,8 @@ class Shape(metaclass=ABCMeta):
 class Color(metaclass=ABCMeta):
     def __eq__(self, other):
         if (
-            self.skin == other.skin
+            self.skin == other.skin,
+            self.eyes == other.eyes
         ):
             return True
         return False
@@ -42,6 +43,11 @@ class Color(metaclass=ABCMeta):
     @property
     @abstractmethod
     def skin(self):
+        pass
+
+    @property
+    @abstractmethod
+    def eyes(self):
         pass
 
     @abstractmethod

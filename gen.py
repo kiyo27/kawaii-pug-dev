@@ -26,8 +26,8 @@ def multiple():
 
 def create():
     from character import types
-    p = types.KabukiPug()
-    attr = {}
+    p = types.SleepingPug()
+    attr = {"attributes":{"glasses":"horned-rim-glasses"}}
     p.create(1, **attr)
     painter = canvas.Painter()
     painter.draw(p)

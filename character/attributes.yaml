@@ -105,7 +105,13 @@ glasses:
       weight: 1
       options:
         basic:
-          eyes: "glasses-eyes"
+          base:
+            color:
+              eyes: "glasses-eyes"
+        sleeping:
+          base:
+            color:
+              eyes: "glasses-sleeping"
     - name: "mafia-glasses"
       weight: 1
     - name: "nerd-glasses"
@@ -116,9 +122,13 @@ glasses:
       weight: 1
       options:
         sleeping:
-          eyes: "scouter-sleeping"
+          base:
+            color:
+              eyes: "scouter-sleeping"
         basic:
-          eyes: "scouter-eyes"
+          base:
+            color:
+              eyes: "scouter-eyes"
 
 eyes:
   weight: 100

@@ -66,7 +66,7 @@ class SleepingPug(Pug):
 
     def makeAttributes(self, **kwargs):
         kwargs["mouth"] = False
-        kwargs["glasses"] = False
+        #kwargs["glasses"] = False
         self._attr = PugAttribute(self, **kwargs)
 
 
