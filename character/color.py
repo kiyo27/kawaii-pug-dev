@@ -19,15 +19,14 @@ class PugColor(abstract.Color):
     def eyes(self, eyes):
         self._eyes = eyes
 
-
     def make(self, **kwargs):
         self._eyes = None
 
         if "skin" in kwargs:
             self._skin = self.base_dir + kwargs["skin"] + ".csv"
         else:
-            n = ['rainbow', 'metallic', 'basic']
+            n = ["rainbow", "metallic", "basic", "green", "blue-red"]
             w = [1, 5, 10]
-            attr = {'list': n, 'attr_weights': w}
+            attr = {"list": n, "attr_weights": w}
             bp = attribute.choice(attr)
-            self._skin = self.base_dir + bp + '.csv'
+            self._skin = self.base_dir + bp + ".csv"

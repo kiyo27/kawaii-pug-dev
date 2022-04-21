@@ -17,6 +17,7 @@ def get_attr(attr_list, key):
     d["weight"] = attr_list[key]["weight"]
     return d
 
+
 def choice(attr):
     target = random.choices(attr["list"], weights=attr["attr_weights"], k=1)[0]
     return target
@@ -164,11 +165,15 @@ class PugAttribute:
                 return attr
 
     def _optional_attr(self, target):
-        if 'options' in target:
-            if self._obj.ctype == 'Pug':
-                self._recursive_set(self._obj, 'basic', target['options'], "character/blueprints")
-            elif self._obj.ctype == 'SleepingPug':
-                self._recursive_set(self._obj, 'sleeping', target['options'], "character/blueprints")
+        if "options" in target:
+            if self._obj.ctype == "Pug":
+                self._recursive_set(
+                    self._obj, "basic", target["options"], "character/blueprints"
+                )
+            elif self._obj.ctype == "SleepingPug":
+                self._recursive_set(
+                    self._obj, "sleeping", target["options"], "character/blueprints"
+                )
 
     def _recursive_set(self, obj, key, value, path):
         if type(value[key]) is not dict:
@@ -181,8 +186,8 @@ class PugAttribute:
                 if hasattr(obj, opt):
                     _obj = getattr(obj, opt)
                     if _obj:
-                        self._recursive_set(_obj, opt, value[key], path) 
+                        self._recursive_set(_obj, opt, value[key], path)
                     else:
                         self._recursive_set(obj, opt, value[key], path)
                 else:
-                    self._recursive_set(obj, opt, value[key], path) 
+                    self._recursive_set(obj, opt, value[key], path)

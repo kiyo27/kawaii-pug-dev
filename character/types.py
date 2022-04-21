@@ -66,7 +66,7 @@ class SleepingPug(Pug):
 
     def makeAttributes(self, **kwargs):
         kwargs["mouth"] = False
-        #kwargs["glasses"] = False
+        # kwargs["glasses"] = False
         self._attr = PugAttribute(self, **kwargs)
 
 
@@ -83,6 +83,7 @@ class KabukiPug(Pug):
         kwargs["skin"] = "kabuki"
         self._color = PugColor(**kwargs)
 
+
 class PhantomPug(Pug):
     """Register phantom-pug's blueprints."""
 
@@ -92,4 +93,3 @@ class PhantomPug(Pug):
         kwargs["mask"] = "phantom"
         kwargs["nose"] = "sleeping"
         self._attr = PugAttribute(self, **kwargs)
-
