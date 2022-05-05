@@ -26,7 +26,7 @@ class PugColor(abstract.Color):
             self._skin = self.base_dir + kwargs["skin"] + ".csv"
         else:
             n = ["rainbow", "metallic", "basic", "green", "blue-red"]
-            w = [1, 5, 10]
+            w = [1, 5, 10, 1, 1]
             attr = {"list": n, "attr_weights": w}
             bp = attribute.choice(attr)
             self._skin = self.base_dir + bp + ".csv"

@@ -1,16 +1,10 @@
-import os
 import random
-
 import yaml
-
-from pixart import abstract
 
 
 def get_attr(attr_list, key):
-    n = []
     w = []
     for o in attr_list[key]["attribute"]:
-        n.append(o["name"])
         w.append(o["weight"])
 
     d = {"list": attr_list[key]["attribute"], "attr_weights": w}
