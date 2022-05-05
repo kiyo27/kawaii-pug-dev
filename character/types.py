@@ -53,6 +53,7 @@ class AnonyPug(Pug):
         kwargs["eyes"] = False
         kwargs["glasses"] = False
         kwargs["nose"] = False
+        kwargs["headband"] = False
         self._attr = PugAttribute(self, **kwargs)
 
 

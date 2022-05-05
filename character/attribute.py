@@ -29,6 +29,7 @@ class AttributeYaml:
 
             cls.mask = get_attr(attr_list, "mask")
             cls.head = get_attr(attr_list, "head")
+            cls.headband = get_attr(attr_list, "headband")
             cls.neck = get_attr(attr_list, "neck")
             cls.mouth = get_attr(attr_list, "mouth")
             cls.eyes = get_attr(attr_list, "eyes")
@@ -56,6 +57,7 @@ class PugAttribute:
         if (
             self.mask == other.mask
             and self.head == other.head
+            and self.headband == other.headband
             and self.neck == other.neck
             and self.mouth == other.mouth
             and self.eyes == other.eyes
@@ -73,6 +75,10 @@ class PugAttribute:
     @property
     def head(self):
         return self._head
+
+    @property
+    def headband(self):
+        return self._headband
 
     @property
     def neck(self):
@@ -101,6 +107,7 @@ class PugAttribute:
     def make(self, **kwargs):
         self.makeMask(**kwargs)
         self.makeHead(**kwargs)
+        self.makeHeadband(**kwargs)
         self.makeNeck(**kwargs)
         self.makeMouth(**kwargs)
         self.makeEyes(**kwargs)
@@ -116,6 +123,12 @@ class PugAttribute:
 
     def makeHead(self, **kwargs):
         self.set_attr("head", **kwargs)
+
+    def makeHeadband(self, **kwargs):
+        if self.head["bp"]:
+            self.set_attr("headband", headband=False)
+        else:
+            self.set_attr("headband", **kwargs)
 
     def makeNeck(self, **kwargs):
         self.set_attr("neck", **kwargs)

@@ -1,101 +1,1001 @@
-id,type,mask,head,neck,mouth,eyes,glasses,nose,ears,skin
-1,Pug,,Cap,,,,,,,basic
-2,SleepingPug,,Beanie,,,Blue Eye Shadow,,,,metallic
-3,Pug,,,,Tongue,Cross Eyed,,,,basic
-4,KabukiPug,,Tassle Hat,,Pipe,,Scouter,,,kabuki
-5,KabukiPug,,Knitted Cap,Green Collar,Cigarette,,Eye Mask,,,kabuki
-6,AnonyPug,Anonymous,Hat and Goggles,Scarf,,,,,,metallic
-7,SleepingPug,,Pilot Helmet,Green Collar,,Purple Eye Shadow,Big Shades,,,metallic
-8,Pug,,Chonmage,Scarf,Pipe,Purple Eye Shadow,Classic Shades,,,basic
-9,Pug,,Tassle Hat,,,Purple Eye Shadow,Scouter,,,basic
-10,SleepingPug,,Crown,Green Collar,,Purple Eye Shadow,,,,basic
-11,AnonyPug,Anonymous,Crown,Green Collar,,,,,Golden Ears,rainbow
-12,PhantomPug,Phantom,Head Light,,Medical Mask,,,,,blue-red
-13,SleepingPug,,Headphone,,,Cross Eyed,Black Glasses,,,basic
-14,SleepingPug,,Top Hat,Green Collar,,,Eye Patch,,,metallic
-15,SleepingPug,,Fedora,Green Collar,,Cross Eyed,,,,basic
-16,SleepingPug,,Straw Hat,,,Blue Eye Shadow,Classic Shades,,,basic
-17,AnonyPug,Anonymous,Fedora,Green Collar,,,,,,basic
-18,KabukiPug,,Fedora,,,Cross Eyed,Black Glasses,,,kabuki
-19,PhantomPug,Phantom,Cowboy Hat,,Pipe,,3D Glasses,,,blue-red
-20,SleepingPug,,Hat and Goggles,,,,Nerd Glasses,,,metallic
-21,SleepingPug,,Mohawk,Green Collar,,Cross Eyed,Mafia Glasses,,,basic
-22,Pug,,Demon,Green Collar,Cigarette,Purple Eye Shadow,Classic Shades,,,blue-red
-23,Pug,,Cap,Scarf,Medical Mask,,Regular Shades,,Green Ears,basic
-24,AnonyPug,Anonymous,Wizard Hat,,,,,,,basic
-25,AnonyPug,Anonymous,Demon,,,,,,,basic
-26,KabukiPug,,Cap,,Medical Mask,,,,,kabuki
-27,AnonyPug,Anonymous,,Scarf,,,,,,basic
-28,KabukiPug,,Pilot Helmet,,Pipe,,,,,kabuki
-29,AnonyPug,Anonymous,Mohawk,,,,,,,metallic
-30,PhantomPug,Phantom,Chonmage,Scarf,Tongue,,,,,metallic
-31,SleepingPug,,Wizard Hat,,,Cross Eyed,,,,basic
-32,Pug,,Bucket Hat,Green Collar,,Cross Eyed,Mafia Glasses,,,basic
-33,SleepingPug,,Bucket Hat,,,,Horned Rim Glasses,,,metallic
-34,PhantomPug,Phantom,Straw Hat,Green Collar,,,,,,basic
-35,KabukiPug,,Demon,Scarf,Vape,Purple Eye Shadow,Scouter,,,kabuki
-36,AnonyPug,Anonymous,Demon,Scarf,,,,,,green
-37,PhantomPug,Phantom,,,,,,,,basic
-38,SleepingPug,,Police Cap,,,,,,,basic
-39,SleepingPug,,Casual Knitted Cap,,,,Horned Rim Glasses,,,basic
-40,KabukiPug,,Welding Goggles,Green Collar,Pipe,,Big Shades,,,kabuki
-41,AnonyPug,Anonymous,Straw Hat,,,,,,,basic
-42,Pug,,Bandana,Green Collar,,,,,,basic
-43,Pug,,Chonmage,Scarf,Vape,Blue Eye Shadow,Regular Shades,,,basic
-44,Pug,,Police Cap,,,Blue Eye Shadow,Mafia Glasses,,,basic
-45,PhantomPug,Phantom,Wizard Hat,Scarf,Tongue,,,,,basic
-46,AnonyPug,Anonymous,,,,,,,,rainbow
-47,KabukiPug,,Police Cap,,Pipe,,Classic Shades,,,kabuki
-48,SleepingPug,,Demon,Scarf,,,,,,green
-49,KabukiPug,,Cap Forward,,,,,,,kabuki
-50,PhantomPug,Phantom,Chonmage,Green Collar,Vape,,Horned Rim Glasses,,,basic
-51,AnonyPug,Anonymous,Straw Hat,Scarf,,,,,,metallic
-52,PhantomPug,Phantom,Tassle Hat,Scarf,Pipe,,VR,,,basic
-53,SleepingPug,,Striped Ribbon,Green Collar,,Blue Eye Shadow,Regular Shades,,,basic
-54,SleepingPug,,Cap Forward,Scarf,,,Horned Rim Glasses,,,basic
-55,SleepingPug,,Big Hat,,,,Regular Shades,,,basic
-56,PhantomPug,Phantom,Cowboy Hat,,Vape,,VR,,,metallic
-57,SleepingPug,,Fedora,Scarf,,,,,,metallic
-58,PhantomPug,Phantom,Beanie,Scarf,Tongue,,Black Glasses,,,basic
-59,SleepingPug,,Head Light,Green Collar,,Purple Eye Shadow,,,,basic
-60,KabukiPug,,Cowboy Hat,Green Collar,Cigarette,Purple Eye Shadow,Mafia Glasses,,,kabuki
-61,AnonyPug,Anonymous,Knitted Cap,Scarf,,,,,,metallic
-62,KabukiPug,,,,,Cross Eyed,Black Glasses,,,kabuki
-63,PhantomPug,Phantom,Pilot Helmet,,,,Eye Mask,,,basic
-64,PhantomPug,Phantom,Big Hat,,,,Classic Shades,,,metallic
-65,Pug,,Wizard Hat,Scarf,Pipe,Purple Eye Shadow,,,,rainbow
-66,Pug,,Mohawk,Scarf,Pipe,Blue Eye Shadow,,,,basic
-67,PhantomPug,Phantom,Beanie,Green Collar,,,,,,metallic
-68,KabukiPug,,Police Cap,Green Collar,Vape,,,,,kabuki
-69,AnonyPug,Anonymous,,Green Collar,,,,,,metallic
-70,Pug,,Cowboy Hat,,Medical Mask,Cross Eyed,,,,metallic
-71,SleepingPug,,,,,,VR,,,basic
-72,AnonyPug,Anonymous,Top Hat,,,,,,,blue-red
-73,PhantomPug,Phantom,Cowboy Hat,,Tongue,,,,,metallic
-74,Pug,,Cap Forward,,,Blue Eye Shadow,Classic Shades,,,basic
-75,KabukiPug,,Silk Hat,,Pipe,,Mafia Glasses,,,kabuki
-76,KabukiPug,,Striped Ribbon,,,Purple Eye Shadow,Horned Rim Glasses,,,kabuki
-77,AnonyPug,Anonymous,Hat and Flower,,,,,,,blue-red
-78,PhantomPug,Phantom,Police Cap,Scarf,Tongue,,Regular Shades,,,basic
-79,KabukiPug,,Pilot Helmet,Green Collar,Medical Mask,,,,,kabuki
-80,PhantomPug,Phantom,Wizard Hat,Scarf,,,Big Shades,,,rainbow
-81,KabukiPug,,Straw Hat,Green Collar,Tongue,,,,,kabuki
-82,AnonyPug,Anonymous,Crown,,,,,,,blue-red
-83,PhantomPug,Phantom,Hat and Flower,Scarf,Vape,,,,,basic
-84,KabukiPug,,Police Cap,,,Cross Eyed,,,,kabuki
-85,KabukiPug,,Straw Hat,Green Collar,Tongue,Blue Eye Shadow,,,Green Ears,kabuki
-86,SleepingPug,,Head Light,,,,Mafia Glasses,,,metallic
-87,KabukiPug,,Headphone,Green Collar,Cigarette,,Regular Shades,,,kabuki
-88,PhantomPug,Phantom,Tassle Hat,,Tongue,,3D Glasses,,,basic
-89,Pug,,Beanie,Scarf,Pipe,Blue Eye Shadow,Horned Rim Glasses,,,basic
-90,Pug,,Head Light,,Tongue,,,,,basic
-91,KabukiPug,,Wizard Hat,Scarf,,Cross Eyed,,,,kabuki
-92,SleepingPug,,Demon,,,,Big Shades,,,basic
-93,KabukiPug,,Kasa,Green Collar,Pipe,,,Clown Nose,,kabuki
-94,KabukiPug,,Wizard Hat,,,Blue Eye Shadow,Big Shades,,,kabuki
-95,SleepingPug,,Knitted Cap,Green Collar,,,Horned Rim Glasses,,,green
-96,SleepingPug,,Bandana,Scarf,,,Classic Shades,,,basic
-97,PhantomPug,Phantom,Straw Hat,Green Collar,Cigarette,,,,,basic
-98,SleepingPug,,,,,Purple Eye Shadow,Horned Rim Glasses,,,metallic
-99,AnonyPug,Anonymous,Silk Hat,Scarf,,,,,,basic
-100,AnonyPug,Anonymous,Hat and Flower,Green Collar,,,,,,metallic
+id,type,mask,head,headband,neck,mouth,eyes,glasses,nose,ears,skin
+1,AnonyPug,Anonymous,,,Scarf,,,,,,metallic
+2,Pug,,,Headband,Scarf,Vape,,,,,basic
+3,AnonyPug,Anonymous,Police Cap,,Green Collar,,,,,,metallic
+4,PhantomPug,Phantom,Straw Hat,,Scarf,Cigarette,,,,,basic
+5,KabukiPug,,Head Light,,,Pipe,,Nerd Glasses,,,kabuki
+6,AnonyPug,Anonymous,Knitted Cap,,,,,,,,basic
+7,AnonyPug,Anonymous,,,,,,,,,metallic
+8,PhantomPug,Phantom,,,Scarf,Medical Mask,,Eye Mask,,,basic
+9,Pug,,Welding Goggles,,Scarf,Tongue,,Eye Mask,,,blue-red
+10,AnonyPug,Anonymous,,,Green Collar,,,,,,basic
+11,KabukiPug,,,,,Tongue,,,,,kabuki
+12,PhantomPug,Phantom,Wizard Hat,,,,,,,,basic
+13,Pug,,Crown,,,,Cross Eyed,,,,basic
+14,KabukiPug,,Crown,,,,,,,,kabuki
+15,SleepingPug,,Headphone,,Green Collar,,Cross Eyed,,,,basic
+16,Pug,,Cowboy Hat,,Green Collar,Vape,,,,,basic
+17,PhantomPug,Phantom,Bandana,,,,,,,,basic
+18,PhantomPug,Phantom,Silk Hat,,Green Collar,Tongue,,Big Shades,,,basic
+19,AnonyPug,Anonymous,Straw Hat,,,,,,,,basic
+20,Pug,,Headphone,,Green Collar,Tongue,,,,Green Ears,basic
+21,SleepingPug,,Demon,,Scarf,,,,,,basic
+22,PhantomPug,Phantom,Tassle Hat,,,Vape,,,,,basic
+23,KabukiPug,,Top Hat,,Green Collar,,,,,,kabuki
+24,PhantomPug,Phantom,Striped Ribbon,,,,,,,,metallic
+25,SleepingPug,,Bandana,,Scarf,,,Scouter,,,rainbow
+26,PhantomPug,Phantom,Straw Hat,,,,,,,,basic
+27,PhantomPug,Phantom,Casual Knitted Cap,,Scarf,,,,,,basic
+28,SleepingPug,,Kasa,,Green Collar,,,,,,rainbow
+29,Pug,,Bandana,,Scarf,Cigarette,,,,,basic
+30,KabukiPug,,Top Hat,,,,,,,,kabuki
+31,SleepingPug,,Hat and Goggles,,Scarf,,,Black Glasses,,,basic
+32,SleepingPug,,Knitted Cap,,,,,,,,basic
+33,KabukiPug,,Welding Goggles,,,Vape,,Eye Mask,,,kabuki
+34,Pug,,Beanie,,,,,Nerd Glasses,,,basic
+35,AnonyPug,Anonymous,Silk Hat,,Green Collar,,,,,,metallic
+36,Pug,,Kasa,,Green Collar,Medical Mask,,,,,basic
+37,PhantomPug,Phantom,Hat and Goggles,,,Cigarette,,Black Glasses,,,green
+38,KabukiPug,,Casual Knitted Cap,,,Cigarette,,Black Glasses,,,kabuki
+39,SleepingPug,,Wizard Hat,,,,,Classic Shades,,,basic
+40,PhantomPug,Phantom,Chonmage,,,Cigarette,,Classic Shades,,,basic
+41,KabukiPug,,,,,,,Black Glasses,,,kabuki
+42,SleepingPug,,Straw Hat,,Green Collar,,,Big Shades,,,metallic
+43,Pug,,Straw Hat,,,,,Mafia Glasses,,,basic
+44,PhantomPug,Phantom,Fedora,,Scarf,Tongue,,Horned Rim Glasses,,,basic
+45,SleepingPug,,,,Green Collar,,,Black Glasses,,,rainbow
+46,AnonyPug,Anonymous,Hat and Flower,,Scarf,,,,,,basic
+47,KabukiPug,,Chonmage,,Green Collar,,Purple Eye Shadow,,,,kabuki
+48,PhantomPug,Phantom,Kasa,,,,,,,,rainbow
+49,AnonyPug,Anonymous,Head Light,,Scarf,,,,,,basic
+50,AnonyPug,Anonymous,Kasa,,,,,,,,basic
+51,PhantomPug,Phantom,Casual Knitted Cap,,,,,,,,basic
+52,AnonyPug,Anonymous,Wizard Hat,,,,,,,,basic
+53,Pug,,Crown,,,,,Scouter,,,basic
+54,KabukiPug,,,,Green Collar,,,Scouter,,,kabuki
+55,PhantomPug,Phantom,,,,Cigarette,,,,,basic
+56,Pug,,Chonmage,,,,,,,,metallic
+57,KabukiPug,,Casual Knitted Cap,,,Cigarette,Blue Eye Shadow,Mafia Glasses,,,kabuki
+58,AnonyPug,Anonymous,Crown,,Green Collar,,,,,,metallic
+59,Pug,,,Hachimaki,Green Collar,Cigarette,,Scouter,,,basic
+60,AnonyPug,Anonymous,Welding Goggles,,,,,,,,basic
+61,PhantomPug,Phantom,Welding Goggles,,Scarf,,,,,,basic
+62,Pug,,,,,,,Mafia Glasses,,,basic
+63,AnonyPug,Anonymous,Kasa,,Scarf,,,,,,basic
+64,AnonyPug,Anonymous,Welding Goggles,,Scarf,,,,,,basic
+65,SleepingPug,,Headphone,,,,,,,,basic
+66,AnonyPug,Anonymous,Top Hat,,Scarf,,,,,,basic
+67,AnonyPug,Anonymous,Cap Forward,,,,,,,,metallic
+68,PhantomPug,Phantom,Big Hat,,Scarf,,,Nerd Glasses,,,basic
+69,SleepingPug,,Head Light,,,,,Regular Shades,,,metallic
+70,PhantomPug,Phantom,Headphone,,,Tongue,,,,,basic
+71,SleepingPug,,Straw Hat,,Scarf,,Blue Eye Shadow,,,,basic
+72,SleepingPug,,Pilot Helmet,,,,Cross Eyed,Mafia Glasses,,,metallic
+73,SleepingPug,,Hat and Goggles,,Scarf,,,Regular Shades,,,blue-red
+74,SleepingPug,,Head Light,,,,,,Clown Nose,,basic
+75,KabukiPug,,,Hachimaki,,Medical Mask,,,,,kabuki
+76,KabukiPug,,Cowboy Hat,,,Vape,,Eye Mask,,,kabuki
+77,SleepingPug,,Bandana,,Scarf,,,,,,metallic
+78,AnonyPug,Anonymous,Crown,,,,,,,,metallic
+79,PhantomPug,Phantom,Welding Goggles,,,,,Horned Rim Glasses,,,basic
+80,AnonyPug,Anonymous,Chonmage,,,,,,,,metallic
+81,SleepingPug,,Straw Hat,,Green Collar,,,,,,basic
+82,Pug,,,Headband,Scarf,Pipe,Cross Eyed,VR,,,blue-red
+83,SleepingPug,,Bandana,,Scarf,,,Big Shades,,,basic
+84,PhantomPug,Phantom,Cap,,Scarf,,,Black Glasses,,,metallic
+85,AnonyPug,Anonymous,Demon,,Green Collar,,,,,,metallic
+86,Pug,,,,Green Collar,,Blue Eye Shadow,Horned Rim Glasses,,,rainbow
+87,KabukiPug,,Cap Forward,,,Medical Mask,Purple Eye Shadow,Classic Shades,,,kabuki
+88,Pug,,,Hachimaki,Green Collar,,,,,,basic
+89,PhantomPug,Phantom,Casual Knitted Cap,,Scarf,,,Horned Rim Glasses,,,basic
+90,AnonyPug,Anonymous,Demon,,Scarf,,,,,,basic
+91,Pug,,Demon,,,,,Eye Mask,,,basic
+92,PhantomPug,Phantom,Top Hat,,Green Collar,Cigarette,,Horned Rim Glasses,,,metallic
+93,KabukiPug,,Top Hat,,,Tongue,Purple Eye Shadow,,,,kabuki
+94,Pug,,Casual Knitted Cap,,,,,,,,rainbow
+95,PhantomPug,Phantom,,,Green Collar,,,,,,metallic
+96,PhantomPug,Phantom,Bandana,,Scarf,Tongue,,Scouter,,,basic
+97,PhantomPug,Phantom,Top Hat,,Green Collar,,,Classic Shades,,,basic
+98,AnonyPug,Anonymous,Striped Ribbon,,Scarf,,,,,,green
+99,KabukiPug,,Straw Hat,,,,,,,,kabuki
+100,PhantomPug,Phantom,Tassle Hat,,Scarf,Vape,,Black Glasses,,,basic
+101,PhantomPug,Phantom,Cap,,Scarf,,,Mafia Glasses,,,metallic
+102,KabukiPug,,Demon,,,,,,,,kabuki
+103,KabukiPug,,Chonmage,,Green Collar,,,Mafia Glasses,,,kabuki
+104,KabukiPug,,Welding Goggles,,,,,,,,kabuki
+105,PhantomPug,Phantom,,,,Medical Mask,,,,,metallic
+106,Pug,,Big Hat,,Scarf,,,Black Glasses,,,basic
+107,Pug,,Bucket Hat,,Green Collar,,,Nerd Glasses,,,blue-red
+108,Pug,,Welding Goggles,,Green Collar,Tongue,,,,,metallic
+109,SleepingPug,,Demon,,,,,Horned Rim Glasses,,,basic
+110,PhantomPug,Phantom,Hat and Goggles,,,,,,,,metallic
+111,Pug,,Big Hat,,Scarf,Cigarette,,Eye Mask,,,metallic
+112,KabukiPug,,,,,,,Eye Mask,,,kabuki
+113,Pug,,Wizard Hat,,Scarf,,Cross Eyed,Classic Shades,,,basic
+114,PhantomPug,Phantom,Welding Goggles,,,Medical Mask,,,,,basic
+115,Pug,,Top Hat,,,Tongue,,,,,green
+116,KabukiPug,,,,Scarf,,Cross Eyed,,,,kabuki
+117,AnonyPug,Anonymous,Pilot Helmet,,,,,,,,basic
+118,Pug,,Top Hat,,,,,Scouter,,,basic
+119,PhantomPug,Phantom,,,,,,Horned Rim Glasses,,,basic
+120,Pug,,Welding Goggles,,,,,,,,basic
+121,KabukiPug,,Beanie,,Scarf,,,,,,kabuki
+122,PhantomPug,Phantom,Bandana,,,Medical Mask,,,,,basic
+123,Pug,,Striped Ribbon,,,Medical Mask,Purple Eye Shadow,3D Glasses,,,metallic
+124,Pug,,Hat and Flower,,,Pipe,Cross Eyed,Scouter,,,basic
+125,KabukiPug,,Striped Ribbon,,,,Cross Eyed,,,,kabuki
+126,SleepingPug,,Hat and Goggles,,Scarf,,,Scouter,,,metallic
+127,SleepingPug,,Headphone,,Scarf,,,,,,basic
+128,PhantomPug,Phantom,Cap,,Green Collar,,,VR,,,basic
+129,KabukiPug,,Straw Hat,,Green Collar,,,,,,kabuki
+130,SleepingPug,,Cap Forward,,Green Collar,,,3D Glasses,,,basic
+131,SleepingPug,,Kasa,,,,Purple Eye Shadow,Mafia Glasses,,,blue-red
+132,KabukiPug,,Cap Forward,,,Pipe,Blue Eye Shadow,,,,kabuki
+133,KabukiPug,,Casual Knitted Cap,,,Cigarette,,,,,kabuki
+134,Pug,,Mohawk,,Green Collar,,,,,,metallic
+135,KabukiPug,,Straw Hat,,Green Collar,,Cross Eyed,,,,kabuki
+136,KabukiPug,,Silk Hat,,,Vape,Blue Eye Shadow,,,,kabuki
+137,SleepingPug,,,Headband,Green Collar,,Blue Eye Shadow,,,,basic
+138,AnonyPug,Anonymous,Fedora,,,,,,,,basic
+139,KabukiPug,,,,,Cigarette,,,,,kabuki
+140,SleepingPug,,Police Cap,,Scarf,,,Eye Patch,,,basic
+141,SleepingPug,,Fedora,,,,Cross Eyed,Horned Rim Glasses,,,basic
+142,AnonyPug,Anonymous,Wizard Hat,,Scarf,,,,,,basic
+143,Pug,,Wizard Hat,,Green Collar,Vape,,3D Glasses,,Golden Ears,basic
+144,SleepingPug,,Welding Goggles,,Scarf,,,,,,basic
+145,KabukiPug,,,,Scarf,,,,,,kabuki
+146,PhantomPug,Phantom,Demon,,Scarf,Medical Mask,,,,,basic
+147,PhantomPug,Phantom,Wizard Hat,,Scarf,,,Big Shades,,,metallic
+148,SleepingPug,,,Hachimaki,Scarf,,,Regular Shades,,,blue-red
+149,PhantomPug,Phantom,Welding Goggles,,,Cigarette,,,,,blue-red
+150,SleepingPug,,Wizard Hat,,Green Collar,,,,,,metallic
+151,PhantomPug,Phantom,,Headband,,,,,,,rainbow
+152,Pug,,Head Light,,Scarf,,Blue Eye Shadow,,,,metallic
+153,PhantomPug,Phantom,Wizard Hat,,Green Collar,Tongue,,Scouter,,,green
+154,AnonyPug,Anonymous,Head Light,,Green Collar,,,,,,metallic
+155,Pug,,Bucket Hat,,Green Collar,,Purple Eye Shadow,,,,metallic
+156,Pug,,Hat and Goggles,,Green Collar,,,,,,blue-red
+157,AnonyPug,Anonymous,Bucket Hat,,Scarf,,,,,,basic
+158,SleepingPug,,Silk Hat,,Green Collar,,,Scouter,,,metallic
+159,Pug,,Crown,,Green Collar,,,,,,blue-red
+160,KabukiPug,,Demon,,Green Collar,,,Mafia Glasses,,,kabuki
+161,PhantomPug,Phantom,Fedora,,Green Collar,,,,,,basic
+162,PhantomPug,Phantom,Demon,,Scarf,,,Regular Shades,,,basic
+163,Pug,,Cap Forward,,,,,,,,basic
+164,Pug,,Hat and Flower,,,,,Eye Patch,,,metallic
+165,Pug,,Chonmage,,,,,Eye Patch,,,blue-red
+166,SleepingPug,,,,Green Collar,,Cross Eyed,,,,basic
+167,AnonyPug,Anonymous,Mohawk,,Green Collar,,,,,,basic
+168,SleepingPug,,,Hachimaki,,,,Classic Shades,,,metallic
+169,SleepingPug,,,Hachimaki,,,Blue Eye Shadow,,,,basic
+170,PhantomPug,Phantom,,,Scarf,,,,,,basic
+171,Pug,,Fedora,,Scarf,Pipe,Blue Eye Shadow,Scouter,,,basic
+172,PhantomPug,Phantom,Straw Hat,,Green Collar,Medical Mask,,,,,basic
+173,PhantomPug,Phantom,Beanie,,Scarf,Medical Mask,,,,,metallic
+174,AnonyPug,Anonymous,Mohawk,,,,,,,,basic
+175,KabukiPug,,Knitted Cap,,Green Collar,,,Horned Rim Glasses,,,kabuki
+176,Pug,,Beanie,,Scarf,Medical Mask,Cross Eyed,,,,basic
+177,PhantomPug,Phantom,Cap Forward,,Scarf,Vape,,3D Glasses,,,basic
+178,KabukiPug,,Fedora,,Scarf,Tongue,,,,,kabuki
+179,Pug,,Knitted Cap,,Scarf,Cigarette,,Classic Shades,,,blue-red
+180,KabukiPug,,Cap,,Green Collar,,,,,,kabuki
+181,KabukiPug,,,Hachimaki,,Cigarette,,Horned Rim Glasses,,,kabuki
+182,Pug,,Crown,,Scarf,Pipe,Purple Eye Shadow,,,,basic
+183,Pug,,Tassle Hat,,Scarf,,,,,,basic
+184,SleepingPug,,Fedora,,,,,,,,metallic
+185,SleepingPug,,Fedora,,,,,Eye Patch,,,basic
+186,PhantomPug,Phantom,Police Cap,,,,,Classic Shades,,,basic
+187,SleepingPug,,Head Light,,Scarf,,Blue Eye Shadow,,,,basic
+188,PhantomPug,Phantom,Crown,,Green Collar,Medical Mask,,Black Glasses,,,basic
+189,SleepingPug,,Bandana,,Green Collar,,Purple Eye Shadow,,,,basic
+190,KabukiPug,,Cap Forward,,Green Collar,Tongue,Purple Eye Shadow,Eye Patch,,,kabuki
+191,KabukiPug,,Hat and Flower,,,,Blue Eye Shadow,,,,kabuki
+192,KabukiPug,,Mohawk,,Green Collar,,,Horned Rim Glasses,,,kabuki
+193,SleepingPug,,Kasa,,,,,,,,basic
+194,SleepingPug,,Straw Hat,,Scarf,,,,,,metallic
+195,KabukiPug,,Silk Hat,,,Pipe,Cross Eyed,,,,kabuki
+196,Pug,,,Headband,Scarf,Cigarette,Cross Eyed,3D Glasses,,,basic
+197,AnonyPug,Anonymous,Pilot Helmet,,Green Collar,,,,,,metallic
+198,Pug,,Cap Forward,,Scarf,Pipe,,,,Golden Ears,metallic
+199,PhantomPug,Phantom,Demon,,Scarf,,,,,,blue-red
+200,KabukiPug,,Police Cap,,Scarf,Tongue,,,,,kabuki
+201,Pug,,Pilot Helmet,,Scarf,Medical Mask,Cross Eyed,,,,basic
+202,KabukiPug,,,,,,,Classic Shades,,,kabuki
+203,KabukiPug,,Welding Goggles,,,Tongue,,,,,kabuki
+204,Pug,,Straw Hat,,,Cigarette,,,,,basic
+205,Pug,,Bucket Hat,,Green Collar,,,,,,metallic
+206,AnonyPug,Anonymous,Silk Hat,,,,,,,,basic
+207,KabukiPug,,Big Hat,,Scarf,,Purple Eye Shadow,,,,kabuki
+208,Pug,,Straw Hat,,,Pipe,Purple Eye Shadow,,,,metallic
+209,AnonyPug,Anonymous,Beanie,,Scarf,,,,,,metallic
+210,AnonyPug,Anonymous,Hat and Goggles,,,,,,,,basic
+211,AnonyPug,Anonymous,Bucket Hat,,Green Collar,,,,,,basic
+212,PhantomPug,Phantom,,Hachimaki,,,,,,,basic
+213,SleepingPug,,Bandana,,Scarf,,,VR,,,basic
+214,PhantomPug,Phantom,,Headband,Scarf,Vape,,,,,basic
+215,PhantomPug,Phantom,,Headband,,Cigarette,,,,,basic
+216,Pug,,Head Light,,Green Collar,,Cross Eyed,Mafia Glasses,,,basic
+217,AnonyPug,Anonymous,Welding Goggles,,Green Collar,,,,,,basic
+218,Pug,,,,Green Collar,Vape,Purple Eye Shadow,,,,basic
+219,AnonyPug,Anonymous,Striped Ribbon,,Scarf,,,,,Golden Ears,basic
+220,SleepingPug,,Fedora,,,,,3D Glasses,,,basic
+221,Pug,,Head Light,,,,,Nerd Glasses,,,metallic
+222,PhantomPug,Phantom,Pilot Helmet,,,Medical Mask,,Classic Shades,,,basic
+223,SleepingPug,,,Hachimaki,,,,Big Shades,,,metallic
+224,SleepingPug,,Casual Knitted Cap,,Scarf,,,Mafia Glasses,,,basic
+225,Pug,,,Hachimaki,,,,,,,basic
+226,AnonyPug,Anonymous,Police Cap,,,,,,,,basic
+227,KabukiPug,,Police Cap,,Green Collar,,,,,,kabuki
+228,PhantomPug,Phantom,Hat and Flower,,Scarf,Cigarette,,,,,basic
+229,KabukiPug,,,Headband,,Tongue,,,,,kabuki
+230,PhantomPug,Phantom,Tassle Hat,,Scarf,,,Mafia Glasses,,,rainbow
+231,Pug,,Beanie,,,,,3D Glasses,,,basic
+232,SleepingPug,,Demon,,,,,Big Shades,,,metallic
+233,SleepingPug,,Chonmage,,Scarf,,,,,,blue-red
+234,PhantomPug,Phantom,Head Light,,,,,,,,basic
+235,Pug,,Cap,,,Vape,,3D Glasses,,,basic
+236,PhantomPug,Phantom,Mohawk,,,Tongue,,Regular Shades,,,metallic
+237,KabukiPug,,Cap Forward,,Green Collar,Pipe,,Mafia Glasses,Clown Nose,,kabuki
+238,SleepingPug,,,,Scarf,,Blue Eye Shadow,,,,basic
+239,Pug,,,,Green Collar,Vape,,3D Glasses,,,metallic
+240,KabukiPug,,Tassle Hat,,Scarf,Pipe,,Scouter,,,kabuki
+241,KabukiPug,,Hat and Flower,,Scarf,Pipe,,,,,kabuki
+242,KabukiPug,,Welding Goggles,,,Cigarette,Cross Eyed,Eye Patch,,,kabuki
+243,PhantomPug,Phantom,Big Hat,,Green Collar,Tongue,,,,,basic
+244,KabukiPug,,Cap,,,,,Scouter,,,kabuki
+245,PhantomPug,Phantom,Crown,,Green Collar,Cigarette,,3D Glasses,,,metallic
+246,SleepingPug,,Cowboy Hat,,Green Collar,,Purple Eye Shadow,,,,basic
+247,KabukiPug,,Wizard Hat,,Scarf,Tongue,,Horned Rim Glasses,,,kabuki
+248,SleepingPug,,Wizard Hat,,Green Collar,,,Mafia Glasses,,,basic
+249,Pug,,Welding Goggles,,Scarf,,,Nerd Glasses,,,basic
+250,SleepingPug,,Crown,,Green Collar,,,,,,metallic
+251,PhantomPug,Phantom,Cap Forward,,Green Collar,,,,,,basic
+252,AnonyPug,Anonymous,Headphone,,Green Collar,,,,,,metallic
+253,PhantomPug,Phantom,Crown,,,Tongue,,Classic Shades,,,basic
+254,Pug,,Fedora,,,Tongue,Cross Eyed,,,,basic
+255,PhantomPug,Phantom,Cap,,,,,Eye Mask,,,basic
+256,SleepingPug,,,Headband,,,,Horned Rim Glasses,,,basic
+257,KabukiPug,,,Headband,Green Collar,Cigarette,,,,,kabuki
+258,SleepingPug,,,,,,,,,,basic
+259,Pug,,Big Hat,,Green Collar,,,,,,metallic
+260,SleepingPug,,Police Cap,,Green Collar,,,,,,blue-red
+261,PhantomPug,Phantom,,Hachimaki,,Medical Mask,,Big Shades,,,basic
+262,Pug,,Pilot Helmet,,,Vape,,3D Glasses,,,metallic
+263,PhantomPug,Phantom,Cap Forward,,,Cigarette,,,,,metallic
+264,PhantomPug,Phantom,,Headband,Scarf,,,Eye Mask,,,basic
+265,PhantomPug,Phantom,Chonmage,,Green Collar,Vape,,,,,basic
+266,KabukiPug,,,Headband,,Cigarette,,,,,kabuki
+267,SleepingPug,,Casual Knitted Cap,,Green Collar,,,Mafia Glasses,,,basic
+268,KabukiPug,,,Hachimaki,,,,Eye Mask,,,kabuki
+269,Pug,,Striped Ribbon,,,,,Big Shades,,,basic
+270,Pug,,Police Cap,,,Tongue,,,Clown Nose,,basic
+271,Pug,,Chonmage,,,Tongue,,,,,basic
+272,SleepingPug,,Pilot Helmet,,Green Collar,,,,,,basic
+273,Pug,,Bandana,,Scarf,Medical Mask,Blue Eye Shadow,,,,basic
+274,KabukiPug,,,Headband,,,Cross Eyed,VR,,,kabuki
+275,Pug,,Bucket Hat,,,Vape,,Scouter,,,metallic
+276,SleepingPug,,Big Hat,,Scarf,,,Mafia Glasses,,Golden Ears,basic
+277,SleepingPug,,Top Hat,,Scarf,,Cross Eyed,Nerd Glasses,,,basic
+278,Pug,,Cap,,Green Collar,,,Black Glasses,,,rainbow
+279,SleepingPug,,Big Hat,,,,,,,,basic
+280,KabukiPug,,,Hachimaki,,Tongue,,Scouter,,,kabuki
+281,PhantomPug,Phantom,Pilot Helmet,,Scarf,,,VR,,,green
+282,PhantomPug,Phantom,Kasa,,,,,Nerd Glasses,,,basic
+283,PhantomPug,Phantom,Fedora,,Scarf,Pipe,,,,,basic
+284,Pug,,,Hachimaki,,,Blue Eye Shadow,Nerd Glasses,,,metallic
+285,SleepingPug,,,,Scarf,,,,,,blue-red
+286,PhantomPug,Phantom,Headphone,,,,,Eye Patch,,,basic
+287,KabukiPug,,Hat and Flower,,,Medical Mask,,Eye Patch,,,kabuki
+288,SleepingPug,,,Headband,,,Purple Eye Shadow,,,,basic
+289,PhantomPug,Phantom,Tassle Hat,,,Medical Mask,,,,,metallic
+290,SleepingPug,,Striped Ribbon,,Green Collar,,,,,,metallic
+291,SleepingPug,,,,Green Collar,,,Regular Shades,,,basic
+292,PhantomPug,Phantom,Bandana,,Green Collar,,,,,,green
+293,Pug,,Big Hat,,Green Collar,,Purple Eye Shadow,,,,basic
+294,Pug,,Bandana,,,,,VR,,,metallic
+295,KabukiPug,,,,,,,,,,kabuki
+296,PhantomPug,Phantom,,Hachimaki,,Medical Mask,,,,,metallic
+297,Pug,,Demon,,,Cigarette,,VR,,,metallic
+298,Pug,,Cap,,,,Cross Eyed,,,,basic
+299,KabukiPug,,Hat and Flower,,Green Collar,,,Big Shades,,,kabuki
+300,PhantomPug,Phantom,Knitted Cap,,,Medical Mask,,,,,basic
+301,KabukiPug,,Kasa,,,Vape,,,,,kabuki
+302,SleepingPug,,Casual Knitted Cap,,,,,Classic Shades,,,basic
+303,SleepingPug,,Straw Hat,,Scarf,,,Classic Shades,,,rainbow
+304,KabukiPug,,Headphone,,Scarf,,,,,,kabuki
+305,KabukiPug,,,,,,Cross Eyed,,,,kabuki
+306,SleepingPug,,Big Hat,,,,,Eye Mask,,,blue-red
+307,KabukiPug,,Crown,,Green Collar,Cigarette,,VR,,,kabuki
+308,Pug,,Pilot Helmet,,Green Collar,,,,,,metallic
+309,KabukiPug,,Head Light,,,,,Scouter,,,kabuki
+310,SleepingPug,,Fedora,,Scarf,,,Black Glasses,,,basic
+311,AnonyPug,Anonymous,Chonmage,,Scarf,,,,,,basic
+312,KabukiPug,,Big Hat,,Green Collar,Pipe,,,,,kabuki
+313,Pug,,Silk Hat,,,,,Scouter,,,basic
+314,KabukiPug,,,,Scarf,Pipe,Blue Eye Shadow,,,,kabuki
+315,KabukiPug,,Demon,,Green Collar,,,Black Glasses,,,kabuki
+316,SleepingPug,,,,,,,Nerd Glasses,,,basic
+317,KabukiPug,,Knitted Cap,,Scarf,Cigarette,Cross Eyed,Big Shades,,,kabuki
+318,Pug,,Cap,,Green Collar,Tongue,,Eye Mask,,,metallic
+319,KabukiPug,,Kasa,,,,,Eye Mask,,,kabuki
+320,SleepingPug,,,,Green Collar,,,Scouter,,,basic
+321,Pug,,Beanie,,,Cigarette,,VR,,,basic
+322,PhantomPug,Phantom,Top Hat,,,,,,,,metallic
+323,AnonyPug,Anonymous,Bandana,,,,,,,,blue-red
+324,Pug,,Tassle Hat,,,,,Eye Mask,,,basic
+325,KabukiPug,,Bucket Hat,,,,,,,,kabuki
+326,Pug,,,Headband,Scarf,,,Regular Shades,,,green
+327,PhantomPug,Phantom,Crown,,,Pipe,,Scouter,,,basic
+328,KabukiPug,,Demon,,,,,Regular Shades,Clown Nose,,kabuki
+329,AnonyPug,Anonymous,Fedora,,Green Collar,,,,,,basic
+330,AnonyPug,Anonymous,Beanie,,,,,,,,basic
+331,SleepingPug,,Casual Knitted Cap,,,,Cross Eyed,Regular Shades,,,metallic
+332,PhantomPug,Phantom,Bandana,,,Tongue,,VR,,,basic
+333,PhantomPug,Phantom,Chonmage,,Scarf,Pipe,,,,,basic
+334,PhantomPug,Phantom,,,,,,Classic Shades,,,basic
+335,PhantomPug,Phantom,Cowboy Hat,,,,,Scouter,,,metallic
+336,KabukiPug,,Tassle Hat,,,Cigarette,,Mafia Glasses,,,kabuki
+337,KabukiPug,,Cap,,Green Collar,,,Eye Mask,,,kabuki
+338,SleepingPug,,Casual Knitted Cap,,Green Collar,,,Nerd Glasses,,,basic
+339,PhantomPug,Phantom,Beanie,,Scarf,,,,,,metallic
+340,SleepingPug,,Welding Goggles,,,,,Classic Shades,,,metallic
+341,Pug,,Crown,,,Vape,Cross Eyed,,,,basic
+342,KabukiPug,,Straw Hat,,,Cigarette,Cross Eyed,Big Shades,,,kabuki
+343,SleepingPug,,Cowboy Hat,,,,,,,,basic
+344,Pug,,Cap,,Scarf,,,,,,basic
+345,SleepingPug,,Straw Hat,,,,Purple Eye Shadow,Eye Mask,,,metallic
+346,PhantomPug,Phantom,,Headband,Green Collar,Pipe,,Horned Rim Glasses,,,metallic
+347,SleepingPug,,Welding Goggles,,,,,Big Shades,,,metallic
+348,KabukiPug,,Hat and Flower,,Scarf,,,,,,kabuki
+349,KabukiPug,,Headphone,,Scarf,Pipe,,Eye Mask,,,kabuki
+350,AnonyPug,Anonymous,Straw Hat,,Green Collar,,,,,,rainbow
+351,SleepingPug,,,Headband,Green Collar,,,,,,blue-red
+352,SleepingPug,,Bandana,,Green Collar,,,Black Glasses,,,basic
+353,KabukiPug,,Demon,,Green Collar,,,,,,kabuki
+354,PhantomPug,Phantom,Silk Hat,,Green Collar,,,Big Shades,,,basic
+355,Pug,,Bucket Hat,,,,Purple Eye Shadow,,,,basic
+356,PhantomPug,Phantom,Top Hat,,,Medical Mask,,,,,metallic
+357,KabukiPug,,Mohawk,,Green Collar,Pipe,,,,,kabuki
+358,AnonyPug,Anonymous,Cap,,Green Collar,,,,,,basic
+359,Pug,,,Headband,,Cigarette,,Big Shades,,,metallic
+360,KabukiPug,,Top Hat,,,,,Eye Patch,,,kabuki
+361,Pug,,Bucket Hat,,,Pipe,,,,,metallic
+362,PhantomPug,Phantom,Casual Knitted Cap,,,Vape,,,,,metallic
+363,KabukiPug,,Kasa,,,,,,,,kabuki
+364,AnonyPug,Anonymous,Headphone,,Scarf,,,,,,basic
+365,PhantomPug,Phantom,Cap Forward,,Scarf,Cigarette,,,,,blue-red
+366,Pug,,Welding Goggles,,Scarf,Vape,,,,,basic
+367,AnonyPug,Anonymous,Tassle Hat,,,,,,,,basic
+368,KabukiPug,,,Hachimaki,Green Collar,Cigarette,,,,,kabuki
+369,Pug,,Demon,,,Medical Mask,,3D Glasses,,,metallic
+370,SleepingPug,,Hat and Flower,,Green Collar,,,Black Glasses,,,basic
+371,SleepingPug,,Top Hat,,Green Collar,,,Big Shades,,,metallic
+372,PhantomPug,Phantom,Cap,,Scarf,,,Horned Rim Glasses,,,metallic
+373,KabukiPug,,Bucket Hat,,,Tongue,,,,,kabuki
+374,KabukiPug,,,,Green Collar,,,,,,kabuki
+375,SleepingPug,,Bandana,,,,,,,,basic
+376,PhantomPug,Phantom,Demon,,Scarf,,,Horned Rim Glasses,,,basic
+377,Pug,,,,Scarf,,,Horned Rim Glasses,,,blue-red
+378,PhantomPug,Phantom,Demon,,Green Collar,Cigarette,,Eye Patch,,,basic
+379,KabukiPug,,Police Cap,,,Vape,,,,,kabuki
+380,KabukiPug,,Chonmage,,,,,,,,kabuki
+381,AnonyPug,Anonymous,Crown,,Scarf,,,,,,basic
+382,PhantomPug,Phantom,,Headband,,Vape,,Black Glasses,,,metallic
+383,KabukiPug,,Fedora,,,,,VR,,,kabuki
+384,SleepingPug,,Bandana,,Scarf,,Purple Eye Shadow,,,,basic
+385,Pug,,,Headband,,Cigarette,,3D Glasses,,,basic
+386,SleepingPug,,Hat and Goggles,,Green Collar,,,,,,blue-red
+387,Pug,,Headphone,,Scarf,,,Mafia Glasses,,,metallic
+388,AnonyPug,Anonymous,Pilot Helmet,,Scarf,,,,,,basic
+389,AnonyPug,Anonymous,Cap Forward,,Green Collar,,,,,,metallic
+390,KabukiPug,,,,Scarf,Vape,,,,,kabuki
+391,KabukiPug,,Hat and Goggles,,,,,,,,kabuki
+392,PhantomPug,Phantom,,,,,,VR,,,metallic
+393,KabukiPug,,Silk Hat,,,,,VR,,,kabuki
+394,PhantomPug,Phantom,Straw Hat,,,Tongue,,,,,rainbow
+395,Pug,,,,,Cigarette,,,,,metallic
+396,PhantomPug,Phantom,Cap,,,Pipe,,Classic Shades,,,metallic
+397,Pug,,Striped Ribbon,,,,Blue Eye Shadow,,,,basic
+398,Pug,,Tassle Hat,,Scarf,Tongue,,,,,metallic
+399,Pug,,Chonmage,,Scarf,Vape,,,,,basic
+400,PhantomPug,Phantom,Fedora,,Scarf,,,,,,metallic
+401,PhantomPug,Phantom,Striped Ribbon,,,,,Black Glasses,,,metallic
+402,KabukiPug,,Bandana,,Scarf,Cigarette,,Black Glasses,,,kabuki
+403,Pug,,Pilot Helmet,,Scarf,Medical Mask,Cross Eyed,Nerd Glasses,,,metallic
+404,PhantomPug,Phantom,Wizard Hat,,,,,VR,,,rainbow
+405,KabukiPug,,Chonmage,,,Cigarette,Purple Eye Shadow,,,,kabuki
+406,KabukiPug,,Hat and Goggles,,Scarf,,,Classic Shades,,,kabuki
+407,Pug,,Wizard Hat,,,Medical Mask,,Black Glasses,,,basic
+408,PhantomPug,Phantom,Big Hat,,,Pipe,,Nerd Glasses,,,basic
+409,Pug,,Cowboy Hat,,Green Collar,,,,,,metallic
+410,Pug,,,Hachimaki,Green Collar,Medical Mask,,Classic Shades,,,basic
+411,KabukiPug,,,Hachimaki,,Pipe,,Eye Patch,,,kabuki
+412,AnonyPug,Anonymous,Silk Hat,,Scarf,,,,,,basic
+413,SleepingPug,,Police Cap,,Scarf,,,Regular Shades,,,basic
+414,SleepingPug,,Beanie,,Scarf,,,Scouter,,,blue-red
+415,PhantomPug,Phantom,Big Hat,,,Cigarette,,,,,basic
+416,AnonyPug,Anonymous,Big Hat,,,,,,,,basic
+417,Pug,,,Headband,,Medical Mask,,Eye Patch,,,basic
+418,Pug,,Headphone,,Scarf,,,,,,basic
+419,PhantomPug,Phantom,Headphone,,Green Collar,,,,,,metallic
+420,SleepingPug,,Tassle Hat,,,,,,,,basic
+421,KabukiPug,,Cap Forward,,,Cigarette,,,,,kabuki
+422,SleepingPug,,Chonmage,,,,,,,,metallic
+423,PhantomPug,Phantom,Head Light,,Green Collar,Tongue,,Eye Mask,,,metallic
+424,KabukiPug,,,,Green Collar,Tongue,Purple Eye Shadow,Eye Patch,,,kabuki
+425,PhantomPug,Phantom,Chonmage,,,Pipe,,Eye Mask,,,basic
+426,KabukiPug,,Hat and Flower,,,Medical Mask,,Scouter,,,kabuki
+427,Pug,,Top Hat,,Scarf,,,Big Shades,,,basic
+428,KabukiPug,,,,Green Collar,Tongue,,Classic Shades,,,kabuki
+429,KabukiPug,,Hat and Goggles,,Green Collar,Tongue,,Regular Shades,,,kabuki
+430,AnonyPug,Anonymous,Big Hat,,Green Collar,,,,,,green
+431,Pug,,Mohawk,,,Tongue,,,,,basic
+432,AnonyPug,Anonymous,Fedora,,Scarf,,,,,,basic
+433,KabukiPug,,Hat and Flower,,Green Collar,,,VR,,,kabuki
+434,Pug,,Casual Knitted Cap,,Green Collar,,,Scouter,,,basic
+435,AnonyPug,Anonymous,Headphone,,,,,,,,basic
+436,KabukiPug,,Head Light,,,Medical Mask,,,,,kabuki
+437,KabukiPug,,Big Hat,,,,,VR,,,kabuki
+438,PhantomPug,Phantom,Big Hat,,Scarf,Vape,,Big Shades,,,basic
+439,KabukiPug,,Wizard Hat,,Green Collar,,,,,,kabuki
+440,PhantomPug,Phantom,Pilot Helmet,,Scarf,Pipe,,Black Glasses,,,metallic
+441,KabukiPug,,Crown,,,Cigarette,,,,,kabuki
+442,SleepingPug,,Tassle Hat,,,,,Nerd Glasses,,,basic
+443,SleepingPug,,Crown,,Green Collar,,,Big Shades,Clown Nose,,basic
+444,KabukiPug,,Striped Ribbon,,Green Collar,,,Scouter,,,kabuki
+445,PhantomPug,Phantom,Straw Hat,,,Medical Mask,,Mafia Glasses,,,metallic
+446,PhantomPug,Phantom,Bucket Hat,,,,,Horned Rim Glasses,,,metallic
+447,PhantomPug,Phantom,Top Hat,,Green Collar,Tongue,,,,,green
+448,AnonyPug,Anonymous,Head Light,,,,,,,,metallic
+449,KabukiPug,,Headphone,,,,,,,,kabuki
+450,KabukiPug,,Hat and Goggles,,Scarf,,,,,,kabuki
+451,KabukiPug,,Cap Forward,,,Vape,,Nerd Glasses,,,kabuki
+452,KabukiPug,,Head Light,,Green Collar,,,Classic Shades,,,kabuki
+453,AnonyPug,Anonymous,Demon,,,,,,,,metallic
+454,SleepingPug,,Beanie,,,,Purple Eye Shadow,,,,basic
+455,SleepingPug,,Casual Knitted Cap,,Green Collar,,,,,,blue-red
+456,SleepingPug,,Silk Hat,,Scarf,,Blue Eye Shadow,Black Glasses,,,basic
+457,Pug,,,Headband,,,,Black Glasses,,,metallic
+458,SleepingPug,,Head Light,,Scarf,,,,,,basic
+459,PhantomPug,Phantom,Demon,,Green Collar,Cigarette,,Mafia Glasses,,,blue-red
+460,SleepingPug,,Pilot Helmet,,Green Collar,,,Scouter,,,basic
+461,Pug,,,,,,,VR,,,rainbow
+462,SleepingPug,,Striped Ribbon,,Scarf,,,,,,basic
+463,PhantomPug,Phantom,Bandana,,Scarf,Cigarette,,Eye Mask,,,basic
+464,AnonyPug,Anonymous,Cap,,,,,,,,basic
+465,SleepingPug,,Tassle Hat,,,,,Horned Rim Glasses,,,basic
+466,SleepingPug,,Hat and Goggles,,Green Collar,,Blue Eye Shadow,Classic Shades,,,basic
+467,KabukiPug,,,Headband,,Medical Mask,,Classic Shades,,,kabuki
+468,SleepingPug,,Cap,,,,,Regular Shades,,Green Ears,basic
+469,KabukiPug,,Mohawk,,,,,Black Glasses,,,kabuki
+470,Pug,,Pilot Helmet,,,Cigarette,Blue Eye Shadow,,,,metallic
+471,KabukiPug,,Hat and Flower,,Green Collar,,,Horned Rim Glasses,,,kabuki
+472,SleepingPug,,Knitted Cap,,Scarf,,,,,,basic
+473,SleepingPug,,Straw Hat,,Green Collar,,,Horned Rim Glasses,,,basic
+474,SleepingPug,,,Hachimaki,Scarf,,,Mafia Glasses,,,metallic
+475,KabukiPug,,Top Hat,,Scarf,,,,,,kabuki
+476,SleepingPug,,Chonmage,,,,,Regular Shades,,,basic
+477,Pug,,,Headband,Green Collar,,Blue Eye Shadow,,,,metallic
+478,PhantomPug,Phantom,Hat and Goggles,,,Pipe,,Classic Shades,,,basic
+479,Pug,,Casual Knitted Cap,,,,Cross Eyed,,,,green
+480,Pug,,Top Hat,,,Tongue,,Regular Shades,,,basic
+481,PhantomPug,Phantom,Striped Ribbon,,,,,Nerd Glasses,,,metallic
+482,KabukiPug,,,Headband,Scarf,,,,,,kabuki
+483,Pug,,Wizard Hat,,Scarf,,,,,,metallic
+484,PhantomPug,Phantom,Bucket Hat,,Green Collar,,,Eye Mask,,,basic
+485,PhantomPug,Phantom,Straw Hat,,,Pipe,,,,,basic
+486,PhantomPug,Phantom,Welding Goggles,,Green Collar,Vape,,,,,metallic
+487,KabukiPug,,Silk Hat,,,,,,,,kabuki
+488,SleepingPug,,,Hachimaki,,,,Scouter,,,basic
+489,AnonyPug,Anonymous,Cowboy Hat,,,,,,,,green
+490,Pug,,,Hachimaki,,Tongue,,Black Glasses,,,basic
+491,PhantomPug,Phantom,Bucket Hat,,,Vape,,,,,basic
+492,PhantomPug,Phantom,Bandana,,Scarf,,,Mafia Glasses,,,basic
+493,Pug,,Crown,,Scarf,,Cross Eyed,,,,metallic
+494,KabukiPug,,,Hachimaki,Green Collar,,,Eye Patch,,,kabuki
+495,SleepingPug,,Hat and Goggles,,Green Collar,,,Scouter,,,basic
+496,KabukiPug,,Top Hat,,,,,Eye Mask,,,kabuki
+497,PhantomPug,Phantom,Mohawk,,Green Collar,Medical Mask,,Big Shades,,,metallic
+498,AnonyPug,Anonymous,Top Hat,,,,,,,,metallic
+499,SleepingPug,,Silk Hat,,Green Collar,,Blue Eye Shadow,,,,metallic
+500,Pug,,,Headband,,Pipe,,,,,basic
+501,KabukiPug,,Hat and Goggles,,Scarf,,,Eye Patch,,,kabuki
+502,SleepingPug,,Police Cap,,,,Purple Eye Shadow,Regular Shades,,,basic
+503,KabukiPug,,Hat and Flower,,,Tongue,,Scouter,,,kabuki
+504,KabukiPug,,Police Cap,,,,,Mafia Glasses,,,kabuki
+505,SleepingPug,,Police Cap,,,,,,,,green
+506,SleepingPug,,Striped Ribbon,,Green Collar,,,Nerd Glasses,,,basic
+507,KabukiPug,,Headphone,,,Medical Mask,Cross Eyed,,,,kabuki
+508,PhantomPug,Phantom,Hat and Flower,,Scarf,Medical Mask,,,,,basic
+509,KabukiPug,,Wizard Hat,,,Medical Mask,,Eye Mask,,,kabuki
+510,KabukiPug,,Demon,,,,,Horned Rim Glasses,,,kabuki
+511,PhantomPug,Phantom,Welding Goggles,,,,,,,,basic
+512,SleepingPug,,Beanie,,Scarf,,Blue Eye Shadow,Regular Shades,,,blue-red
+513,Pug,,Big Hat,,,,,Eye Patch,,,green
+514,KabukiPug,,Cowboy Hat,,,,,Big Shades,,,kabuki
+515,Pug,,Casual Knitted Cap,,Green Collar,,Blue Eye Shadow,Classic Shades,,,metallic
+516,KabukiPug,,Demon,,,Vape,,Black Glasses,,,kabuki
+517,PhantomPug,Phantom,Hat and Flower,,,Medical Mask,,,,,rainbow
+518,PhantomPug,Phantom,Cowboy Hat,,,Pipe,,,,,basic
+519,PhantomPug,Phantom,Top Hat,,Scarf,Pipe,,VR,,,basic
+520,KabukiPug,,Tassle Hat,,Scarf,Tongue,,,,,kabuki
+521,PhantomPug,Phantom,,,,,,Mafia Glasses,,,metallic
+522,KabukiPug,,Headphone,,Scarf,Pipe,Purple Eye Shadow,,,,kabuki
+523,PhantomPug,Phantom,Wizard Hat,,,Tongue,,Mafia Glasses,,Green Ears,metallic
+524,KabukiPug,,Crown,,Scarf,,,,,,kabuki
+525,SleepingPug,,Bandana,,,,,Big Shades,,,metallic
+526,Pug,,,Hachimaki,Scarf,,,Mafia Glasses,,,basic
+527,KabukiPug,,Pilot Helmet,,Green Collar,,,,,,kabuki
+528,AnonyPug,Anonymous,Striped Ribbon,,Green Collar,,,,,,basic
+529,Pug,,Cap Forward,,,Vape,Cross Eyed,,,,basic
+530,KabukiPug,,Straw Hat,,,Vape,,Big Shades,,,kabuki
+531,SleepingPug,,Mohawk,,Green Collar,,,Classic Shades,,,basic
+532,PhantomPug,Phantom,Chonmage,,,,,Nerd Glasses,,,basic
+533,Pug,,Silk Hat,,Scarf,,Purple Eye Shadow,Scouter,,,basic
+534,SleepingPug,,Cowboy Hat,,Green Collar,,,Scouter,,,metallic
+535,SleepingPug,,Headphone,,Scarf,,,VR,,,metallic
+536,PhantomPug,Phantom,,,,,,3D Glasses,,,basic
+537,PhantomPug,Phantom,Crown,,Green Collar,,,Horned Rim Glasses,,,basic
+538,Pug,,,Hachimaki,Scarf,,,,,,basic
+539,Pug,,Demon,,Green Collar,,,,,,basic
+540,SleepingPug,,Tassle Hat,,Scarf,,,Eye Mask,,,basic
+541,PhantomPug,Phantom,Cap,,Scarf,,,,,,basic
+542,AnonyPug,Anonymous,Hat and Flower,,Green Collar,,,,,,metallic
+543,PhantomPug,Phantom,Knitted Cap,,Green Collar,,,,,,basic
+544,Pug,,Beanie,,,,Blue Eye Shadow,VR,,,basic
+545,Pug,,Cap Forward,,,,,3D Glasses,,,basic
+546,PhantomPug,Phantom,Mohawk,,,,,,,,metallic
+547,KabukiPug,,,,,Medical Mask,,,,,kabuki
+548,Pug,,Top Hat,,Green Collar,Pipe,,VR,,,basic
+549,KabukiPug,,Hat and Goggles,,,Cigarette,,,,,kabuki
+550,AnonyPug,Anonymous,Bucket Hat,,,,,,,,metallic
+551,KabukiPug,,Cap Forward,,,Cigarette,,Eye Mask,,,kabuki
+552,Pug,,Cap,,,Vape,,,,,metallic
+553,PhantomPug,Phantom,,,Green Collar,Medical Mask,,,,,basic
+554,KabukiPug,,Silk Hat,,Scarf,,,,,,kabuki
+555,PhantomPug,Phantom,Headphone,,,,,Scouter,,,basic
+556,SleepingPug,,Fedora,,Green Collar,,,,,,metallic
+557,PhantomPug,Phantom,Wizard Hat,,,,,Regular Shades,,,basic
+558,KabukiPug,,Straw Hat,,,,,Black Glasses,,,kabuki
+559,AnonyPug,Anonymous,Tassle Hat,,Scarf,,,,,,basic
+560,KabukiPug,,Head Light,,Scarf,,Blue Eye Shadow,Nerd Glasses,,,kabuki
+561,PhantomPug,Phantom,Hat and Goggles,,Green Collar,,,Eye Patch,,,basic
+562,PhantomPug,Phantom,Casual Knitted Cap,,Green Collar,,,,,,basic
+563,SleepingPug,,Striped Ribbon,,,,,,,,basic
+564,KabukiPug,,Straw Hat,,Green Collar,Tongue,,Classic Shades,,,kabuki
+565,AnonyPug,Anonymous,Hat and Goggles,,Scarf,,,,,,metallic
+566,SleepingPug,,Silk Hat,,Green Collar,,Cross Eyed,3D Glasses,,,basic
+567,SleepingPug,,Hat and Goggles,,,,,Regular Shades,,,basic
+568,AnonyPug,Anonymous,Bucket Hat,,Scarf,,,,,Golden Ears,basic
+569,Pug,,Pilot Helmet,,Green Collar,Medical Mask,,Eye Mask,,,basic
+570,Pug,,Police Cap,,,,,,,,basic
+571,PhantomPug,Phantom,Kasa,,Scarf,,,Classic Shades,,,green
+572,KabukiPug,,Headphone,,Green Collar,,,,,,kabuki
+573,KabukiPug,,,,,Cigarette,,Regular Shades,,,kabuki
+574,Pug,,Headphone,,,Medical Mask,,,,,basic
+575,SleepingPug,,,Hachimaki,Green Collar,,,Nerd Glasses,,,basic
+576,KabukiPug,,,Hachimaki,Scarf,Cigarette,,,,,kabuki
+577,PhantomPug,Phantom,Pilot Helmet,,,,,,,,metallic
+578,KabukiPug,,,Hachimaki,Scarf,Medical Mask,,Regular Shades,,,kabuki
+579,AnonyPug,Anonymous,Hat and Flower,,,,,,,,metallic
+580,Pug,,Chonmage,,Green Collar,Pipe,,VR,,,basic
+581,PhantomPug,Phantom,Demon,,Green Collar,,,VR,,,rainbow
+582,KabukiPug,,Kasa,,,Medical Mask,,3D Glasses,,,kabuki
+583,PhantomPug,Phantom,Bucket Hat,,Green Collar,Pipe,,Mafia Glasses,,,green
+584,Pug,,Bandana,,Green Collar,,,VR,,,metallic
+585,KabukiPug,,Bucket Hat,,Scarf,,,,,,kabuki
+586,Pug,,Fedora,,,,,Eye Patch,,,metallic
+587,SleepingPug,,Beanie,,Scarf,,,Big Shades,,,blue-red
+588,KabukiPug,,,Headband,,,,,,,kabuki
+589,SleepingPug,,Demon,,,,,,,,basic
+590,KabukiPug,,Hat and Goggles,,,Medical Mask,,,,,kabuki
+591,PhantomPug,Phantom,Police Cap,,,,,,,,rainbow
+592,PhantomPug,Phantom,Knitted Cap,,Scarf,Medical Mask,,Mafia Glasses,,,basic
+593,KabukiPug,,,Headband,,Medical Mask,,Regular Shades,,,kabuki
+594,AnonyPug,Anonymous,Tassle Hat,,Green Collar,,,,,,basic
+595,SleepingPug,,Mohawk,,Scarf,,,3D Glasses,,,rainbow
+596,SleepingPug,,Demon,,Green Collar,,,Regular Shades,,,metallic
+597,PhantomPug,Phantom,Tassle Hat,,,,,,,,basic
+598,Pug,,Chonmage,,,Cigarette,,Scouter,,,metallic
+599,PhantomPug,Phantom,,Headband,Scarf,,,Mafia Glasses,,,basic
+600,SleepingPug,,Headphone,,Scarf,,,Eye Patch,,,basic
+601,Pug,,Wizard Hat,,,,,Black Glasses,,,basic
+602,PhantomPug,Phantom,,Headband,Scarf,,,,,,blue-red
+603,PhantomPug,Phantom,Welding Goggles,,,,,Nerd Glasses,,,green
+604,KabukiPug,,,Hachimaki,,,,VR,,,kabuki
+605,SleepingPug,,Cap,,,,Blue Eye Shadow,,,,basic
+606,Pug,,Bandana,,Green Collar,Pipe,,3D Glasses,,,basic
+607,Pug,,Bandana,,,,,,,,basic
+608,Pug,,,Hachimaki,,Pipe,,,,,basic
+609,Pug,,Big Hat,,Scarf,,,3D Glasses,,,blue-red
+610,Pug,,Straw Hat,,,,,,,,basic
+611,Pug,,,Headband,Green Collar,Cigarette,Purple Eye Shadow,Big Shades,,,basic
+612,SleepingPug,,Kasa,,,,,Classic Shades,,,basic
+613,SleepingPug,,Head Light,,,,,,,,basic
+614,SleepingPug,,Cap,,Scarf,,,,,,basic
+615,Pug,,Bucket Hat,,,,,Eye Patch,,,basic
+616,Pug,,Fedora,,,,,,,,metallic
+617,PhantomPug,Phantom,Knitted Cap,,Scarf,,,,,,metallic
+618,SleepingPug,,Mohawk,,Green Collar,,Cross Eyed,,,,basic
+619,SleepingPug,,Kasa,,Green Collar,,,Regular Shades,,,basic
+620,SleepingPug,,Headphone,,Green Collar,,,Eye Mask,,,green
+621,Pug,,Knitted Cap,,Scarf,Medical Mask,,Mafia Glasses,,,basic
+622,SleepingPug,,Bucket Hat,,,,,Big Shades,,,blue-red
+623,Pug,,Silk Hat,,Green Collar,Pipe,,Mafia Glasses,,,basic
+624,KabukiPug,,Hat and Goggles,,,Tongue,,VR,,,kabuki
+625,SleepingPug,,Casual Knitted Cap,,,,Cross Eyed,,,,basic
+626,KabukiPug,,Fedora,,Green Collar,Cigarette,,,,,kabuki
+627,SleepingPug,,Hat and Flower,,,,,,,,blue-red
+628,KabukiPug,,,Hachimaki,,Pipe,Cross Eyed,Horned Rim Glasses,,,kabuki
+629,PhantomPug,Phantom,Head Light,,Scarf,Medical Mask,,Scouter,,,green
+630,AnonyPug,Anonymous,Cowboy Hat,,Green Collar,,,,,,rainbow
+631,KabukiPug,,Silk Hat,,,Medical Mask,,,,,kabuki
+632,PhantomPug,Phantom,,,Green Collar,,,,,Green Ears,blue-red
+633,Pug,,,Headband,,,,,,,basic
+634,KabukiPug,,Head Light,,Green Collar,Tongue,,Scouter,,,kabuki
+635,PhantomPug,Phantom,Silk Hat,,,Vape,,Scouter,,,rainbow
+636,Pug,,,,Scarf,,,,,,basic
+637,Pug,,,Headband,Scarf,,Cross Eyed,Eye Mask,,,metallic
+638,Pug,,,Headband,Scarf,Vape,,Horned Rim Glasses,,,basic
+639,SleepingPug,,Police Cap,,Green Collar,,,Nerd Glasses,,,basic
+640,Pug,,Cap Forward,,,Cigarette,,VR,,,green
+641,KabukiPug,,Chonmage,,Scarf,Medical Mask,Purple Eye Shadow,,,,kabuki
+642,PhantomPug,Phantom,Kasa,,,Pipe,,Eye Mask,,,basic
+643,Pug,,,,Green Collar,,,,,,basic
+644,Pug,,Beanie,,,Cigarette,,,,,basic
+645,Pug,,Head Light,,Green Collar,Tongue,Purple Eye Shadow,3D Glasses,,,metallic
+646,KabukiPug,,Straw Hat,,,Medical Mask,,Mafia Glasses,,,kabuki
+647,SleepingPug,,Casual Knitted Cap,,,,Cross Eyed,VR,,,basic
+648,KabukiPug,,Wizard Hat,,Green Collar,Vape,,Horned Rim Glasses,,,kabuki
+649,KabukiPug,,Silk Hat,,Green Collar,,,,,,kabuki
+650,Pug,,Beanie,,,,,,,,metallic
+651,Pug,,Hat and Flower,,,,,Mafia Glasses,,,basic
+652,SleepingPug,,Tassle Hat,,Green Collar,,Purple Eye Shadow,,,,green
+653,Pug,,Cowboy Hat,,,Medical Mask,,,,,basic
+654,AnonyPug,Anonymous,Striped Ribbon,,,,,,,,metallic
+655,KabukiPug,,Wizard Hat,,Green Collar,,Purple Eye Shadow,Classic Shades,,,kabuki
+656,KabukiPug,,,,,Vape,Purple Eye Shadow,3D Glasses,,,kabuki
+657,KabukiPug,,Headphone,,,Tongue,,,,,kabuki
+658,KabukiPug,,Demon,,,Cigarette,Purple Eye Shadow,,,,kabuki
+659,SleepingPug,,Cap Forward,,Scarf,,,,,,metallic
+660,Pug,,Cowboy Hat,,Scarf,Medical Mask,Cross Eyed,Mafia Glasses,,,basic
+661,Pug,,Crown,,Scarf,Tongue,Cross Eyed,,,,metallic
+662,KabukiPug,,Bandana,,,Vape,,VR,,,kabuki
+663,PhantomPug,Phantom,Chonmage,,,,,Scouter,,,basic
+664,KabukiPug,,Straw Hat,,,Cigarette,,,,,kabuki
+665,Pug,,Cap Forward,,,Vape,Blue Eye Shadow,,,,basic
+666,SleepingPug,,Head Light,,Green Collar,,,,,,metallic
+667,KabukiPug,,Knitted Cap,,,Medical Mask,Cross Eyed,Eye Patch,,,kabuki
+668,KabukiPug,,Beanie,,,,,Mafia Glasses,,,kabuki
+669,PhantomPug,Phantom,Kasa,,Scarf,,,,,,green
+670,AnonyPug,Anonymous,Casual Knitted Cap,,,,,,,,metallic
+671,Pug,,,Headband,Green Collar,Medical Mask,,,,,basic
+672,KabukiPug,,Police Cap,,Scarf,,,,,,kabuki
+673,PhantomPug,Phantom,Silk Hat,,Green Collar,Cigarette,,3D Glasses,,,metallic
+674,KabukiPug,,Cowboy Hat,,Green Collar,Vape,,,,,kabuki
+675,SleepingPug,,,Hachimaki,Green Collar,,,Eye Mask,,,basic
+676,KabukiPug,,Crown,,Green Collar,Medical Mask,Cross Eyed,,,,kabuki
+677,KabukiPug,,Fedora,,,,,,,,kabuki
+678,KabukiPug,,Police Cap,,,,,Horned Rim Glasses,,,kabuki
+679,PhantomPug,Phantom,,Headband,,Vape,,,,,metallic
+680,PhantomPug,Phantom,Demon,,,,,,,,basic
+681,PhantomPug,Phantom,Beanie,,,,,Eye Mask,,,rainbow
+682,PhantomPug,Phantom,Hat and Flower,,Green Collar,,,,,,basic
+683,Pug,,Fedora,,Scarf,,,Nerd Glasses,,,basic
+684,AnonyPug,Anonymous,Cap Forward,,Scarf,,,,,,metallic
+685,Pug,,Crown,,Green Collar,,Purple Eye Shadow,Classic Shades,,,basic
+686,PhantomPug,Phantom,Bucket Hat,,,,,,,Green Ears,rainbow
+687,PhantomPug,Phantom,,Hachimaki,Scarf,,,,,,basic
+688,KabukiPug,,Fedora,,Scarf,Tongue,,Nerd Glasses,,,kabuki
+689,SleepingPug,,Cowboy Hat,,Green Collar,,Blue Eye Shadow,Mafia Glasses,,,basic
+690,KabukiPug,,Pilot Helmet,,,,,,,,kabuki
+691,PhantomPug,Phantom,Mohawk,,,,,Black Glasses,,,basic
+692,Pug,,Fedora,,,,Purple Eye Shadow,Eye Patch,,,basic
+693,Pug,,Top Hat,,,,Cross Eyed,VR,,,metallic
+694,Pug,,Demon,,Scarf,,,,,,basic
+695,Pug,,,,,Medical Mask,,Scouter,,,green
+696,SleepingPug,,,Hachimaki,,,Purple Eye Shadow,Regular Shades,,,basic
+697,PhantomPug,Phantom,Cap,,Green Collar,,,Eye Patch,,,basic
+698,Pug,,,,Green Collar,Vape,,,,,metallic
+699,PhantomPug,Phantom,Mohawk,,Green Collar,Cigarette,,VR,,,basic
+700,PhantomPug,Phantom,Top Hat,,Green Collar,Pipe,,,,,metallic
+701,Pug,,Bucket Hat,,,,,,,,basic
+702,Pug,,Striped Ribbon,,,Cigarette,,Nerd Glasses,,,basic
+703,SleepingPug,,Silk Hat,,,,,,,,rainbow
+704,Pug,,Hat and Goggles,,Green Collar,,,Mafia Glasses,,,basic
+705,KabukiPug,,,Headband,Scarf,Medical Mask,Purple Eye Shadow,,,,kabuki
+706,PhantomPug,Phantom,Chonmage,,Green Collar,Medical Mask,,,,,basic
+707,PhantomPug,Phantom,Straw Hat,,,Cigarette,,,,,metallic
+708,SleepingPug,,Pilot Helmet,,,,Blue Eye Shadow,,,,basic
+709,PhantomPug,Phantom,Hat and Goggles,,Scarf,Tongue,,,,,metallic
+710,PhantomPug,Phantom,Welding Goggles,,Green Collar,Medical Mask,,3D Glasses,,,green
+711,KabukiPug,,Pilot Helmet,,Scarf,,Blue Eye Shadow,,,,kabuki
+712,KabukiPug,,Cap,,Green Collar,Vape,Purple Eye Shadow,Eye Mask,,,kabuki
+713,SleepingPug,,Bucket Hat,,,,Blue Eye Shadow,VR,,,metallic
+714,KabukiPug,,Welding Goggles,,Scarf,,,,,,kabuki
+715,SleepingPug,,Striped Ribbon,,Green Collar,,,Scouter,,,basic
+716,Pug,,Top Hat,,Scarf,,,Nerd Glasses,,,rainbow
+717,PhantomPug,Phantom,,Hachimaki,Green Collar,Cigarette,,,,,basic
+718,Pug,,Straw Hat,,,,,Classic Shades,,,basic
+719,Pug,,Cowboy Hat,,Scarf,,,,,,metallic
+720,Pug,,Silk Hat,,,Vape,,,,,basic
+721,SleepingPug,,Head Light,,,,,Black Glasses,,,basic
+722,KabukiPug,,Knitted Cap,,Scarf,,,,,,kabuki
+723,PhantomPug,Phantom,Hat and Flower,,,,,Horned Rim Glasses,,,basic
+724,AnonyPug,Anonymous,Knitted Cap,,Green Collar,,,,,,basic
+725,Pug,,Wizard Hat,,,,,Eye Patch,,,metallic
+726,PhantomPug,Phantom,Casual Knitted Cap,,,,,Big Shades,,,basic
+727,PhantomPug,Phantom,Casual Knitted Cap,,,Medical Mask,,Nerd Glasses,,Green Ears,metallic
+728,PhantomPug,Phantom,Crown,,Scarf,,,Eye Mask,,,basic
+729,PhantomPug,Phantom,,,,Vape,,Eye Patch,,,green
+730,PhantomPug,Phantom,Demon,,,Medical Mask,,Mafia Glasses,,,basic
+731,AnonyPug,Anonymous,Mohawk,,Scarf,,,,,,rainbow
+732,PhantomPug,Phantom,Beanie,,Green Collar,Vape,,,,,rainbow
+733,Pug,,Demon,,Green Collar,Pipe,,Horned Rim Glasses,,,basic
+734,Pug,,Demon,,,Cigarette,,,,,basic
+735,PhantomPug,Phantom,Head Light,,Green Collar,Cigarette,,,,,basic
+736,KabukiPug,,Demon,,,,,VR,,,kabuki
+737,KabukiPug,,Police Cap,,,,,,,,kabuki
+738,PhantomPug,Phantom,Crown,,Green Collar,Cigarette,,Regular Shades,,,blue-red
+739,KabukiPug,,,,,,Purple Eye Shadow,3D Glasses,,,kabuki
+740,Pug,,,Headband,,,Purple Eye Shadow,VR,,,basic
+741,AnonyPug,Anonymous,Kasa,,Green Collar,,,,,,blue-red
+742,SleepingPug,,Kasa,,Scarf,,,Mafia Glasses,,,basic
+743,Pug,,Hat and Goggles,,,Pipe,,VR,,,basic
+744,SleepingPug,,,Headband,,,,,,,metallic
+745,KabukiPug,,Tassle Hat,,Scarf,,Purple Eye Shadow,3D Glasses,,,kabuki
+746,KabukiPug,,Striped Ribbon,,Green Collar,,,Eye Patch,,,kabuki
+747,KabukiPug,,,,Scarf,,,Eye Patch,,,kabuki
+748,Pug,,Cap,,,Tongue,,Eye Patch,,,blue-red
+749,Pug,,Tassle Hat,,Scarf,Medical Mask,Purple Eye Shadow,,,,basic
+750,PhantomPug,Phantom,Demon,,,Medical Mask,,Big Shades,,,basic
+751,SleepingPug,,Crown,,Scarf,,,,,,basic
+752,KabukiPug,,Bucket Hat,,,Vape,Blue Eye Shadow,,,,kabuki
+753,Pug,,Cap Forward,,,,,Scouter,,,basic
+754,PhantomPug,Phantom,Casual Knitted Cap,,,,,Nerd Glasses,,,basic
+755,PhantomPug,Phantom,Pilot Helmet,,Green Collar,,,,,,blue-red
+756,PhantomPug,Phantom,Head Light,,,Medical Mask,,Eye Patch,,,metallic
+757,SleepingPug,,Cap,,Green Collar,,,Horned Rim Glasses,,,basic
+758,KabukiPug,,Top Hat,,,Cigarette,,VR,,,kabuki
+759,KabukiPug,,Headphone,,Green Collar,Tongue,,Black Glasses,,,kabuki
+760,Pug,,,Hachimaki,Scarf,Tongue,,Big Shades,,,basic
+761,Pug,,Straw Hat,,Scarf,,,,,,rainbow
+762,PhantomPug,Phantom,,,,,,,,,metallic
+763,Pug,,,,,Cigarette,,Mafia Glasses,,,basic
+764,PhantomPug,Phantom,Headphone,,Green Collar,Pipe,,,,,green
+765,KabukiPug,,Big Hat,,Green Collar,Cigarette,,,,,kabuki
+766,Pug,,Police Cap,,Green Collar,Tongue,,,,,metallic
+767,SleepingPug,,Straw Hat,,,,,,,,basic
+768,KabukiPug,,Tassle Hat,,,Tongue,,,,,kabuki
+769,Pug,,Casual Knitted Cap,,,Medical Mask,,,,,rainbow
+770,KabukiPug,,Demon,,Green Collar,Vape,,,,,kabuki
+771,SleepingPug,,Beanie,,Green Collar,,,Scouter,,,metallic
+772,PhantomPug,Phantom,Straw Hat,,,Cigarette,,Eye Mask,,,basic
+773,SleepingPug,,Welding Goggles,,,,Cross Eyed,Regular Shades,,,basic
+774,Pug,,,Headband,Green Collar,,,Horned Rim Glasses,,,basic
+775,Pug,,Beanie,,Scarf,,,VR,,,basic
+776,Pug,,Crown,,Scarf,,,,,,metallic
+777,Pug,,,,,Cigarette,,Horned Rim Glasses,,,metallic
+778,SleepingPug,,Beanie,,,,Purple Eye Shadow,VR,,,basic
+779,Pug,,Headphone,,,Pipe,,Classic Shades,,,basic
+780,SleepingPug,,Hat and Goggles,,,,,Nerd Glasses,,,basic
+781,PhantomPug,Phantom,Mohawk,,Scarf,,,Eye Patch,,,basic
+782,PhantomPug,Phantom,Demon,,Scarf,,,Nerd Glasses,,,metallic
+783,KabukiPug,,Hat and Goggles,,Scarf,Vape,,,,,kabuki
+784,KabukiPug,,,,Green Collar,Pipe,,,,,kabuki
+785,KabukiPug,,Beanie,,,,,,,,kabuki
+786,PhantomPug,Phantom,Cowboy Hat,,Scarf,Pipe,,,,,metallic
+787,KabukiPug,,Beanie,,,,,Scouter,,,kabuki
+788,PhantomPug,Phantom,Striped Ribbon,,Green Collar,,,,,,basic
+789,KabukiPug,,Hat and Flower,,Green Collar,Tongue,,,,,kabuki
+790,PhantomPug,Phantom,Wizard Hat,,,,,Eye Mask,,,basic
+791,SleepingPug,,Mohawk,,,,,Black Glasses,,,basic
+792,KabukiPug,,Cowboy Hat,,,,,Classic Shades,,,kabuki
+793,Pug,,,Hachimaki,Scarf,Cigarette,,Horned Rim Glasses,,,basic
+794,Pug,,Big Hat,,Scarf,,Purple Eye Shadow,,,,basic
+795,PhantomPug,Phantom,Fedora,,Scarf,Pipe,,VR,,,metallic
+796,PhantomPug,Phantom,Welding Goggles,,,Tongue,,Big Shades,,,metallic
+797,Pug,,Crown,,Green Collar,,,VR,,,basic
+798,Pug,,Cap,,Scarf,Medical Mask,,,,,basic
+799,Pug,,Fedora,,Green Collar,Pipe,,,,,basic
+800,PhantomPug,Phantom,Tassle Hat,,Scarf,,,Classic Shades,,,basic
+801,SleepingPug,,,Hachimaki,,,,Mafia Glasses,,,metallic
+802,SleepingPug,,Demon,,Green Collar,,Cross Eyed,,,,rainbow
+803,KabukiPug,,Hat and Flower,,Green Collar,Vape,,,,,kabuki
+804,PhantomPug,Phantom,Top Hat,,,Tongue,,3D Glasses,,,basic
+805,Pug,,Straw Hat,,,,Cross Eyed,,,,basic
+806,SleepingPug,,Top Hat,,Green Collar,,,Nerd Glasses,,,basic
+807,AnonyPug,Anonymous,Knitted Cap,,Scarf,,,,,,metallic
+808,Pug,,Kasa,,Scarf,,,,,,basic
+809,SleepingPug,,Cap,,Green Collar,,,Eye Mask,,,basic
+810,KabukiPug,,Kasa,,Scarf,,,Eye Patch,,,kabuki
+811,PhantomPug,Phantom,Kasa,,Scarf,Medical Mask,,Black Glasses,,,basic
+812,SleepingPug,,Beanie,,Scarf,,,Regular Shades,,,basic
+813,PhantomPug,Phantom,Striped Ribbon,,Scarf,Vape,,,,,rainbow
+814,Pug,,Kasa,,,Medical Mask,Cross Eyed,Eye Mask,,,blue-red
+815,PhantomPug,Phantom,,,,Vape,,Eye Mask,,,metallic
+816,Pug,,Knitted Cap,,,Cigarette,Purple Eye Shadow,3D Glasses,,,basic
+817,KabukiPug,,Bandana,,,,,,,,kabuki
+818,SleepingPug,,Hat and Goggles,,,,Purple Eye Shadow,Classic Shades,,,metallic
+819,PhantomPug,Phantom,Straw Hat,,Scarf,Pipe,,Eye Patch,,,basic
+820,KabukiPug,,Cap,,Green Collar,Cigarette,,,,,kabuki
+821,Pug,,Pilot Helmet,,Green Collar,Vape,,Eye Mask,,,basic
+822,PhantomPug,Phantom,Cowboy Hat,,Scarf,Pipe,,Eye Mask,,,basic
+823,SleepingPug,,Police Cap,,Scarf,,,,,,metallic
+824,KabukiPug,,Mohawk,,Scarf,Vape,Purple Eye Shadow,,,,kabuki
+825,SleepingPug,,Cap Forward,,,,,Big Shades,,,metallic
+826,AnonyPug,Anonymous,Beanie,,Green Collar,,,,,,basic
+827,PhantomPug,Phantom,Police Cap,,Green Collar,Pipe,,Nerd Glasses,,,basic
+828,Pug,,,Hachimaki,Scarf,,Purple Eye Shadow,,,,basic
+829,Pug,,Cowboy Hat,,,Cigarette,,,,,basic
+830,KabukiPug,,Cowboy Hat,,,Cigarette,Cross Eyed,Eye Patch,,,kabuki
+831,KabukiPug,,Kasa,,,Cigarette,,Eye Mask,,,kabuki
+832,SleepingPug,,Pilot Helmet,,Green Collar,,,Horned Rim Glasses,,,blue-red
+833,KabukiPug,,Straw Hat,,Green Collar,Pipe,,3D Glasses,,,kabuki
+834,KabukiPug,,,,,,,Regular Shades,Clown Nose,,kabuki
+835,KabukiPug,,Bandana,,Green Collar,Pipe,,,,,kabuki
+836,SleepingPug,,Silk Hat,,,,Cross Eyed,,,,basic
+837,Pug,,Bandana,,Green Collar,,,,,,basic
+838,SleepingPug,,Silk Hat,,,,,Black Glasses,,,green
+839,SleepingPug,,,,Green Collar,,Blue Eye Shadow,,,,metallic
+840,AnonyPug,Anonymous,Police Cap,,Scarf,,,,,,basic
+841,KabukiPug,,Welding Goggles,,Green Collar,Pipe,,,,,kabuki
+842,KabukiPug,,,,,Vape,,VR,,,kabuki
+843,PhantomPug,Phantom,Crown,,,,,Black Glasses,,,metallic
+844,Pug,,Head Light,,Green Collar,,Purple Eye Shadow,,,,basic
+845,Pug,,Welding Goggles,,Scarf,,,,,,green
+846,KabukiPug,,Cap Forward,,,Medical Mask,,,,,kabuki
+847,PhantomPug,Phantom,Fedora,,Green Collar,,,Classic Shades,,,basic
+848,SleepingPug,,,,Green Collar,,,,,,basic
+849,Pug,,Demon,,Scarf,Cigarette,,Black Glasses,,,basic
+850,SleepingPug,,Cap,,,,,,Clown Nose,,basic
+851,KabukiPug,,Straw Hat,,,Tongue,,Regular Shades,,,kabuki
+852,SleepingPug,,Beanie,,,,,Regular Shades,,,basic
+853,KabukiPug,,Bucket Hat,,,Cigarette,,Eye Mask,,,kabuki
+854,KabukiPug,,Mohawk,,Scarf,,Purple Eye Shadow,,,,kabuki
+855,AnonyPug,Anonymous,Casual Knitted Cap,,Green Collar,,,,,,basic
+856,PhantomPug,Phantom,Chonmage,,Scarf,,,,,,basic
+857,KabukiPug,,,,,,Cross Eyed,Classic Shades,,,kabuki
+858,Pug,,Big Hat,,,Vape,Blue Eye Shadow,,,,basic
+859,KabukiPug,,Pilot Helmet,,,,,Black Glasses,,,kabuki
+860,SleepingPug,,Casual Knitted Cap,,,,,,,,green
+861,Pug,,Mohawk,,Scarf,,Purple Eye Shadow,Mafia Glasses,,,basic
+862,PhantomPug,Phantom,Striped Ribbon,,Green Collar,Medical Mask,,VR,,,basic
+863,Pug,,Hat and Goggles,,,,,,,,basic
+864,KabukiPug,,Big Hat,,Scarf,,,Eye Mask,,,kabuki
+865,KabukiPug,,Cap,,Green Collar,Medical Mask,Blue Eye Shadow,Black Glasses,,,kabuki
+866,Pug,,Headphone,,Scarf,,,Black Glasses,,,metallic
+867,AnonyPug,Anonymous,Chonmage,,Green Collar,,,,,,basic
+868,Pug,,Bucket Hat,,,Tongue,,,,,basic
+869,KabukiPug,,Cap,,Green Collar,,,Classic Shades,,,kabuki
+870,SleepingPug,,Bucket Hat,,Green Collar,,Purple Eye Shadow,Black Glasses,,,metallic
+871,Pug,,Beanie,,Green Collar,,,,,,basic
+872,KabukiPug,,Cap Forward,,Green Collar,,,,,,kabuki
+873,SleepingPug,,Knitted Cap,,Green Collar,,,,,,metallic
+874,Pug,,,,,,,,,,green
+875,PhantomPug,Phantom,Fedora,,,Medical Mask,,,,,metallic
+876,PhantomPug,Phantom,,Hachimaki,Scarf,,,Horned Rim Glasses,,,basic
+877,PhantomPug,Phantom,Crown,,Scarf,Vape,,,,,metallic
+878,KabukiPug,,Police Cap,,Scarf,,,Eye Patch,,,kabuki
+879,SleepingPug,,Casual Knitted Cap,,,,,Mafia Glasses,,,metallic
+880,SleepingPug,,,,,,Cross Eyed,,,,basic
+881,PhantomPug,Phantom,,Hachimaki,Green Collar,Cigarette,,Nerd Glasses,,,basic
+882,PhantomPug,Phantom,Head Light,,,Pipe,,,,,rainbow
+883,KabukiPug,,Wizard Hat,,,Vape,,,,,kabuki
+884,SleepingPug,,,Headband,,,,Black Glasses,,,basic
+885,SleepingPug,,Headphone,,,,Purple Eye Shadow,,,,metallic
+886,SleepingPug,,Crown,,,,,Regular Shades,,,basic
+887,KabukiPug,,Pilot Helmet,,Green Collar,Tongue,,,,,kabuki
+888,PhantomPug,Phantom,,,Green Collar,Vape,,Scouter,,,rainbow
+889,SleepingPug,,Bucket Hat,,,,Cross Eyed,Scouter,,,basic
+890,Pug,,Demon,,,,,,,,metallic
+891,PhantomPug,Phantom,Beanie,,Scarf,Medical Mask,,Regular Shades,,,basic
+892,Pug,,Top Hat,,,,Blue Eye Shadow,3D Glasses,,,basic
+893,PhantomPug,Phantom,Bucket Hat,,Scarf,Cigarette,,,,,basic
+894,AnonyPug,Anonymous,Headphone,,Scarf,,,,,Golden Ears,basic
+895,SleepingPug,,Top Hat,,,,,,,,rainbow
+896,Pug,,Mohawk,,Green Collar,,Purple Eye Shadow,Big Shades,,,metallic
+897,Pug,,Striped Ribbon,,Scarf,Medical Mask,,Classic Shades,,,basic
+898,KabukiPug,,Crown,,,Vape,,Big Shades,,,kabuki
+899,SleepingPug,,Demon,,Scarf,,,Nerd Glasses,,,metallic
+900,PhantomPug,Phantom,Wizard Hat,,,,,Scouter,,,basic
+901,Pug,,,Headband,Green Collar,Vape,,Black Glasses,,,rainbow
+902,SleepingPug,,Wizard Hat,,Green Collar,,Blue Eye Shadow,Horned Rim Glasses,,,metallic
+903,Pug,,Hat and Flower,,,Tongue,Blue Eye Shadow,Regular Shades,,,metallic
+904,PhantomPug,Phantom,Head Light,,,,,Scouter,,,basic
+905,KabukiPug,,Striped Ribbon,,,Cigarette,,,,,kabuki
+906,SleepingPug,,Cowboy Hat,,,,,Eye Patch,,,metallic
+907,SleepingPug,,Bucket Hat,,,,,Scouter,,,metallic
+908,PhantomPug,Phantom,Demon,,Green Collar,Medical Mask,,Scouter,,,basic
+909,SleepingPug,,Hat and Flower,,Green Collar,,,,,,basic
+910,PhantomPug,Phantom,Wizard Hat,,Green Collar,Cigarette,,Mafia Glasses,,,blue-red
+911,Pug,,,,,Medical Mask,,,,,metallic
+912,Pug,,,Headband,,,,Big Shades,,,basic
+913,Pug,,,Headband,,,,Eye Patch,,,basic
+914,PhantomPug,Phantom,Wizard Hat,,,Tongue,,Eye Patch,,,metallic
+915,Pug,,Straw Hat,,Green Collar,Vape,Purple Eye Shadow,Eye Mask,,,basic
+916,KabukiPug,,Police Cap,,,,Cross Eyed,Horned Rim Glasses,,,kabuki
+917,PhantomPug,Phantom,Kasa,,,Medical Mask,,,,,basic
+918,PhantomPug,Phantom,,,Scarf,,,Eye Patch,,,basic
+919,KabukiPug,,Cap,,,Medical Mask,,Black Glasses,,,kabuki
+920,KabukiPug,,Straw Hat,,,,Purple Eye Shadow,,,,kabuki
+921,PhantomPug,Phantom,Kasa,,Green Collar,,,,,,metallic
+922,SleepingPug,,,,Green Collar,,Cross Eyed,Eye Mask,,,basic
+923,PhantomPug,Phantom,Welding Goggles,,Scarf,,,Big Shades,,,blue-red
+924,SleepingPug,,Big Hat,,,,Blue Eye Shadow,Scouter,,,green
+925,Pug,,,Hachimaki,Green Collar,,,Regular Shades,,,metallic
+926,Pug,,Welding Goggles,,Scarf,Cigarette,,3D Glasses,,,green
+927,PhantomPug,Phantom,Crown,,Scarf,,,,,,basic
+928,PhantomPug,Phantom,,Hachimaki,Scarf,Vape,,,,,basic
+929,KabukiPug,,Mohawk,,,,,,,,kabuki
+930,KabukiPug,,,Headband,,Tongue,,Scouter,,,kabuki
+931,PhantomPug,Phantom,Silk Hat,,,,,,,,metallic
+932,PhantomPug,Phantom,Knitted Cap,,Scarf,Medical Mask,,VR,,,basic
+933,KabukiPug,,Cowboy Hat,,Green Collar,Tongue,,,,,kabuki
+934,KabukiPug,,Welding Goggles,,Green Collar,,Purple Eye Shadow,Horned Rim Glasses,,,kabuki
+935,PhantomPug,Phantom,Chonmage,,Green Collar,Vape,,Eye Mask,,,basic
+936,KabukiPug,,Straw Hat,,Scarf,,Cross Eyed,,,,kabuki
+937,KabukiPug,,Tassle Hat,,,Pipe,Blue Eye Shadow,VR,,,kabuki
+938,KabukiPug,,Top Hat,,Green Collar,Pipe,,3D Glasses,,,kabuki
+939,Pug,,Chonmage,,Green Collar,,,Big Shades,,,basic
+940,Pug,,Demon,,,Medical Mask,,Mafia Glasses,,,rainbow
+941,SleepingPug,,Pilot Helmet,,,,Purple Eye Shadow,,,,metallic
+942,Pug,,Mohawk,,Scarf,Cigarette,,,,,basic
+943,KabukiPug,,Welding Goggles,,,Pipe,,,,,kabuki
+944,SleepingPug,,Chonmage,,,,,VR,,,blue-red
+945,PhantomPug,Phantom,Police Cap,,,Pipe,,,,,green
+946,KabukiPug,,,Hachimaki,,,Cross Eyed,Mafia Glasses,,,kabuki
+947,PhantomPug,Phantom,,,,Cigarette,,Scouter,,,basic
+948,PhantomPug,Phantom,Bandana,,,Cigarette,,,,,metallic
+949,PhantomPug,Phantom,Cap,,Green Collar,,,Scouter,,,basic
+950,Pug,,,,Green Collar,,,3D Glasses,,,basic
+951,PhantomPug,Phantom,Crown,,Green Collar,Vape,,,,,metallic
+952,Pug,,Chonmage,,Scarf,,,Classic Shades,,,metallic
+953,PhantomPug,Phantom,Headphone,,Scarf,,,,,,basic
+954,Pug,,Big Hat,,,Pipe,,,,,basic
+955,PhantomPug,Phantom,Welding Goggles,,,,,Regular Shades,,,basic
+956,SleepingPug,,Fedora,,Scarf,,,Nerd Glasses,,,basic
+957,Pug,,Head Light,,Scarf,Vape,,,,,green
+958,KabukiPug,,Pilot Helmet,,Scarf,Cigarette,,Big Shades,,,kabuki
+959,Pug,,Police Cap,,Green Collar,,,Scouter,,,basic
+960,SleepingPug,,Striped Ribbon,,Scarf,,,Mafia Glasses,,,basic
+961,PhantomPug,Phantom,,Hachimaki,,Tongue,,Regular Shades,,,basic
+962,Pug,,Crown,,Scarf,,Purple Eye Shadow,VR,,,metallic
+963,Pug,,Cowboy Hat,,,,Purple Eye Shadow,,,,basic
+964,KabukiPug,,Big Hat,,,,Purple Eye Shadow,,,,kabuki
+965,SleepingPug,,Cap Forward,,Green Collar,,,Big Shades,,,basic
+966,Pug,,Welding Goggles,,,Tongue,,,,,green
+967,KabukiPug,,Police Cap,,,Tongue,Purple Eye Shadow,VR,,,kabuki
+968,KabukiPug,,Cowboy Hat,,Green Collar,Tongue,,Nerd Glasses,,,kabuki
+969,SleepingPug,,Headphone,,Green Collar,,,,,,basic
+970,PhantomPug,Phantom,Wizard Hat,,,Cigarette,,,,,metallic
+971,Pug,,,,,,Blue Eye Shadow,Scouter,,,basic
+972,Pug,,Bandana,,Scarf,Cigarette,Cross Eyed,Nerd Glasses,,,basic
+973,SleepingPug,,Hat and Flower,,,,,Black Glasses,,,basic
+974,KabukiPug,,Hat and Flower,,,,Purple Eye Shadow,Eye Mask,,,kabuki
+975,PhantomPug,Phantom,Hat and Goggles,,Green Collar,,,Black Glasses,,,basic
+976,KabukiPug,,,Hachimaki,Scarf,,,Eye Patch,,,kabuki
+977,AnonyPug,Anonymous,Big Hat,,Scarf,,,,,,basic
+978,KabukiPug,,Casual Knitted Cap,,,,,Classic Shades,,,kabuki
+979,Pug,,,,,,Blue Eye Shadow,Horned Rim Glasses,,,basic
+980,SleepingPug,,Mohawk,,,,,Mafia Glasses,,,metallic
+981,KabukiPug,,Casual Knitted Cap,,,,,,,,kabuki
+982,PhantomPug,Phantom,Cap Forward,,Scarf,,,Classic Shades,,,green
+983,PhantomPug,Phantom,Straw Hat,,Green Collar,,,Scouter,,,rainbow
+984,KabukiPug,,Mohawk,,Green Collar,,,Big Shades,,,kabuki
+985,KabukiPug,,Pilot Helmet,,Green Collar,,,Regular Shades,,,kabuki
+986,PhantomPug,Phantom,Big Hat,,,,,,,,basic
+987,SleepingPug,,Silk Hat,,Green Collar,,Cross Eyed,,,,basic
+988,Pug,,Top Hat,,,Tongue,,Nerd Glasses,,,metallic
+989,Pug,,Hat and Flower,,Green Collar,,,Regular Shades,,,basic
+990,PhantomPug,Phantom,Demon,,,Vape,,,,,metallic
+991,Pug,,Beanie,,Scarf,,,,,,metallic
+992,PhantomPug,Phantom,Silk Hat,,,,,Scouter,,,basic
+993,KabukiPug,,Cap,,,Tongue,,Eye Patch,,,kabuki
+994,KabukiPug,,Head Light,,,,,,,,kabuki
+995,SleepingPug,,Kasa,,,,Purple Eye Shadow,Big Shades,,,metallic
+996,PhantomPug,Phantom,,Hachimaki,,Vape,,,,,blue-red
+997,AnonyPug,Anonymous,Cap,,Scarf,,,,,Golden Ears,basic
+998,Pug,,Striped Ribbon,,Scarf,,Blue Eye Shadow,,,,basic
+999,SleepingPug,,Kasa,,Green Collar,,Purple Eye Shadow,Black Glasses,,,rainbow
+1000,Pug,,,Hachimaki,,Cigarette,,,,Golden Ears,basic

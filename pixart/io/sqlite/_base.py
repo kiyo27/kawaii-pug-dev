@@ -18,6 +18,7 @@ def write_sqlite(character):
                 character.ctype,
                 character.attributes.mask["name"],
                 character.attributes.head["name"],
+                character.attributes.headband["name"],
                 character.attributes.neck["name"],
                 character.attributes.mouth["name"],
                 character.attributes.eyes["name"],
@@ -27,7 +28,7 @@ def write_sqlite(character):
                 _extract_filename(character.color.skin)
             )
         ]
-        con.executemany("insert into attributes values (?,?,?,?,?,?,?,?,?,?,?)", l)
+        con.executemany("insert into attributes values (?,?,?,?,?,?,?,?,?,?,?,?)", l)
 
 
 def export_csv():
@@ -69,6 +70,7 @@ def _format(row):
         'attributes': {
             'mask': _convert_none_to_false(row['mask']),
             'head': _convert_none_to_false(row['head']),
+            'headband': _convert_none_to_false(row['headband']),
             'neck': _convert_none_to_false(row['neck']),
             'mouth': _convert_none_to_false(row['mouth']),
             'eyes': _convert_none_to_false(row['eyes']),
