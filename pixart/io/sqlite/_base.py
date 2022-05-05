@@ -8,23 +8,23 @@ def _extract_filename(path):
         return os.path.splitext(os.path.basename(path))[0]
 
 
-def write_sqlite(version, character):
+def write_sqlite(character):
     con = sqlite3.connect("characters.db")
 
     with con:
         l = [
             (
-                version,
                 character.num,
-                _extract_filename(character.ctype),
-                _extract_filename(character.attributes.head),
-                _extract_filename(character.attributes.neck),
-                _extract_filename(character.attributes.mouth),
-                _extract_filename(character.attributes.eyes),
-                _extract_filename(character.attributes.glasses),
-                _extract_filename(character.attributes.nose),
-                _extract_filename(character.attributes.ears),
-                _extract_filename(character.color.skin),
+                character.ctype,
+                character.attributes.mask["name"],
+                character.attributes.head["name"],
+                character.attributes.neck["name"],
+                character.attributes.mouth["name"],
+                character.attributes.eyes["name"],
+                character.attributes.glasses["name"],
+                character.attributes.nose["name"],
+                character.attributes.ears["name"],
+                _extract_filename(character.color.skin)
             )
         ]
         con.executemany("insert into attributes values (?,?,?,?,?,?,?,?,?,?,?)", l)
@@ -43,12 +43,12 @@ def export_csv():
 
     con.close()
 
-def select(version):
+def select():
     con = sqlite3.connect("characters.db")
     con.row_factory = sqlite3.Row
     with con:
         cur = con.cursor()
-        cur.execute("SELECT * FROM attributes where version=?", (version,))
+        cur.execute("SELECT * FROM attributes")
         l = list()
         for row in cur.fetchall():
             l.append(_format(row))
@@ -56,11 +56,18 @@ def select(version):
     con.close()  
     return l
 
+def delete_table():
+    con = sqlite3.connect("characters.db")
+    with con:
+        con.execute("delete from attributes")
+
 def _format(row):
     data = {
         'id': row['id'],
-        'type': row['types'],
+        'type': row['type'],
+        'skin': _convert_none_to_false(row['skin']),
         'attributes': {
+            'mask': _convert_none_to_false(row['mask']),
             'head': _convert_none_to_false(row['head']),
             'neck': _convert_none_to_false(row['neck']),
             'mouth': _convert_none_to_false(row['mouth']),
@@ -68,7 +75,6 @@ def _format(row):
             'glasses': _convert_none_to_false(row['glasses']),
             'nose': _convert_none_to_false(row['nose']),
             'ears': _convert_none_to_false(row['ears']),
-            'skin': _convert_none_to_false(row['skin']),
         }
     }
 

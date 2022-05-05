@@ -1,107 +1,165 @@
+mask:
+  weight: 1
+  attribute:
+    - filename: "phantom"
+      name: "Phantom"
+      weight: 1
+    - filename: "anonymous"
+      name: "Anonymous"
+      weight: 1
 head: 
   weight: 800
   attribute:
-    - name: "beanie"
+    - filename: "beanie"
+      name: "Beanie"
       weight: 1
-    - name: "pilot-helmet"
+    - filename: "pilot-helmet"
+      name: "Pilot Helmet"
       weight: 1
-    - name: "welding-goggles"
+    - filename: "welding-goggles"
+      name: "Welding Goggles"
       weight: 1
-    - name: "bandana"
+    - filename: "bandana"
+      name: "Bandana"
       weight: 1
-    - name: "big-hat"
+    - filename: "big-hat"
+      name: "Big Hat"
       weight: 1
-    - name: "bucket-hat"
+    - filename: "bucket-hat"
+      name: "Bucket Hat"
       weight: 1
-    - name: "cap-forward"
+    - filename: "cap-forward"
+      name: "Cap Forward"
       weight: 1
-    - name: "cap"
+    - filename: "cap"
+      name: "Cap"
       weight: 1
-    - name: "casual-knitted-cap"
+    - filename: "casual-knitted-cap"
+      name: "Casual Knitted Cap"
       weight: 1
-    - name: "chonmage"
+    - filename: "chonmage"
+      name: "Chonmage"
       weight: 1
-    - name: "cowboy-hat"
+    - filename: "cowboy-hat"
+      name: "Cowboy Hat"
       weight: 1
-    - name: "crown"
+    - filename: "crown"
+      name: "Crown"
       weight: 1
-    - name: "demon"
+    - filename: "demon"
+      name: "Demon"
       weight: 1
-    - name: "fedora"
+    - filename: "fedora"
+      name: "Fedora"
       weight: 1
-    - name: "hachimaki"
+    - filename: "hat-and-flower"
+      name: "Hat and Flower"
       weight: 1
-    - name: "hat-and-flower"
+    - filename: "hat-and-goggle"
+      name: "Hat and Goggles"
       weight: 1
-    - name: "hat-and-goggle"
+    - filename: "head-light"
+      name: "Head Light"
       weight: 1
-    - name: "head-light"
+    - filename: "headphone"
+      name: "Headphone"
       weight: 1
-    - name: "headband"
+    - filename: "kasa"
+      name: "Kasa"
       weight: 1
-    - name: "headphone"
+    - filename: "knitted-cap"
+      name: "Knitted Cap"
       weight: 1
-    - name: "kasa"
+    - filename: "mohawk"
+      name: "Mohawk"
       weight: 1
-    - name: "knitted-cap"
+    - filename: "police-cap"
+      name: "Police Cap"
       weight: 1
-    - name: "mohawk"
+    - filename: "silk-hat"
+      name: "Silk Hat"
       weight: 1
-    - name: "police-cap"
+    - filename: "straw-hat"
+      name: "Straw Hat"
       weight: 1
-    - name: "silk-hat"
+    - filename: "stripe-ribbon"
+      name: "Striped Ribbon"
       weight: 1
-    - name: "straw-hat"
+    - filename: "tassle-hat"
+      name: "Tassle Hat"
       weight: 1
-    - name: "stripe-ribbon"
+    - filename: "top-hat"
+      name: "Top Hat"
       weight: 1
-    - name: "tassle-hat"
+    - filename: "wizard-hat"
+      name: "Wizard Hat"
       weight: 1
-    - name: "top-hat"
+
+headband:
+  weight: 500
+  attribute:
+    - filename: "headband"
+      name: "Headband"
       weight: 1
-    - name: "wizard-hat"
+    - filename: "hachimaki"
+      name: "Hachimaki"
       weight: 1
 
 neck:
   weight: 500
   attribute:
-    - name: "scarf"
+    - filename: "scarf"
+      name: "Scarf"
       weight: 1
-    - name: "green-collar"
+    - filename: "green-collar"
+      name: "Green Collar"
       weight: 1
 
 mouth:
   weight: 500
   attribute:
-    - name: "cigarette"
+    - filename: "cigarette"
+      name: "Cigarette"
       weight: 1
-    - name: "medical-mask"
+    - filename: "medical-mask"
+      name: "Medical Mask"
       weight: 1
-    - name: "pipe"
+    - filename: "pipe"
+      name: "Pipe"
       weight: 1
-    - name: "tongue"
+    - filename: "tongue"
+      name: "Tongue"
       weight: 1
-    - name: "vape"
+    - filename: "vape"
+      name: "Vape"
       weight: 1
 
 glasses:
   weight: 500
   attribute:
-    - name: "3d-glasses"
+    - filename: "3d-glasses"
+      name: "3D Glasses"
       weight: 1
-    - name: "vr"
+    - filename: "vr"
+      name: "VR"
       weight: 1
-    - name: "big-shades"
+    - filename: "big-shades"
+      name: "Big Shades"
       weight: 1
-    - name: "black-glasses"
+    - filename: "black-glasses"
+      name: "Black Glasses"
       weight: 1
-    - name: "classic-shades"
+    - filename: "classic-shades"
+      name: "Classic Shades"
       weight: 1
-    - name: "eye-mask"
+    - filename: "eye-mask"
+      name: "Eye Mask"
       weight: 1
-    - name: "eye-patch"
+    - filename: "eye-patch"
+      name: "Eye Patch"
       weight: 1
-    - name: "horned-rim-glasses"
+    - filename: "horned-rim-glasses"
+      name: "Horned Rim Glasses"
       weight: 1
       options:
         basic:
@@ -112,13 +170,21 @@ glasses:
           base:
             color:
               eyes: "glasses-sleeping"
-    - name: "mafia-glasses"
+        phantom:
+          base:
+            color:
+              eyes: "glasses-eyes"
+    - filename: "mafia-glasses"
+      name: "Mafia Glasses"
       weight: 1
-    - name: "nerd-glasses"
+    - filename: "nerd-glasses"
+      name: "Nerd Glasses"
       weight: 1
-    - name: "regular-shades"
+    - filename: "regular-shades"
+      name: "Regular Shades"
       weight: 1
-    - name: "scouter"
+    - filename: "scouter"
+      name: "Scouter"
       weight: 1
       options:
         sleeping:
@@ -129,28 +195,37 @@ glasses:
           base:
             color:
               eyes: "scouter-eyes"
+        phantom:
+          base:
+            color:
+              eyes: "scouter-eyes"
 
 eyes:
-  weight: 100
+  weight: 200
   attribute:
-    - name: "blue-eye-shadow"
+    - filename: "blue-eye-shadow"
+      name: "Blue Eye Shadow"
       weight: 1
-    - name: "purple-eye-shadow"
+    - filename: "purple-eye-shadow"
+      name: "Purple Eye Shadow"
       weight: 1
-    - name: "cross-eyed"
+    - filename: "cross-eyed"
+      name: "Cross Eyed"
       weight: 1
 
 nose:
   weight: 10
   attribute:
-    - name: "clown-nose"
+    - filename: "clown-nose"
+      name: "Clown Nose"
       weight: 1
 
 ears:
   weight: 10
   attribute:
-    - name: "green-ears"
+    - filename: "green-ears"
+      name: "Green Ears"
       weight: 1
-    - name: "golden-ears"
+    - filename: "golden-ears"
+      name: "Golden Ears"
       weight: 1
-

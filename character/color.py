@@ -21,8 +21,7 @@ class PugColor(abstract.Color):
 
     def make(self, **kwargs):
         self._eyes = None
-
-        if "skin" in kwargs:
+        if kwargs["skin"]:
             self._skin = self.base_dir + kwargs["skin"] + ".csv"
         else:
             n = ["rainbow", "metallic", "basic", "green", "blue-red"]

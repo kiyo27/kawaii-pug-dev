@@ -64,7 +64,11 @@ _paretto = {
     200: (5,221,247),
     199: (223,84,0),
     198: (202,58,0),
-    197: (205,73,0)
+    197: (205,73,0),
+    196: (108,213,202),
+    195: (208,185,228),
+    194: (250,232,189),
+    193: (127,255,0)
 }
 
 
@@ -93,19 +97,15 @@ class Painter:
 
     def draw(self, c):
         self.copy(c.shape.edge)
-
         self.copy(c.color.skin)
-        self.copy(c.attributes.eyes)
-        self.copy(c.attributes.ears)
-
+        self.copy(c.attributes.eyes["bp"])
+        self.copy(c.attributes.ears["bp"])
         self.copy(c.shape.mouth)
-
-        self.copy(c.attributes.neck)
-        self.copy(c.attributes.nose)
-        self.copy(c.attributes.mask)
-
+        self.copy(c.attributes.neck["bp"])
+        self.copy(c.attributes.nose["bp"])
         self.copy(c.shape.eyes)
-        self.copy(c.attributes.glasses)
+        self.copy(c.attributes.mask["bp"])
+        self.copy(c.attributes.glasses["bp"])
         self.copy(c.color.eyes)
-        self.copy(c.attributes.head)
-        self.copy(c.attributes.mouth)
+        self.copy(c.attributes.head["bp"])
+        self.copy(c.attributes.mouth["bp"])

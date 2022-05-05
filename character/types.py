@@ -25,10 +25,11 @@ class Pug(abstract.Character):
         self.num = num
         kwargs.setdefault("shape", {})
         kwargs.setdefault("color", {})
+        kwargs.setdefault("skin", kwargs.get("skin"))
         kwargs.setdefault("attributes", {})
 
         self.makeShape(**kwargs["shape"])
-        self.makeColor(**kwargs["color"])
+        self.makeColor(skin=kwargs["skin"])
         self.makeAttributes(**kwargs["attributes"])
 
     def makeShape(self, **kwargs):
@@ -47,10 +48,11 @@ class AnonyPug(Pug):
     ctype = "AnonyPug"
 
     def makeAttributes(self, **kwargs):
-        kwargs["mask"] = "anonymous"
+        kwargs["mask"] = "Anonymous"
         kwargs["mouth"] = False
         kwargs["eyes"] = False
         kwargs["glasses"] = False
+        kwargs["nose"] = False
         self._attr = PugAttribute(self, **kwargs)
 
 
@@ -90,6 +92,5 @@ class PhantomPug(Pug):
     ctype = "PhantomPug"
 
     def makeAttributes(self, **kwargs):
-        kwargs["mask"] = "phantom"
-        kwargs["nose"] = "sleeping"
+        kwargs["mask"] = "Phantom"
         self._attr = PugAttribute(self, **kwargs)

@@ -16,7 +16,7 @@ group.add_argument("--from-db", dest="db", action="store_true", help="create fro
 def multiple():
     f = factory.Multiple()
     face_types = ["Pug", "SleepingPug", "AnonyPug", "KabukiPug", "PhantomPug"]
-    f.create(face_types, "character", 1, total=1000)
+    f.create(face_types, "character", total=100)
     #painter = canvas.Painter()
     #for p in f.created:
     #    painter.draw(p)
@@ -41,16 +41,16 @@ def create():
 def create_from_db():
     from pixart.helper import director
     import concurrent.futures
-    data = sqlite.select(1)
-    director.construct(data[0:10])
+    data = sqlite.select()
+    director.construct(data[0:200])
     
-    #with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-    #    executor.map(director.construct,[data[0:100],data[100:200]])
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
-        future = executor.submit(director.construct,data[0:10])
-        print(future)
-        for f in concurrent.futures.as_completed([future]):
-            print(f)
+        executor.map(director.construct,[data[0:100],data[100:200]])
+    #with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+    #    future = executor.submit(director.construct,data[0:10])
+    #    print(future)
+    #    for f in concurrent.futures.as_completed([future]):
+    #        print(f)
 
 
 if __name__ == "__main__":

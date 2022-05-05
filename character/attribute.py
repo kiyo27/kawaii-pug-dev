@@ -27,6 +27,7 @@ class AttributeYaml:
             with open("character/attributes.yaml") as f:
                 attr_list = yaml.safe_load(f)
 
+            cls.mask = get_attr(attr_list, "mask")
             cls.head = get_attr(attr_list, "head")
             cls.neck = get_attr(attr_list, "neck")
             cls.mouth = get_attr(attr_list, "mouth")
@@ -36,6 +37,12 @@ class AttributeYaml:
             cls.ears = get_attr(attr_list, "ears")
 
         return cls.singleton
+
+    def search_by_name(self, attr_name, name):
+        attr_list = getattr(self, attr_name)
+        for attr in attr_list["list"]:
+            if attr["name"] == name:
+                return attr
 
 
 class PugAttribute:
@@ -92,7 +99,7 @@ class PugAttribute:
         return self._ears
 
     def make(self, **kwargs):
-        self.makeFace(**kwargs)
+        self.makeMask(**kwargs)
         self.makeHead(**kwargs)
         self.makeNeck(**kwargs)
         self.makeMouth(**kwargs)
@@ -101,11 +108,11 @@ class PugAttribute:
         self.makeNose(**kwargs)
         self.makeEars(**kwargs)
 
-    def makeFace(self, **kwargs):
+    def makeMask(self, **kwargs):
         if "mask" in kwargs:
             self.set_attr("mask", **kwargs)
         else:
-            self._mask = None
+            self.set_attr("mask", mask=False)
 
     def makeHead(self, **kwargs):
         self.set_attr("head", **kwargs)
@@ -117,9 +124,8 @@ class PugAttribute:
         self.set_attr("mouth", **kwargs)
 
     def makeEyes(self, **kwargs):
-        bp_dir = self.base_dir + "eyes/"
-        if self.mask is not None:
-            self._eyes = None
+        if self.mask["bp"]:
+            self.set_attr("eyes", eyes=False)
         else:
             self.set_attr("eyes", **kwargs)
 
@@ -133,24 +139,28 @@ class PugAttribute:
         self.set_attr("ears", **kwargs)
 
     def set_attr(self, attr, **kwargs):
-        bp_dir = self.base_dir + attr + "/"
         if attr in kwargs:
             if kwargs[attr] is False:
-                setattr(self, "_" + attr, None)
+                setattr(self, "_" + attr, {"bp": None, "name": None})
             else:
-                setattr(self, "_" + attr, bp_dir + kwargs[attr] + ".csv")
+                attr_list = self.attr_yml.search_by_name(attr, kwargs[attr])
+                setattr(self, "_" + attr, self._get_dict_to_set_attr(attr, attr_list))
                 target = self._get_attr_by_name(attr, kwargs[attr])
                 self._optional_attr(target)
         else:
             r = random.randrange(0, 1000)
             weight = getattr(self.attr_yml, attr)["weight"]
             if weight < r:
-                setattr(self, "_" + attr, None)
+                setattr(self, "_" + attr, {"bp": None, "name": None})
             else:
                 l = getattr(self.attr_yml, attr)
                 target = choice(l)
-                setattr(self, "_" + attr, bp_dir + target["name"] + ".csv")
+                setattr(self, "_" + attr, self._get_dict_to_set_attr(attr, target))
                 self._optional_attr(target)
+
+    def _get_dict_to_set_attr(self, attr_name, attr_list):
+        bp_dir = self.base_dir + attr_name + "/"
+        return {"bp": bp_dir + attr_list["filename"] + ".csv", "name": attr_list["name"]}
 
     def _get_attr_by_name(self, key, name):
         attr_list = getattr(self.attr_yml, key)["list"]
@@ -167,6 +177,10 @@ class PugAttribute:
             elif self._obj.ctype == "SleepingPug":
                 self._recursive_set(
                     self._obj, "sleeping", target["options"], "character/blueprints"
+                )
+            elif self._obj.ctype == "PhantomPug":
+                self._recursive_set(
+                    self._obj, "phantom", target["options"], "character/blueprints"
                 )
 
     def _recursive_set(self, obj, key, value, path):

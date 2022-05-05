@@ -3,7 +3,7 @@ import os
 import random
 
 from pixart import abstract
-from pixart.io.sqlite import write_sqlite
+from pixart.io.sqlite import write_sqlite, delete_table
 
 
 def factory(modname, cname):
@@ -13,8 +13,9 @@ def factory(modname, cname):
 class Multiple:
     def __init__(self):
         self.created = []
+        delete_table()
 
-    def create(self, types, mod, version, total=50):
+    def create(self, types, mod, total=50):
         count = 0
 
         while count < total:
@@ -24,11 +25,10 @@ class Multiple:
 
             if not self.created:
                 self.created.append(p)
-                write_sqlite(version, p)
+                write_sqlite(p)
                 count += 1
                 continue
 
-            new = []
             l = len(self.created)
             for i, ins in enumerate(self.created):
                 if p == ins:
@@ -36,7 +36,7 @@ class Multiple:
 
                 if i == l - 1:
                     self.created.append(p)
-                    write_sqlite(version, p)
+                    write_sqlite(p)
                     count += 1
                     break
 

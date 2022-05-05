@@ -8,7 +8,7 @@ from PIL import Image
 def cli():
     from character import types
     p = types.SleepingPug()
-    attr = {"attributes":{"glasses":"horned-rim-glasses"}}
+    attr = {"attributes":{"glasses":"Horned Rim Glasses"}}
     p.create(1, **attr)
     painter = canvas.Painter()
     painter.draw(p)
