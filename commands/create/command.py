@@ -4,8 +4,9 @@ from pixart.io import sqlite, opencv
 from PIL import Image
 
 
-@click.command("build")
-def cli():
+@click.command("create")
+@click.option("--multiple", is_flag=True)
+def cli(multiple):
     from character import types
     p = types.SleepingPug()
     attr = {"attributes":{"glasses":"Horned Rim Glasses"}}

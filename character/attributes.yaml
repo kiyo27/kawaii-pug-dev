@@ -94,6 +94,21 @@ head:
     - filename: "wizard-hat"
       name: "Wizard Hat"
       weight: 1
+    - filename: "kabuto"
+      name: "Kabuto"
+      weight: 1
+    - filename: "mini-cap"
+      name: "Mini Cap"
+      weight: 1
+    - filename: "mini-cap-forward"
+      name: "Mini Cap Forward"
+      weight: 1
+    - filename: "mini-police-cap"
+      name: "Mini Police Cap"
+      weight: 1
+    - filename: "red-mohawk"
+      name: "Red Mohawk"
+      weight: 1
 
 headband:
   weight: 500
