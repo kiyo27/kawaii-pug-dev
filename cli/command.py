@@ -42,7 +42,7 @@ class BaseCommand(click.MultiCommand):
             return None
 
         if not hasattr(mod, "cli"):
-            click.echo("Command i not configured correctly.")
+            click.echo("Command is not configured correctly.")
             return None
 
         return mod.cli

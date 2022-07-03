@@ -1,7 +1,7 @@
 from pixart.helper import factory
 from pixart import canvas
 from pixart.io import opencv
-
+from PIL import Image
 
 def construct(data, preview=False):
     for row in data:
